@@ -1,0 +1,27 @@
+.grey-bg{
+	background: #435464;
+}
+
+.yellow-bg{
+	background: #fedbbd;
+}
+
+.banner, .three-grid{
+	margin-bottom: 30px;
+}
+
+.bottom-margin{
+	margin-bottom: 30px;
+}
+
+@media (max-width:1199px){
+	img{
+		width: 100%;
+	}
+}
+
+@media (max-width:767px){
+	.container{
+		padding: 0 15px;
+	}
+}
