@@ -1,4 +1,4 @@
-//SETUP: LAUNCH CLICK AND SCROLL LISTENERS 
+//SETUP: KICKSTART CLICK AND SCROLL LISTENERS 
 
 window.onload = function() {
     addClickListeners();
@@ -10,16 +10,22 @@ window.onload = function() {
 function addClickListeners(){
   document.getElementById("e-ec-testButtonA").addEventListener('click', simulateProductClick, false);
   document.getElementById("e-ec-testButtonB").addEventListener('click', simulateCheckoutComplete, false);
-
 }
 
-//LISTEN FOR IMPRESSIONS ON UNIQUE ASSETS  
+/*
+LISTEN FOR IMPRESSIONS ON UNIQUE ASSETS
+IMPRESSION COUNTERS
+Impressions are triggered once per page-load. Upon first trigger counters change to "false"
+*/
+
+var count01 = true; 
+var count02 = true; 
+var count03 = true; 
 
 function checkForNewImpressions() {
-   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true) {window.alert("IMPRESSION TEST #1 TRIGGERED");}
-   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true) {window.alert("IMPRESSION TEST #2 TRIGGERED");}
-   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true) {window.alert("IMPRESSION TEST #3 TRIGGERED");}
-
+   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {window.alert("IMPRESSION TEST #1 TRIGGERED"); count01=false;}
+   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {window.alert("IMPRESSION TEST #2 TRIGGERED"); count02=false;}
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {window.alert("IMPRESSION TEST #3 TRIGGERED"); count03=false;}
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
