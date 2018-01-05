@@ -56,5 +56,5 @@ dataLayer.push({
                     'quantity': 1,
                     'variant': ''
 }]}}});
-window.alert("Finished Simulating Checkout-Complete");
+window.alert("Finished Simulating Checkout-Complete Completed");
 }
