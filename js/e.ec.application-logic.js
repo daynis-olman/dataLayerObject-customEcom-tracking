@@ -1,16 +1,34 @@
-//Setting up
+//SETUP: LAUNCH CLICK AND SCROLL LISTENERS 
+
 window.onload = function() {
-    addListeners();
+    addClickListeners();
+    window.addEventListener('scroll', function(){ console.log("Scrolling..."); checkForNewImpressions();  }, true)
 };
 
-//Define Event Listeners
+//LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
-function addListeners(){
+function addClickListeners(){
   document.getElementById("e-ec-testButtonA").addEventListener('click', simulateProductClick, false);
   document.getElementById("e-ec-testButtonB").addEventListener('click', simulateCheckoutComplete, false);
+
 }
 
-//Simulating Product Click
+//LISTEN FOR IMPRESSIONS ON UNIQUE ASSETS  
+
+function checkForNewImpressions() {
+   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true) {window.alert("IMPRESSION TEST #1 TRIGGERED");}
+   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true) {window.alert("IMPRESSION TEST #2 TRIGGERED");}
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true) {window.alert("IMPRESSION TEST #3 TRIGGERED");}
+
+}
+
+//FUNCTION: Determine if an element is in the visible viewport
+function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (rect.top >= 0 && rect.left >= 0 && rect.bottom
+<= (window.innerHeight || document. documentElement.clientHeight) && rect.right <= (window.innerWidth || document. documentElement.clientWidth)
+);}
+
+
+//FUNCTION: Simulating Product Click
 function simulateProductClick() {
 window.alert("Starting Simulating Product Click");
 dataLayer.push({
@@ -31,7 +49,7 @@ dataLayer.push({
 window.alert("Simulating Product Click Completed");
 }
 
-//Simulating Checkout Complete
+//FUNCTION: Checkout Complete
 function simulateCheckoutComplete() {
 window.alert("Starting Checkout Complete Simulation");
 dataLayer.push({
