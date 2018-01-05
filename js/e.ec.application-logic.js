@@ -1,13 +1,17 @@
-//SETUP: KICKSTART CLICK AND SCROLL LISTENERS 
+//SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
 window.onload = function() {
-    addClickListeners();
-    window.addEventListener('scroll', function(){ console.log("Scrolling..."); checkForNewImpressions();  }, true)
+    addClickListenersGroup();
+    window.addEventListener('scroll', function(){checkForNewImpressions();}, true)
+    document.getElementById('appointmentFunnelTest').addEventListener("input", function() {console.log("Form has changed!")});
+    document.getElementById('appointmentFunnelTest').addEventListener("submit", function() {console.log("Form was submitted!")});
+
 };
+
 
 //LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
-function addClickListeners(){
+function addClickListenersGroup(){
   document.getElementById("e-ec-testButtonA").addEventListener('click', simulateProductClick, false);
   document.getElementById("e-ec-testButtonB").addEventListener('click', simulateCheckoutComplete, false);
 }
@@ -23,9 +27,9 @@ var count02 = true;
 var count03 = true; 
 
 function checkForNewImpressions() {
-   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {window.alert("IMPRESSION TEST #1 TRIGGERED"); count01=false;}
-   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {window.alert("IMPRESSION TEST #2 TRIGGERED"); count02=false;}
-   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {window.alert("IMPRESSION TEST #3 TRIGGERED"); count03=false;}
+   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {console.log("IMPRESSION TEST #1 TRIGGERED"); count01=false;}
+   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {console.log("IMPRESSION TEST #2 TRIGGERED"); count02=false;}
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {console.log("IMPRESSION TEST #3 TRIGGERED"); count03=false;}
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
@@ -33,10 +37,9 @@ function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (
 <= (window.innerHeight || document. documentElement.clientHeight) && rect.right <= (window.innerWidth || document. documentElement.clientWidth)
 );}
 
-
 //FUNCTION: Simulating Product Click
 function simulateProductClick() {
-window.alert("Starting Simulating Product Click");
+console.log("Starting: DataLayer.push - CTA Click");
 dataLayer.push({
     'event': 'productClick',
     'ecommerce': {
@@ -52,12 +55,12 @@ dataLayer.push({
                 'variant': '',
                 'position': 1
 }]}}}); 
-window.alert("Simulating Product Click Completed");
+console.log("Completed: DataLayer.push - CTA Click");
 }
 
 //FUNCTION: Checkout Complete
 function simulateCheckoutComplete() {
-window.alert("Starting Checkout Complete Simulation");
+console.log("Starting: DataLayer.push - Checkout Complete");
 dataLayer.push({
     'event': 'purchase',
     'ecommerce': {
@@ -80,5 +83,5 @@ dataLayer.push({
                     'quantity': 1,
                     'variant': ''
 }]}}});
-window.alert("Finished Simulating Checkout-Complete Completed");
-}
+console.log("Completed: DataLayer.push - Checkout Complete");
+}Add Events Listeners for form input changes and form submit
