@@ -3,17 +3,15 @@
 window.onload = function() {
     addClickListenersGroup();
     window.addEventListener('scroll', function(){checkForNewImpressions();}, true)
-    document.getElementById('appointmentFunnelTest').addEventListener("input", function (){FormInputInitiated();} );
-    document.getElementById('appointmentFunnelTest').addEventListener("submit", function (){FormSubmitInitiated();} );
-
+    document.getElementById('appointmentFunnelTest').addEventListener("input", function (){dataLayerFormInput();} );
+    document.getElementById('appointmentFunnelTest').addEventListener("submit", function (){dataLayerFormSubmit();} );
 };
-
 
 //LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
 function addClickListenersGroup(){
-  document.getElementById("e-ec-testButtonA").addEventListener('click', simulateProductClick, false);
-  document.getElementById("e-ec-testButtonB").addEventListener('click', simulateCheckoutComplete, false);
+  document.getElementById("e-ec-testButtonA").addEventListener('click', dataLayerProductClick, false);
+  document.getElementById("e-ec-testButtonB").addEventListener('click', dataLayerCheckoutComplete, false);
 }
 
 /*
@@ -30,9 +28,9 @@ var formCount02 = true; //form submit
 
 
 function checkForNewImpressions() {
-   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {assetImpressionTest1();}
-   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {assetImpressionTest2();}
-   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {assetImpressionTest3();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {dataLayerassetImpression01();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {dataLayerassetImpression02();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {dataLayerassetImpression03();}
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
@@ -41,15 +39,11 @@ function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (
 );}
 
 
-
-
-
 //FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #1
 
-function assetImpressionTest1 () {
+function dataLayerassetImpression01 () {
     
         if (count01 === true) {
-        console.log("Starting: DataLayer.push - ASSET IMPRESSION TEST #1");
         
      
                 //ADD CODE FOR DATA LAYER PUSH HERE
@@ -63,10 +57,9 @@ function assetImpressionTest1 () {
 
 //FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #2
 
-function assetImpressionTest2 () {
+function dataLayerassetImpression02 () {
     
         if (count02 === true) {
-        console.log("Starting: DataLayer.push - ASSET IMPRESSION TEST #2");
         
      
                 //ADD CODE FOR DATA LAYER PUSH HERE
@@ -80,10 +73,9 @@ function assetImpressionTest2 () {
 
 //FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #3
 
-function assetImpressionTest3 () {
+function dataLayerassetImpression03 () {
     
         if (count03 === true) {
-        console.log("Starting: DataLayer.push - ASSET IMPRESSION TEST #3");
         
      
                 //ADD CODE FOR DATA LAYER PUSH HERE
@@ -95,13 +87,9 @@ function assetImpressionTest3 () {
     }    
 }
 
-
-
-
 //FUNCTION: DataLayer.push - CTA Click
 
-function simulateProductClick() {
-console.log("Starting: DataLayer.push - CTA Click");
+function dataLayerProductClick() {
 dataLayer.push({
     'event': 'productClick',
     'ecommerce': {
@@ -122,8 +110,7 @@ console.log("Completed: DataLayer.push - CTA Click");
 
 //FUNCTION: DataLayer.push - Checkout Complete
 
-function simulateCheckoutComplete() {
-console.log("Starting: DataLayer.push - Checkout Complete");
+function dataLayerCheckoutComplete() {
 dataLayer.push({
     'event': 'purchase',
     'ecommerce': {
@@ -154,10 +141,9 @@ console.log("Completed: DataLayer.push - Checkout Complete");
 
 //FUNCTION: DataLayer.push - Product Add - User form input
 
-function FormInputInitiated() {
+function dataLayerFormInput() {
 
     if (formCount01 === true) {
-        console.log("Starting: DataLayer.push - Product Add - User form input");
         
      
                 //ADD CODE FOR DATA LAYER PUSH HERE
@@ -170,11 +156,11 @@ function FormInputInitiated() {
 }
 
 
-//FUNCTION: Form completion initiated by user || Product Adds (Lead Form Starts)  
-function FormSubmitInitiated() {
+//FUNCTION: DataLayer.push - Checkout - Form Submit  
+
+function dataLayerFormSubmit() {
 
     if (formCount02 === true) {
-        console.log("Starting: DataLayer.push - Checkout - Form Submit");
         
      
                 //ADD CODE FOR DATA LAYER PUSH HERE
