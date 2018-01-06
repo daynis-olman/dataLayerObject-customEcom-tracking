@@ -3,8 +3,8 @@
 window.onload = function() {
     addClickListenersGroup();
     window.addEventListener('scroll', function(){checkForNewImpressions();}, true)
-    document.getElementById('appointmentFunnelTest').addEventListener("input", function() {console.log("Form has changed!")});
-    document.getElementById('appointmentFunnelTest').addEventListener("submit", function() {console.log("Form was submitted!")});
+    document.getElementById('appointmentFunnelTest').addEventListener("input", function (){FormInputInitiated();} );
+    document.getElementById('appointmentFunnelTest').addEventListener("submit", function (){FormSubmitInitiated();} );
 
 };
 
@@ -22,14 +22,17 @@ IMPRESSION COUNTERS
 Impressions are triggered once per page-load. Upon first trigger counters change to "false"
 */
 
-var count01 = true; 
-var count02 = true; 
-var count03 = true; 
+var count01 = true;     //Asset impression test #1
+var count02 = true;     //Asset impression test #2
+var count03 = true;     //Asset impression test #3
+var formCount01 = true; //form impression 
+var formCount02 = true; //form submit 
+
 
 function checkForNewImpressions() {
-   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {console.log("IMPRESSION TEST #1 TRIGGERED"); count01=false;}
-   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {console.log("IMPRESSION TEST #2 TRIGGERED"); count02=false;}
-   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {console.log("IMPRESSION TEST #3 TRIGGERED"); count03=false;}
+   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {assetImpressionTest1();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {assetImpressionTest2();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {assetImpressionTest3();}
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
@@ -37,7 +40,66 @@ function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (
 <= (window.innerHeight || document. documentElement.clientHeight) && rect.right <= (window.innerWidth || document. documentElement.clientWidth)
 );}
 
-//FUNCTION: Simulating Product Click
+
+
+
+
+//FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #1
+
+function assetImpressionTest1 () {
+    
+        if (count01 === true) {
+        console.log("Starting: DataLayer.push - ASSET IMPRESSION TEST #1");
+        
+     
+                //ADD CODE FOR DATA LAYER PUSH HERE
+                //Form completion initiated by user
+        
+        
+        console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #1");
+        count01 = false;
+    }    
+}
+
+//FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #2
+
+function assetImpressionTest2 () {
+    
+        if (count02 === true) {
+        console.log("Starting: DataLayer.push - ASSET IMPRESSION TEST #2");
+        
+     
+                //ADD CODE FOR DATA LAYER PUSH HERE
+                //Form completion initiated by user
+        
+        
+        console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #2");
+        count02 = false;
+    }    
+}
+
+//FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #3
+
+function assetImpressionTest3 () {
+    
+        if (count03 === true) {
+        console.log("Starting: DataLayer.push - ASSET IMPRESSION TEST #3");
+        
+     
+                //ADD CODE FOR DATA LAYER PUSH HERE
+                //Form completion initiated by user
+        
+        
+        console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #3");
+        count03 = false;
+    }    
+}
+
+
+
+
+//FUNCTION: DataLayer.push - CTA Click
+
 function simulateProductClick() {
 console.log("Starting: DataLayer.push - CTA Click");
 dataLayer.push({
@@ -49,7 +111,7 @@ dataLayer.push({
             'products': [{
                 'name': 'Book Consultation',
                 'id': '1',
-                'price': '1119.88',
+                'price': '0.00',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
@@ -58,7 +120,8 @@ dataLayer.push({
 console.log("Completed: DataLayer.push - CTA Click");
 }
 
-//FUNCTION: Checkout Complete
+//FUNCTION: DataLayer.push - Checkout Complete
+
 function simulateCheckoutComplete() {
 console.log("Starting: DataLayer.push - Checkout Complete");
 dataLayer.push({
@@ -71,7 +134,7 @@ dataLayer.push({
                 'affiliation': undefined, 
                 'revenue': '',
                 'tax':'',
-                'shipping': '2000.00',
+                'shipping': '0.00',
                 'coupon': 'NewYear'
                 },
                 'products': [{
@@ -84,4 +147,42 @@ dataLayer.push({
                     'variant': ''
 }]}}});
 console.log("Completed: DataLayer.push - Checkout Complete");
-}Add Events Listeners for form input changes and form submit
+}
+
+
+
+
+//FUNCTION: DataLayer.push - Product Add - User form input
+
+function FormInputInitiated() {
+
+    if (formCount01 === true) {
+        console.log("Starting: DataLayer.push - Product Add - User form input");
+        
+     
+                //ADD CODE FOR DATA LAYER PUSH HERE
+                //Form completion initiated by user
+        
+        
+        console.log("Completed: DataLayer.push - Product Add - User form input");
+        formCount01 = false;
+    }    
+}
+
+
+//FUNCTION: Form completion initiated by user || Product Adds (Lead Form Starts)  
+function FormSubmitInitiated() {
+
+    if (formCount02 === true) {
+        console.log("Starting: DataLayer.push - Checkout - Form Submit");
+        
+     
+                //ADD CODE FOR DATA LAYER PUSH HERE
+                //Form completion initiated by user
+        
+        
+        console.log("Completed: DataLayer.push - Checkout - Form Submit");
+        formCount02 = false;
+    }    
+}
+
