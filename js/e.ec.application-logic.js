@@ -28,9 +28,9 @@ var formCount02 = true; //form submit
 
 
 function checkForNewImpressions() {
-   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {dataLayerassetImpression01();}
-   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {dataLayerassetImpression02();}
-   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {dataLayerassetImpression03();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {dataLayerAssetImpression01();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {dataLayerAssetImpression02();}
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {dataLayerAssetImpression03();}
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
@@ -41,15 +41,30 @@ function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (
 
 //FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #1
 
-function dataLayerassetImpression01 () {
-    
+function dataLayerAssetImpression01 () {
         if (count01 === true) {
         
      
-                //ADD CODE FOR DATA LAYER PUSH HERE
-                //Form completion initiated by user
+                dataLayer.push({
+                    'event': 'productImpressions',
+                    'ecommerce': {
+                        'currencyCode': 'AUD',
+                        'impressions':[
+                            {
+                                'name': 'Asset-Impression-Test-01',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'variant': '',
+                                'list': '/home',
+                                'position': 1
+                            },
+                        ]
+                    }  
+                    });
         
-        
+            
         console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #1");
         count01 = false;
     }    
@@ -57,14 +72,30 @@ function dataLayerassetImpression01 () {
 
 //FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #2
 
-function dataLayerassetImpression02 () {
-    
+function dataLayerAssetImpression02 () {
         if (count02 === true) {
         
-     
-                //ADD CODE FOR DATA LAYER PUSH HERE
-                //Form completion initiated by user
+            
+                dataLayer.push({
+                    'event': 'productImpressions',
+                    'ecommerce': {
+                        'currencyCode': 'AUD',
+                        'impressions':[
+                            {
+                                'name': 'Asset-Impression-Test-02',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'variant': '',
+                                'list': '/home',
+                                'position': 1
+                            },
+                        ]
+                    }  
+                    });
         
+            
         
         console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #2");
         count02 = false;
@@ -73,13 +104,29 @@ function dataLayerassetImpression02 () {
 
 //FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #3
 
-function dataLayerassetImpression03 () {
+function dataLayerAssetImpression03 () {
     
         if (count03 === true) {
         
      
-                //ADD CODE FOR DATA LAYER PUSH HERE
-                //Form completion initiated by user
+                  dataLayer.push({
+                    'event': 'productImpressions',
+                    'ecommerce': {
+                        'currencyCode': 'AUD',
+                        'impressions':[
+                            {
+                                'name': 'Asset-Impression-Test-03',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'variant': '',
+                                'list': '/home',
+                                'position': 1
+                            },
+                        ]
+                    }  
+                    });
         
         
         console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #3");
@@ -97,42 +144,50 @@ dataLayer.push({
         'click': {
             'actionField': {'list': '/weight-loss'}, // Same as impression location
             'products': [{
-                'name': 'Book Consultation',
+                'name': 'Book Consultation - CTA Click TEST',
                 'id': '1',
-                'price': '0.00',
+                'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
                 'position': 1
-}]}}}); 
+                }]}}}); 
+
 console.log("Completed: DataLayer.push - CTA Click");
 }
 
 //FUNCTION: DataLayer.push - Checkout Complete
 
 function dataLayerCheckoutComplete() {
-dataLayer.push({
-    'event': 'purchase',
-    'ecommerce': {
-        'currencyCode': 'AUD', 
-        'purchase': {
-            'actionField': {
-                'id': 'T12345',
-                'affiliation': undefined, 
-                'revenue': '',
-                'tax':'',
-                'shipping': '0.00',
-                'coupon': 'NewYear'
-                },
-                'products': [{
-                    'name': 'Book Consultation',
-                    'id': '1',
-                    'price': '999.83',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'quantity': 1,
-                    'variant': ''
-}]}}});
+
+
+    dataLayer.push({
+        'event': 'purchase',
+        'ecommerce': {
+            'currencyCode': 'AUD', 
+            'purchase': {
+                'actionField': {
+                    'id': 'T12345',
+                    'affiliation': undefined, 
+                    'revenue': '',
+                    'tax':'',
+                    'shipping': '0.00',
+                    'coupon': 'NewYear'
+                    },
+                    'products': [{
+                        'name': 'Book Consultation - Checkout Complete TEST',
+                        'id': '1',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'quantity': 1,
+                        'variant': ''
+                    }]
+            }
+        }
+    });
+
+
 console.log("Completed: DataLayer.push - Checkout Complete");
 }
 
@@ -142,14 +197,26 @@ console.log("Completed: DataLayer.push - Checkout Complete");
 //FUNCTION: DataLayer.push - Product Add - User form input
 
 function dataLayerFormInput() {
-
     if (formCount01 === true) {
         
-     
-                //ADD CODE FOR DATA LAYER PUSH HERE
-                //Form completion initiated by user
-        
-        
+
+      dataLayer.push({
+        'event': 'productAdd',
+        'ecommerce': {
+            'currencyCode': 'AUD',
+            'add': {
+                'actionField': {'list': undefined },
+                'products': [{
+                    'name': 'Product Add - User form input - TEST',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'quantity': 1,
+                    'variant': ''
+                    }]}}});
+    
+
         console.log("Completed: DataLayer.push - Product Add - User form input");
         formCount01 = false;
     }    
@@ -163,8 +230,31 @@ function dataLayerFormSubmit() {
     if (formCount02 === true) {
         
      
-                //ADD CODE FOR DATA LAYER PUSH HERE
-                //Form completion initiated by user
+         dataLayer.push({
+            'event': 'purchase',
+            'ecommerce': {
+                'currencyCode': 'AUD', 
+                'purchase': {
+                    'actionField': {
+                        'id': 'T12345',
+                        'affiliation': undefined, 
+                        'revenue': '',
+                        'tax':'',
+                        'shipping': '0.00',
+                        'coupon': 'NewYear'
+                        },
+                        'products': [{
+                            'name': 'Checkout - Form Submit - TEST',
+                            'id': '1',
+                            'price': '',
+                            'brand': 'Jenny Craig',
+                            'category': 'lead',
+                            'quantity': 1,
+                            'variant': ''
+                        }]
+                }
+            }
+        });
         
         
         console.log("Completed: DataLayer.push - Checkout - Form Submit");
