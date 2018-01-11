@@ -1,12 +1,32 @@
 //SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
 window.onload = function() {
+    discoverRegionNPush();
     addClickListenersGroup();
     window.addEventListener('scroll', function(){checkForNewImpressions();}, true)
     document.getElementById('appointmentFunnelTest').addEventListener("input", function (){dataLayerFormInput();} );
     document.getElementById('appointmentFunnelTest').addEventListener("submit", function (){dataLayerFormSubmit();} );
 };
 
+//FUNCTION: Discover region + dataLayer push
+
+function discoverRegionNPush() {
+
+    (function($) {
+// Required to override html content inside a view 
+        $(window).load(function() {
+            if(window.location.href.indexOf(".co.nz") > -1) {
+                dataLayer.push({'region' : 'NZ'});
+                console.log("NZ Region Pushed to Datalayer");
+            }
+            else if(window.location.href.indexOf(".com.au") > -1) { 
+                dataLayer.push({'region' : 'AU'});
+                console.log("AU Region Pushed to Datalayer");
+}
+});  
+})(jQuery);
+    
+}
 //LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
 function addClickListenersGroup(){
