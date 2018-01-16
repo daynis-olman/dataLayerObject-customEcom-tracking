@@ -99,9 +99,6 @@ X-Impression X-Click
 GlobalFooter-JCAH-Delivery           | xGlobalFooter_JCAH_Delivery_IMPSN         | xGlobalFooter_JCAH_Delivery_CLK
 X-Impression X-Click
 
-GlobalFooter-IconYouTube             | xGlobalFooter_IconYouTube_IMPSN           | xGlobalFooter_IconYouTube_CLK
-X-Impression X-Click
-
 GlobalFooter-IconBlog                | xGlobalFooter_IconBlog_IMPSN              | xGlobalFooter_IconBlog_CLK
 X-Impression X-Click
 
@@ -141,6 +138,7 @@ ELEMENT-ID            | Impression Function   | OnFocus Function      | Submit F
 -----------------------------------------------------------------------------------------------------------------  
 
 mktoForm_1589 [au&nz] |  xmktoForm_1589_IMPSN  | xmktoForm_1589_Focus | xmktoForm_1589_Submit                
+
 
                
 
@@ -214,24 +212,116 @@ IMPRESSION COUNTERS
 Impressions are triggered once per page-load. Upon first trigger counters change to "false"
 */
 
-var count01 = true;     //Asset impression HomeA_CTA_Hero_BookConsultation_IMPSN
-var count02 = true;     //Asset impression test #2
-var count03 = true;     //Asset impression test #3
-var formCount01 = true; //form impression 
-var formCount02 = true; //form submit 
+//Home A - Impressions counters
+
+var count01=!0     // impression counter HomeA_CTA_Hero_BookConsultation_IMPSN();
+var count02=!0     // impression counter HomeA_CTA_Hero_RequestCall_IMPSN();
+var count03=!0     // impression counter HomeA_Body_BookConsultation_IMPSN();
+var count04=!0     // impression counter HomeA_Body_RequestCall_IMPSN();
+var count05=!0     // impression counter HomeA_Body_FAQ_IMPSN(); 
+var count06=!0     // impression counter HomeA_Body_FindCentre_IMPSN(); 
+
+//Home B - Impressions counters
+
+var count07=!0     // impression counter HomeB_Body_BookConsultation_IMPSN();
+var count08=!0     // impression counter HomeB_Body_RequestCall_IMPSN();
+var count09=!0     // impression counter HomeB_Body_FindCentre_IMPSN();
+var count10=!0     // impression counter HomeB_Body_FAQ_IMPSN();
+var count11=!0     // impression counter HomeB_Mob_Body_BookConsultation_IMPSN(); 
+var count12=!0     // impression counter HomeB_Mob_Body_FindCentre_IMPSN(); 
+var count13=!0     // impression counter HomeB_Mob_Body_FAQ_IMPSN(); 
+
+//Global Header - Impressions counters
+
+var count14=!0     // impression counter GlobalHeader_CTA_StartNowOrange_IMPSN(); 
+var count15=!0     // impression counter GlobalHeader_CTA_ClickToCall_IMPSN(); 
+var count16=!0     // impression counter GlobalHeader_CTA_StartLiveChat_IMPSN(); 
+
+//Global Footer - Impressions counters
+
+var count17=!0     // impression counter GlobalFooter_IconFacebook_IMPSN(); 
+var count18=!0     // impression counter GlobalFooter_IconInstagram_IMPSN(); 
+var count19=!0     // impression counter GlobalFooter_IconYouTube_IMPSN(); 
+var count20=!0     // impression counter GlobalFooter_JCAH_Delivery_IMPSN(); 
+var count21=!0     // impression counter GlobalFooter_IconBlog_IMPSN(); 
+
+//Form #1 - Impressions counters
+
+var count22=!0     // impression counter mktoForm_2257_IMPSN(); 
+var count23=!0     // impression counter mktoForm_2258_IMPSN 
+
+//Form #2 - Impressions counters
+
+var count24=!0     // impression counter mktoForm_2259_IMPSN(); 
+var count25=!0     // impression counter mktoForm_2260_IMPSN(); 
+
+//Form #3 - Impressions counters
+
+var count26=!0     // impression counter mktoForm_1579_IMPSN(); 
+var count27=!0     // impression counter mktoForm_1626_IMPSN(); 
+
+//Form #4 - Impressions counters
+
+var count28=!0     // impression counter mktoForm_1689_IMPSN(); 
 
 
 function checkForNewImpressions() {
     
+/* Impression logic re-written to fit in one line for readability. Previous longer version below.
+if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation")) === true && count01 === true) {HomeA_CTA_Hero_BookConsultation_IMPSN();} */
+
+//Home A - Impressions
+
+  isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN();
+  isElementInViewport(document.getElementById("HomeA-CTA-Hero-RequestCall"))===!0&&count02===!0&&HomeA_CTA_Hero_RequestCall_IMPSN();
+  isElementInViewport(document.getElementById("HomeA-Body-BookConsultation"))===!0&&count03===!0&&HomeA_Body_BookConsultation_IMPSN();
+  isElementInViewport(document.getElementById("HomeA-Body-RequestCall"))===!0&&count04===!0&&HomeA_Body_RequestCall_IMPSN();
+  isElementInViewport(document.getElementById("HomeA-Body-FAQ"))===!0&&count05===!0&&HomeA_Body_FAQ_IMPSN();
+  isElementInViewport(document.getElementById("HomeA-Body-FindCentre"))===!0&&count06===!0&&HomeA_Body_FindCentre_IMPSN();
+
+//Home B - Impressions
+
+  isElementInViewport(document.getElementById("HomeB-Body-BookConsultation"))===!0&&count07===!0&&HomeB_Body_BookConsultation_IMPSN();
+  isElementInViewport(document.getElementById("HomeB-Body-RequestCall"))===!0&&count08===!0&&HomeB_Body_RequestCall_IMPSN();
+  isElementInViewport(document.getElementById("HomeB-Body-FindCentre"))===!0&&count09===!0&&HomeB_Body_FindCentre_IMPSN();
+  isElementInViewport(document.getElementById("HomeB-Body-FAQ"))===!0&&count10===!0&&HomeB_Body_FAQ_IMPSN();
+  isElementInViewport(document.getElementById("HomeB-Mob-Body-BookConsultation"))===!0&&count11===!0&&HomeB_Mob_Body_BookConsultation_IMPSN();
+  isElementInViewport(document.getElementById("HomeB-Mob-Body-FindCentre"))===!0&&count12===!0&&HomeB_Mob_Body_FindCentre_IMPSN();
+  isElementInViewport(document.getElementById("HomeB-Mob-Body-FAQ"))===!0&&count13===!0&&HomeB_Mob_Body_FAQ_IMPSN();
+
+//Global Header - Impressions
+
+  isElementInViewport(document.getElementById("GlobalHeader-CTA-StartNowOrange"))===!0&&count14===!0&&GlobalHeader_CTA_StartNowOrange_IMPSN();
+  isElementInViewport(document.getElementById("GlobalHeader-CTA-ClickToCall"))===!0&&count15===!0&&GlobalHeader_CTA_ClickToCall_IMPSN();
+  isElementInViewport(document.getElementById("GlobalHeader-CTA-StartLiveChat"))===!0&&count16===!0&&GlobalHeader_CTA_StartLiveChat_IMPSN();
+
+//Global Footer - Impressions
+
+  isElementInViewport(document.getElementById("GlobalFooter-IconFacebook"))===!0&&count17===!0&&GlobalFooter_IconFacebook_IMPSN();
+  isElementInViewport(document.getElementById("GlobalFooter-IconInstagram"))===!0&&count18===!0&&GlobalFooter_IconInstagram_IMPSN();
+  isElementInViewport(document.getElementById("GlobalFooter-IconYouTube"))===!0&&count19===!0&&GlobalFooter_IconYouTube_IMPSN();
+  isElementInViewport(document.getElementById("GlobalFooter-JCAH-Delivery"))===!0&&count20===!0&&GlobalFooter_JCAH_Delivery_IMPSN();
+  isElementInViewport(document.getElementById("GlobalFooter-IconBlog"))===!0&&count21===!0&&GlobalFooter_IconBlog_IMPSN();
+
+//Form 1 Impressions
+
+  isElementInViewport(document.getElementById("mktoForm_2257"))===!0&&count22===!0&&mktoForm_2257_IMPSN();
+  isElementInViewport(document.getElementById("mktoForm_2258"))===!0&&count23===!0&&mktoForm_2258_IMPSN();
+
+//Form 2 Impressions
+
+  isElementInViewport(document.getElementById("mktoForm_2259"))===!0&&count24===!0&&mktoForm_2259_IMPSN();
+  isElementInViewport(document.getElementById("mktoForm_2260"))===!0&&count25===!0&&mktoForm_2260_IMPSN();
+
+//Form 3 Impressions
+
+  isElementInViewport(document.getElementById("mktoForm_1579"))===!0&&count26===!0&&mktoForm_1579_IMPSN();
+  isElementInViewport(document.getElementById("mktoForm_1626"))===!0&&count27===!0&&mktoForm_1626_IMPSN();
+
+//Form 4 Impressions
+
+  isElementInViewport(document.getElementById("mktoForm_1589"))===!0&&count28===!0&&mktoForm_1589_IMPSN();
     
-   if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation")) === true && count01 === true) {
-       HomeA_CTA_Hero_BookConsultation_IMPSN();}
-
-   if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation")) === true && count01 === true) {
-       HomeA_CTA_Hero_BookConsultation_IMPSN();}
-
-
-
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
