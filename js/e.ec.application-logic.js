@@ -12,9 +12,12 @@ window.onload = function() {
 
 /* REGISTER OF ASSETS FOR IMPRESSIONS / CLICKS / INPUTS (BY ELEMENT IDs)
 
---------HOME-A--------------------------
-
-HomeA-CTA-Hero-BookConsultation
+-----------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                    Impression Function Name                  Click Function Name
+-----------------------------------------------------------------------------------------------------------------  
+HOME-A
+-----------------------------------------------------------------------------------------------------------------
+HomeA-CTA-Hero-BookConsultation | HomeA_CTA_Hero_BookConsultation_Impress | HomeA_CTA_Hero_BookConsultation_Click
 X-Impression X-Click
 
 HomeA-CTA-Hero-RequestCall
@@ -32,7 +35,11 @@ X-Impression X-Click
 HomeA-Body-FindCentre
 X-Impression X-Click
 
---------HOME-B--------------------------
+-----------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                    Impression Function Name                  Click Function Name
+-----------------------------------------------------------------------------------------------------------------  
+HOME-B
+-----------------------------------------------------------------------------------------------------------------
 
 HomeB-Body-BookConsultation
 X-Impression X-Click
@@ -58,19 +65,28 @@ X-Impression X-Click
 HomeB-Mobile-Body-FAQ
 X-Impression X-Click
 
---------GLOBAL-HEADER-------------------
+-----------------------------------------------------------------------------------------------------------------
+GLOBAL HEADER
+-----------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                    Impression Function Name                  Click Function Name
+-----------------------------------------------------------------------------------------------------------------  
 
-Add: GlobalHeader-CTA-StartNowOrange
+
+GlobalHeader-CTA-StartNowOrange
 X-Impression X-Click
 
-Add: GlobalHeader-CTA-ClickToCall (class: click-to-call - noID)
+GlobalHeader-CTA-ClickToCall (class: click-to-call - noID)
 X-Impression X-Click
 
-Add: GlobalHeader-CTA-StartLiveChat (class: livechat_button - noID)
+GlobalHeader-CTA-StartLiveChat (class: livechat_button - noID)
 X-Impression X-Click
 
---------GLOBAL-FOOTER-------------------
-mktoForm_1589 [AU+NZ Subscribe Inspire]
+
+-----------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                    Impression Function Name                  Click Function Name
+-----------------------------------------------------------------------------------------------------------------  
+GLOBAL FOOTER
+-----------------------------------------------------------------------------------------------------------------
 X-Impression X-InputInitiated X-SubmitInitiated
 
 GlobalFooter-IconFacebook
@@ -110,6 +126,12 @@ X-Impression X-InputInitiated X-SubmitInitiated
 mktoForm_1579 [AU]
 mktoForm_1626 [NZ]
 
+--FORM-3------/INSPIRE-Subscribe-----------------
+X-Impression X-InputInitiated X-SubmitInitiated
+
+mktoForm_1589 [AU+NZ Subscribe Inspire]
+
+
 */
 
 //FUNCTION: Discover region + dataLayer push
@@ -130,6 +152,9 @@ function discoverRegionNPush() {
 })(jQuery);
     
 }
+
+//Discover Page URL + store as String
+var currentUrl = window.location.href;
 
 /*
 DRUPAL ID COOKIE LOGIC
