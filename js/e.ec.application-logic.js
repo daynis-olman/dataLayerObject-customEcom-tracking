@@ -1,5 +1,16 @@
-/* REGISTER OF ASSETS FOR IMPRESSIONS / CLICKS / INPUTS (BY ELEMENT IDs)
+//SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
+window.onload = function() {
+//  cookieDrupalID(); Cookie logic 
+    discoverRegionNPush();
+    checkForNewImpressions(); //check for assets in viewport on pageload
+    addClickListenersGroup();
+    window.addEventListener('scroll', function(){checkForNewImpressions();}, true);
+    document.getElementById('appointmentFunnelTest').addEventListener("input", function (){dataLayerFormInput();} );
+    document.getElementById('appointmentFunnelTest').addEventListener("submit", function (){dataLayerFormSubmit();} );
+};
+
+/* REGISTER OF ASSETS FOR IMPRESSIONS / CLICKS / INPUTS (BY ELEMENT IDs)
 
 --------HOME-A--------------------------
 
@@ -18,27 +29,33 @@ X-Impression X-Click
 HomeA-Body-FAQ 
 X-Impression X-Click
 
-Add: HomeA-Body-FindCentre
-X-Impression X-Click
-
-Add: HomeA-Footer-JCAH
+HomeA-Body-FindCentre
 X-Impression X-Click
 
 --------HOME-B--------------------------
 
-Add: HomeB-Body-BookConsultation
+HomeB-Body-BookConsultation
 X-Impression X-Click
 
-Add: HomeB-Body-RequestCall
+HomeB-Body-RequestCall
 X-Impression X-Click
 
-Add: HomeB-Body-FindCentre
+HomeB-Body-FindCentre
 X-Impression X-Click
 
-Add: HomeB-Body-FAQ
+HomeB-Body-FAQ
 X-Impression X-Click
 
-Add: HomeB-Footer-JCAH
+HomeB-Mobile-Body-BookConsultation
+X-Impression X-Click
+
+HomeB-Mobile-Body-RequestCall
+X-Impression X-Click
+
+HomeB-Mobile-Body-FindCentre
+X-Impression X-Click
+
+HomeB-Mobile-Body-FAQ
 X-Impression X-Click
 
 --------GLOBAL-HEADER-------------------
@@ -52,58 +69,50 @@ X-Impression X-Click
 Add: GlobalHeader-CTA-StartLiveChat (class: livechat_button - noID)
 X-Impression X-Click
 
-
 --------GLOBAL-FOOTER-------------------
-Add: Footer-SubscribeToInspire
+mktoForm_1589 [AU+NZ Subscribe Inspire]
+X-Impression X-InputInitiated X-SubmitInitiated
+
+GlobalFooter-IconFacebook
 X-Impression X-Click
 
-Add: Footer-FreeDelivery
+GlobalFooter-IconInstagram
 X-Impression X-Click
 
-Add: Footer-IconFacebook
+GlobalFooter-IconYouTube
 X-Impression X-Click
 
-Add: Footer-IconInstagram
+GlobalFooter-JCAH-Delivery
 X-Impression X-Click
 
-Add: Footer-IconYouTube
+GlobalFooter-IconYouTube
 X-Impression X-Click
+
+GlobalFooter-IconBlog
+X-Impression X-Click
+
 
 --FORM-1------/book-now-ab-------------------
 X-Impression X-InputInitiated X-SubmitInitiated
 
-Add: Form-1-BookNOW-BTest
-Add: Form-1-CTA-Submit
+mktoForm_2257 [AU]
+mktoForm_2258 [NZ]
 
 --FORM-2------/book-now.html-----------------
 X-Impression X-InputInitiated X-SubmitInitiated
 
-Add: Form-2-BookNOW-Origin    
-Add: Form-2-CTA-Submit
+mktoForm_2259 [AU]
+mktoForm_2260 [NZ]
 
 --FORM-3------/start-today.html-----------------
 X-Impression X-InputInitiated X-SubmitInitiated
 
-Add: Form-3-StartToday
-Add: Form-3-CTA-Submit
-
+mktoForm_1579 [AU]
+mktoForm_1626 [NZ]
 
 */
 
-
-
-//SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
-
-window.onload = function() {
-    discoverRegionNPush();
-    addClickListenersGroup();
-    window.addEventListener('scroll', function(){checkForNewImpressions();}, true)
-    document.getElementById('appointmentFunnelTest').addEventListener("input", function (){dataLayerFormInput();} );
-    document.getElementById('appointmentFunnelTest').addEventListener("submit", function (){dataLayerFormSubmit();} );
-};
-
 //FUNCTION: Discover region + dataLayer push
-
 function discoverRegionNPush() {
 
     (function($) {
@@ -121,6 +130,38 @@ function discoverRegionNPush() {
 })(jQuery);
     
 }
+
+/*
+DRUPAL ID COOKIE LOGIC
+push to dataLayer. If missing: create + push to dataLayer
+
+function cookieDrupalID() {
+console.log("STARTING COOKIE MONSTER");
+    
+    //Check if cookie exists. Return Cookie-value or null.
+    value_or_null = (document.cookie.match(/^(?:.*;)?\s*MyCookie\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
+    //If cookie exists push it's value to dataLayer
+    if (value_or_null == null) {
+        console.log("COOKIE EXISTS"); 
+                
+        //push to dataLayer
+        dataLayer.push({
+            'userSegment' = 'New',
+            'userid' = String(value_or_null);
+        });
+        console.log("COOKIE VALUE HAS BEEN PUSHED TO DATALAYER"); 
+
+    } 
+    //If cookie does not exist plant cookie and repeat function
+    console.log("COOKIE DOES NOT EXIST");
+     if (value_or_null === null) {
+
+        //TODO --- plant cookie 
+        drupalIDCookie();
+
+    }
+*/
+    
 //LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
 function addClickListenersGroup(){
@@ -145,6 +186,11 @@ function checkForNewImpressions() {
    if (isElementInViewport(document.getElementById("e-ec-testButton1")) === true && count01 === true) {dataLayerAssetImpression01();}
    if (isElementInViewport(document.getElementById("e-ec-testButton2")) === true && count02 === true) {dataLayerAssetImpression02();}
    if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {dataLayerAssetImpression03();}
+
+   //below are new
+
+   if (isElementInViewport(document.getElementById("e-ec-testButton3")) === true && count03 === true) {dataLayerAssetImpression03();}
+
 }
 
 //FUNCTION: Determine if an element is in the visible viewport
@@ -158,7 +204,6 @@ function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (
 function dataLayerAssetImpression01 () {
         if (count01 === true) {
         
-     
                 dataLayer.push({
                     'event': 'productImpressions',
                     'ecommerce': {
@@ -375,4 +420,7 @@ function dataLayerFormSubmit() {
         formCount02 = false;
     }    
 }
+
+
+
 
