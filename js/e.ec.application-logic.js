@@ -12,136 +12,132 @@ window.onload = function() {
 
 /* REGISTER OF ASSETS FOR IMPRESSIONS / CLICKS / INPUTS (BY ELEMENT IDs)
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 HOME-A
------------------------------------------------------------------------------------------------------------------
-DOM ELEMENT-ID                  | Impression Function Name              |  Click Function Name
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                       | Impression Function Name                    |  Click Function Name
+-------------------------------------------------------------------------------------------------------------------------
 
-HomeA-CTA-Hero-BookConsultation | HomeA_CTA_Hero_BookConsultation_IMPSN | xHomeA_CTA_Hero_BookConsultation_CLK
+HomeA-CTA-Hero-BookConsultation      | HomeA_CTA_Hero_BookConsultation_IMPSN       | HomeA_CTA_Hero_BookConsultation_CLK
+X-Impression X-Click 
+
+HomeA-CTA-Hero-RequestCall           | HomeA_CTA_Hero_RequestCall_IMPSN            | HomeA_CTA_Hero_RequestCall_CLK
 X-Impression X-Click
 
-HomeA-CTA-Hero-RequestCall      | HomeA_CTA_Hero_RequestCall_IMPSN      | xHomeA_CTA_Hero_RequestCall_CLK
+HomeA-Body-BookConsultation          | HomeA_Body_BookConsultation_IMPSN           | HomeA_Body_BookConsultation_CLK
 X-Impression X-Click
 
-HomeA-Body-BookConsultation     | HomeA_Body_BookConsultation_IMPSN     | xHomeA_Body_BookConsultation_CLK
+HomeA-Body-RequestCall               | HomeA_Body_RequestCall_IMPSN                | HomeA_Body_RequestCall_CLK
 X-Impression X-Click
 
-HomeA-Body-RequestCall          | HomeA_Body_RequestCall_IMPSN          | xHomeA_Body_RequestCall_CLK
+HomeA-Body-FAQ                       | HomeA_Body_FAQ_IMPSN                        | HomeA_Body_FAQ_CLK
 X-Impression X-Click
 
-HomeA-Body-FAQ                  | HomeA_Body_FAQ_IMPSN                  | xHomeA_Body_FAQ_CLK
+HomeA-Body-FindCentre                | HomeA_Body_FindCentre_IMPSN                 | HomeA_Body_FindCentre_CLK
 X-Impression X-Click
 
-HomeA-Body-FindCentre           | HomeA_Body_FindCentre_IMPSN           | xHomeA_Body_FindCentre_CLK
-X-Impression X-Click
-
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 HOME-B
------------------------------------------------------------------------------------------------------------------
-DOM ELEMENT-ID                    | Impression Function Name                 | Click Function Name
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                       | Impression Function Name                    | Click Function Name
+-------------------------------------------------------------------------------------------------------------------------  
 
-HomeB-Body-BookConsultation       | HomeB_Body_BookConsultation_IMPSN        | xHomeB_Body_BookConsultation_CLK
+HomeB-Body-BookConsultation          | HomeB_Body_BookConsultation_IMPSN           | HomeB_Body_BookConsultation_CLK
 X-Impression X-Click
 
-HomeB-Body-RequestCall            | HomeB_Body_RequestCall_IMPSN             | xHomeB_Body_RequestCall_CLK
+HomeB-Body-RequestCall               | HomeB_Body_RequestCall_IMPSN                | HomeB_Body_RequestCall_CLK
 X-Impression X-Click
 
-HomeB-Body-FindCentre             | HomeB_Body_FindCentre_IMPSN              | xHomeB_Body_FindCentre_CLK
+HomeB-Body-FindCentre                | HomeB_Body_FindCentre_IMPSN                 | HomeB_Body_FindCentre_CLK
 X-Impression X-Click
 
-HomeB-Body-FAQ                    | HomeB_Body_FAQ_IMPSN                     | xHomeB_Body_FAQ_CLK
+HomeB-Body-FAQ                       | HomeB_Body_FAQ_IMPSN                        | HomeB_Body_FAQ_CLK
 X-Impression X-Click
 
-HomeB-Mob-Body-BookConsultation   | HomeB_Mob_Body_BookConsultation_IMPSN    | xHomeB_Mob_Body_BookConsultation_CLK
+HomeB-Mob-Body-BookConsultation      | HomeB_Mob_Body_BookConsultation_IMPSN       | HomeB_Mob_Body_BookConsultation_CLK
 X-Impression X-Click
 
-HomeB-Mob-Body-RequestCall        | HomeB_Mob_Body_RequestCall_IMPSN         | HomeB_Mob_Body_RequestCall_CLK
+HomeB-Mob-Body-RequestCall           | HomeB_Mob_Body_RequestCall_IMPSN            | HomeB_Mob_Body_RequestCall_CLK
 X-Impression X-Click
   
-HomeB-Mob-Body-FindCentre         | HomeB_Mob_Body_FindCentre_IMPSN          | xHomeB_Mob_Body_FindCentre_CLK
+HomeB-Mob-Body-FindCentre            | HomeB_Mob_Body_FindCentre_IMPSN             | HomeB_Mob_Body_FindCentre_CLK
 X-Impression X-Click
 
-HomeB-Mob-Body-FAQ                | HomeB_Mob_Body_FAQ_IMPSN                 | xHomeB_Mob_Body_FAQ_CLK
+HomeB-Mob-Body-FAQ                   | HomeB_Mob_Body_FAQ_IMPSN                    | HomeB_Mob_Body_FAQ_CLK
 X-Impression X-Click
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 GLOBAL HEADER
------------------------------------------------------------------------------------------------------------------
-DOM ELEMENT-ID                       | Impression Function Name                | Click Function Name
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                       | Impression Function Name                    | Click Function Name
+-------------------------------------------------------------------------------------------------------------------------  
 
-GlobalHeader-CTA-StartNowOrange      | GlobalHeader_CTA_StartNowOrange_IMPSN   | xGlobalHeader_CTA_StartNowOrange_CLK
+GlobalHeader-CTA-StartNowOrange      | GlobalHeader_CTA_StartNowOrange_IMPSN       | GlobalHeader_CTA_StartNowOrange_CLK
 X-Impression X-Click
 
-GlobalHeader-CTA-ClickToCall         | GlobalHeader_CTA_ClickToCall_IMPSN      | xGlobalHeader_CTA_ClickToCall_CLK
+GlobalHeader-CTA-ClickToCall         | GlobalHeader_CTA_ClickToCall_IMPSN          | GlobalHeader_CTA_ClickToCall_CLK
 X-Impression X-Click
 
-GlobalHeader-CTA-StartLiveChat       | GlobalHeader_CTA_StartLiveChat_IMPSN    | xGlobalHeader_CTA_StartLiveChat_CLK
+GlobalHeader-CTA-StartLiveChat       | GlobalHeader_CTA_StartLiveChat_IMPSN        | GlobalHeader_CTA_StartLiveChat_CLK
 X-Impression X-Click
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 GLOBAL FOOTER
------------------------------------------------------------------------------------------------------------------
-DOM ELEMENT-ID                       | Impression Function Name                  | Click Function Name
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------
+DOM ELEMENT-ID                       | Impression Function Name                    | Click Function Name
+-------------------------------------------------------------------------------------------------------------------------  
 
-GlobalFooter-IconFacebook            | GlobalFooter_IconFacebook_IMPSN          | xGlobalFooter_IconFacebook_CLK
+GlobalFooter-IconFacebook            | GlobalFooter_IconFacebook_IMPSN             | GlobalFooter_IconFacebook_CLK
 X-Impression X-Click
 
-GlobalFooter-IconInstagram           | GlobalFooter_IconInstagram_IMPSN         | xGlobalFooter_IconInstagram_CLK
+GlobalFooter-IconInstagram           | GlobalFooter_IconInstagram_IMPSN            | GlobalFooter_IconInstagram_CLK
 X-Impression X-Click
 
-GlobalFooter-IconYouTube             | GlobalFooter_IconYouTube_IMPSN           | xGlobalFooter_IconYouTube_CLK
+GlobalFooter-IconYouTube             | GlobalFooter_IconYouTube_IMPSN              | GlobalFooter_IconYouTube_CLK
 X-Impression X-Click
 
-GlobalFooter-JCAH-Delivery           | GlobalFooter_JCAH_Delivery_IMPSN         | xGlobalFooter_JCAH_Delivery_CLK
+GlobalFooter-JCAH-Delivery           | GlobalFooter_JCAH_Delivery_IMPSN            | GlobalFooter_JCAH_Delivery_CLK
 X-Impression X-Click
 
-GlobalFooter-IconBlog                | GlobalFooter_IconBlog_IMPSN              | xGlobalFooter_IconBlog_CLK
+GlobalFooter-IconBlog                | GlobalFooter_IconBlog_IMPSN                 | GlobalFooter_IconBlog_CLK
 X-Impression X-Click
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 CONVERSION FORMS 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 FORM #1 /book-now-ab
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 ELEMENT-ID            | Impression Function   | OnFocus Function     | Submit Function             
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------  
 
 mktoForm_2257 [au]    |  mktoForm_2257_IMPSN  | xmktoForm_2257_Focus | xmktoForm_2257_Submit                
 mktoForm_2258 [nz]    |  mktoForm_2258_IMPSN  | xmktoForm_2258_Focus | xmktoForm_2258_Submit 
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 FORM #2 /book-now.html
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 ELEMENT-ID            | Impression Function   | OnFocus Function     | Submit Function             
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------  
 
 mktoForm_2259 [au]    |  mktoForm_2259_IMPSN  | xmktoForm_2259_Focus | xmktoForm_2259_Submit                
 mktoForm_2260 [nz]    |  mktoForm_2260_IMPSN  | xmktoForm_2260_Focus | xmktoForm_2260_Submit 
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 FORM #3 /start-today.html
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 ELEMENT-ID            | Impression Function   | OnFocus Function     | Submit Function             
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------  
 
 mktoForm_1579 [au]    |  mktoForm_1579_IMPSN  | xmktoForm_1579_Focus | xmktoForm_1579_Submit                
 mktoForm_1626 [nz]    |  mktoForm_1626_IMPSN  | xmktoForm_1626_Focus | xmktoForm_1626_Submit 
 
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 FORM #4 Subscribe to Inspire Magazine
------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 ELEMENT-ID            | Impression Function   | OnFocus Function      | Submit Function             
------------------------------------------------------------------------------------------------------------------  
+-------------------------------------------------------------------------------------------------------------------------  
 
 mktoForm_1589 [au&nz] |  mktoForm_1589_IMPSN  | xmktoForm_1589_Focus | xmktoForm_1589_Submit                
-
-
-               
-
 
 
 */
@@ -203,7 +199,7 @@ console.log("STARTING COOKIE MONSTER");
 
 function addClickListenersGroup(){
         
-//Home A - Clicks
+//Home A - Clicks listeners
 
   document.getElementById("HomeA-CTA-Hero-BookConsultation").addEventListener("click",HomeA_CTA_Hero_BookConsultation_CLK,!1);
   document.getElementById("HomeA-CTA-Hero-RequestCall").addEventListener("click",HomeA_CTA_Hero_RequestCall_CLK,!1);
@@ -212,7 +208,7 @@ function addClickListenersGroup(){
   document.getElementById("HomeA-Body-FAQ").addEventListener("click",HomeA_Body_FAQ_CLK,!1);
   document.getElementById("HomeA-Body-FindCentre").addEventListener("click",HomeA_Body_FindCentre_CLK,!1);
 
-//Home B - Clicks
+//Home B - Clicks listeners
 
   document.getElementById("HomeB-Body-BookConsultation").addEventListener("click",HomeB_Body_BookConsultation_CLK,!1);
   document.getElementById("HomeB-Body-RequestCall").addEventListener("click",HomeB_Body_RequestCall_CLK,!1);
@@ -223,13 +219,13 @@ function addClickListenersGroup(){
   document.getElementById("HomeB-Mob-Body-FindCentre").addEventListener("click",HomeB_Mob_Body_FindCentre_CLK,!1);
   document.getElementById("HomeB-Mob-Body-FAQ").addEventListener("click",HomeB_Mob_Body_FAQ_CLK,!1);
 
-//Global Header - Clicks
+//Global Header - Clicks listeners
 
   document.getElementById("GlobalHeader-CTA-StartNowOrange").addEventListener("click",GlobalHeader_CTA_StartNowOrange_CLK,!1);
   document.getElementById("GlobalHeader-CTA-ClickToCall").addEventListener("click",GlobalHeader_CTA_ClickToCall_CLK,!1);
   document.getElementById("GlobalHeader-CTA-StartLiveChat").addEventListener("click",GlobalHeader_CTA_StartLiveChat_CLK,!1);
 
-//Global Footer - Clicks
+//Global Footer - Clicks listeners
 
   document.getElementById("GlobalFooter-IconFacebook").addEventListener("click",GlobalFooter_IconFacebook_CLK,!1);
   document.getElementById("GlobalFooter-IconInstagram").addEventListener("click",GlobalFooter_IconInstagram_CLK,!1);
@@ -303,7 +299,7 @@ function checkForNewImpressions() {
 /* Impression logic re-written to fit in one line for readability. Previous longer version below.
 if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation")) === true && count01 === true) {HomeA_CTA_Hero_BookConsultation_IMPSN();} */
 
-//Home A - Impressions
+//Home A - Impression listeners
 
   isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN();
   isElementInViewport(document.getElementById("HomeA-CTA-Hero-RequestCall"))===!0&&count02===!0&&HomeA_CTA_Hero_RequestCall_IMPSN();
@@ -312,7 +308,7 @@ if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation
   isElementInViewport(document.getElementById("HomeA-Body-FAQ"))===!0&&count05===!0&&HomeA_Body_FAQ_IMPSN();
   isElementInViewport(document.getElementById("HomeA-Body-FindCentre"))===!0&&count06===!0&&HomeA_Body_FindCentre_IMPSN();
 
-//Home B - Impressions
+//Home B - Impression listeners
 
   isElementInViewport(document.getElementById("HomeB-Body-BookConsultation"))===!0&&count07===!0&&HomeB_Body_BookConsultation_IMPSN();
   isElementInViewport(document.getElementById("HomeB-Body-RequestCall"))===!0&&count08===!0&&HomeB_Body_RequestCall_IMPSN();
@@ -322,13 +318,13 @@ if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation
   isElementInViewport(document.getElementById("HomeB-Mob-Body-FindCentre"))===!0&&count12===!0&&HomeB_Mob_Body_FindCentre_IMPSN();
   isElementInViewport(document.getElementById("HomeB-Mob-Body-FAQ"))===!0&&count13===!0&&HomeB_Mob_Body_FAQ_IMPSN();
 
-//Global Header - Impressions
+//Global Header - Impression listeners
 
   isElementInViewport(document.getElementById("GlobalHeader-CTA-StartNowOrange"))===!0&&count14===!0&&GlobalHeader_CTA_StartNowOrange_IMPSN();
   isElementInViewport(document.getElementById("GlobalHeader-CTA-ClickToCall"))===!0&&count15===!0&&GlobalHeader_CTA_ClickToCall_IMPSN();
   isElementInViewport(document.getElementById("GlobalHeader-CTA-StartLiveChat"))===!0&&count16===!0&&GlobalHeader_CTA_StartLiveChat_IMPSN();
 
-//Global Footer - Impressions
+//Global Footer - Impression listeners
 
   isElementInViewport(document.getElementById("GlobalFooter-IconFacebook"))===!0&&count17===!0&&GlobalFooter_IconFacebook_IMPSN();
   isElementInViewport(document.getElementById("GlobalFooter-IconInstagram"))===!0&&count18===!0&&GlobalFooter_IconInstagram_IMPSN();
@@ -336,26 +332,30 @@ if (isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation
   isElementInViewport(document.getElementById("GlobalFooter-JCAH-Delivery"))===!0&&count20===!0&&GlobalFooter_JCAH_Delivery_IMPSN();
   isElementInViewport(document.getElementById("GlobalFooter-IconBlog"))===!0&&count21===!0&&GlobalFooter_IconBlog_IMPSN();
 
-//Form 1 Impressions
+//Form 1 Impression listeners
 
   isElementInViewport(document.getElementById("mktoForm_2257"))===!0&&count22===!0&&mktoForm_2257_IMPSN();
   isElementInViewport(document.getElementById("mktoForm_2258"))===!0&&count23===!0&&mktoForm_2258_IMPSN();
 
-//Form 2 Impressions
+//Form 2 Impression listeners
 
   isElementInViewport(document.getElementById("mktoForm_2259"))===!0&&count24===!0&&mktoForm_2259_IMPSN();
   isElementInViewport(document.getElementById("mktoForm_2260"))===!0&&count25===!0&&mktoForm_2260_IMPSN();
 
-//Form 3 Impressions
+//Form 3 Impression listeners
 
   isElementInViewport(document.getElementById("mktoForm_1579"))===!0&&count26===!0&&mktoForm_1579_IMPSN();
   isElementInViewport(document.getElementById("mktoForm_1626"))===!0&&count27===!0&&mktoForm_1626_IMPSN();
 
-//Form 4 Impressions
+//Form 4 Impression listeners
 
   isElementInViewport(document.getElementById("mktoForm_1589"))===!0&&count28===!0&&mktoForm_1589_IMPSN();
     
 }
+
+//////////////////////////
+//START IMPRESSION FUNCTIONS
+//////////////////////////
 
 
 //IMPRESSION FUNCTIONS - HOME-A
@@ -527,6 +527,147 @@ function mktoForm_1589_IMPSN() {
 //////////////////////////
 //END IMPRESSION FUNCTIONS
 //////////////////////////
+
+
+
+
+
+
+
+//////////////////////////
+//START CLICK FUNCTIONS
+//////////////////////////
+
+
+
+//CLICK FUNCTIONS - HOME-A
+function HomeA_CTA_Hero_BookConsultation_CLK() {
+    
+
+}
+
+function HomeA_CTA_Hero_RequestCall_CLK() {
+    
+
+}
+
+function HomeA_Body_BookConsultation_CLK() {
+    
+
+}
+
+function HomeA_Body_RequestCall_CLK() {
+    
+
+}
+
+function HomeA_Body_FAQ_CLK() {
+    
+
+}
+
+function HomeA_Body_FindCentre_CLK() {
+    
+
+}
+
+
+
+//CLICK FUNCTIONS - HOME-B
+
+function HomeB_Body_BookConsultation_CLK() {
+    
+
+}
+
+function HomeB_Body_RequestCall_CLK() {
+    
+
+}
+
+function HomeB_Body_FindCentre_CLK() {
+    
+
+}
+
+function HomeB_Body_FAQ_CLK() {
+    
+
+}
+
+function HomeB_Mob_Body_BookConsultation_CLK() {
+    
+
+}
+
+function HomeB_Mob_Body_RequestCall_CLK() {
+    
+
+}
+
+function HomeB_Mob_Body_FindCentre_CLK() {
+    
+
+}
+
+function HomeB_Mob_Body_FAQ_CLK() {
+    
+
+}
+
+
+//CLICK FUNCTIONS - GLOBAL HEADER
+
+function GlobalHeader_CTA_StartNowOrange_CLK() {
+    
+
+}
+
+function GlobalHeader_CTA_ClickToCall_CLK() {
+    
+
+}
+
+function GlobalHeader_CTA_StartLiveChat_CLK() {
+    
+
+}
+
+
+//CLICK FUNCTIONS - GLOBAL FOOTER
+
+function GlobalFooter_IconFacebook_CLK() {
+    
+
+}
+
+function GlobalFooter_IconInstagram_CLK() {
+    
+
+}
+
+function GlobalFooter_IconYouTube_CLK() {
+    
+
+}
+
+function GlobalFooter_JCAH_Delivery_CLK() {
+    
+
+}
+
+function GlobalFooter_IconBlog_CLK() {
+    
+
+}
+
+
+//////////////////////////
+//END CLICK FUNCTIONS
+//////////////////////////
+
+
+
 
 //FUNCTION: Determine if an element is in the visible viewport
 function isElementInViewport(el) {var rect = el.getBoundingClientRect();return (rect.top >= 0 && rect.left >= 0 && rect.bottom
@@ -755,6 +896,7 @@ function dataLayerFormSubmit() {
         formCount02 = false;
     }    
 }
+
 
 
 
