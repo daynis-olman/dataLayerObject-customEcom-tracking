@@ -1,3 +1,97 @@
+/* REGISTER OF ASSETS FOR IMPRESSIONS / CLICKS / INPUTS (BY ELEMENT IDs)
+
+
+--------HOME-A--------------------------
+
+HomeA-CTA-Hero-BookConsultation
+X-Impression X-Click
+
+HomeA-CTA-Hero-RequestCall
+X-Impression X-Click
+
+HomeA-Body-BookConsultation
+X-Impression X-Click
+
+HomeA-Body-RequestCall
+X-Impression X-Click
+
+HomeA-Body-FAQ 
+X-Impression X-Click
+
+Add: HomeA-Body-FindCentre
+X-Impression X-Click
+
+Add: HomeA-Footer-JCAH
+X-Impression X-Click
+
+--------HOME-B--------------------------
+
+Add: HomeB-Body-BookConsultation
+X-Impression X-Click
+
+Add: HomeB-Body-RequestCall
+X-Impression X-Click
+
+Add: HomeB-Body-FindCentre
+X-Impression X-Click
+
+Add: HomeB-Body-FAQ
+X-Impression X-Click
+
+Add: HomeB-Footer-JCAH
+X-Impression X-Click
+
+--------GLOBAL-HEADER-------------------
+
+Add: GlobalHeader-CTA-StartNowOrange
+X-Impression X-Click
+
+Add: GlobalHeader-CTA-ClickToCall (class: click-to-call - noID)
+X-Impression X-Click
+
+Add: GlobalHeader-CTA-StartLiveChat (class: livechat_button - noID)
+X-Impression X-Click
+
+
+--------GLOBAL-FOOTER-------------------
+Add: Footer-SubscribeToInspire
+X-Impression X-Click
+
+Add: Footer-FreeDelivery
+X-Impression X-Click
+
+Add: Footer-IconFacebook
+X-Impression X-Click
+
+Add: Footer-IconInstagram
+X-Impression X-Click
+
+Add: Footer-IconYouTube
+X-Impression X-Click
+
+--FORM-1------/book-now-ab-------------------
+X-Impression X-InputInitiated X-SubmitInitiated
+
+Add: Form-1-BookNOW-BTest
+Add: Form-1-CTA-Submit
+
+--FORM-2------/book-now.html-----------------
+X-Impression X-InputInitiated X-SubmitInitiated
+
+Add: Form-2-BookNOW-Origin    
+Add: Form-2-CTA-Submit
+
+--FORM-3------/start-today.html-----------------
+X-Impression X-InputInitiated X-SubmitInitiated
+
+Add: Form-3-StartToday
+Add: Form-3-CTA-Submit
+
+
+*/
+
+
+
 //SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
 window.onload = function() {
