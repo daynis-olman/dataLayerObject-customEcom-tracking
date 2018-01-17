@@ -15,65 +15,64 @@ HOME-A
 DOM ELEMENT-ID                       | Impression Function Name                    |  Click Function Name
 -------------------------------------------------------------------------------------------------------------------------
 HomeA-CTA-Hero-BookConsultation      | HomeA_CTA_Hero_BookConsultation_IMPSN       | HomeA_CTA_Hero_BookConsultation_CLK
-X-Impression X-Click 
+
 HomeA-CTA-Hero-RequestCall           | HomeA_CTA_Hero_RequestCall_IMPSN            | HomeA_CTA_Hero_RequestCall_CLK
-X-Impression X-Click
+
 HomeA-Body-BookConsultation          | HomeA_Body_BookConsultation_IMPSN           | HomeA_Body_BookConsultation_CLK
-X-Impression X-Click
+
 HomeA-Body-RequestCall               | HomeA_Body_RequestCall_IMPSN                | HomeA_Body_RequestCall_CLK
-X-Impression X-Click
+
 HomeA-Body-FAQ                       | HomeA_Body_FAQ_IMPSN                        | HomeA_Body_FAQ_CLK
-X-Impression X-Click
+
 HomeA-Body-FindCentre                | HomeA_Body_FindCentre_IMPSN                 | HomeA_Body_FindCentre_CLK
-X-Impression X-Click
+
 -------------------------------------------------------------------------------------------------------------------------
 HOME-B
 -------------------------------------------------------------------------------------------------------------------------
 DOM ELEMENT-ID                       | Impression Function Name                    | Click Function Name
 -------------------------------------------------------------------------------------------------------------------------  
 HomeB-Body-BookConsultation          | HomeB_Body_BookConsultation_IMPSN           | HomeB_Body_BookConsultation_CLK
-X-Impression X-Click
+
 HomeB-Body-RequestCall               | HomeB_Body_RequestCall_IMPSN                | HomeB_Body_RequestCall_CLK
-X-Impression X-Click
+
 HomeB-Body-FindCentre                | HomeB_Body_FindCentre_IMPSN                 | HomeB_Body_FindCentre_CLK
-X-Impression X-Click
+
 HomeB-Body-FAQ                       | HomeB_Body_FAQ_IMPSN                        | HomeB_Body_FAQ_CLK
-X-Impression X-Click
+
 HomeB-Mob-Body-BookConsultation      | HomeB_Mob_Body_BookConsultation_IMPSN       | HomeB_Mob_Body_BookConsultation_CLK
-X-Impression X-Click
+
 HomeB-Mob-Body-RequestCall           | HomeB_Mob_Body_RequestCall_IMPSN            | HomeB_Mob_Body_RequestCall_CLK
-X-Impression X-Click
   
 HomeB-Mob-Body-FindCentre            | HomeB_Mob_Body_FindCentre_IMPSN             | HomeB_Mob_Body_FindCentre_CLK
-X-Impression X-Click
+
 HomeB-Mob-Body-FAQ                   | HomeB_Mob_Body_FAQ_IMPSN                    | HomeB_Mob_Body_FAQ_CLK
-X-Impression X-Click
+
 -------------------------------------------------------------------------------------------------------------------------
 GLOBAL HEADER
 -------------------------------------------------------------------------------------------------------------------------
 DOM ELEMENT-ID                       | Impression Function Name                    | Click Function Name
 -------------------------------------------------------------------------------------------------------------------------  
 GlobalHeader-CTA-StartNowOrange      | GlobalHeader_CTA_StartNowOrange_IMPSN       | GlobalHeader_CTA_StartNowOrange_CLK
-X-Impression X-Click
+
 GlobalHeader-CTA-ClickToCall         | GlobalHeader_CTA_ClickToCall_IMPSN          | GlobalHeader_CTA_ClickToCall_CLK
-X-Impression X-Click
+
 GlobalHeader-CTA-StartLiveChat       | GlobalHeader_CTA_StartLiveChat_IMPSN        | GlobalHeader_CTA_StartLiveChat_CLK
-X-Impression X-Click
+
 -------------------------------------------------------------------------------------------------------------------------
 GLOBAL FOOTER
 -------------------------------------------------------------------------------------------------------------------------
 DOM ELEMENT-ID                       | Impression Function Name                    | Click Function Name
 -------------------------------------------------------------------------------------------------------------------------  
 GlobalFooter-IconFacebook            | GlobalFooter_IconFacebook_IMPSN             | GlobalFooter_IconFacebook_CLK
-X-Impression X-Click
+
 GlobalFooter-IconInstagram           | GlobalFooter_IconInstagram_IMPSN            | GlobalFooter_IconInstagram_CLK
-X-Impression X-Click
+
 GlobalFooter-IconYouTube             | GlobalFooter_IconYouTube_IMPSN              | GlobalFooter_IconYouTube_CLK
-X-Impression X-Click
+
 GlobalFooter-JCAH-Delivery           | GlobalFooter_JCAH_Delivery_IMPSN            | GlobalFooter_JCAH_Delivery_CLK
-X-Impression X-Click
+
 GlobalFooter-IconBlog                | GlobalFooter_IconBlog_IMPSN                 | GlobalFooter_IconBlog_CLK
-X-Impression X-Click
+
 -------------------------------------------------------------------------------------------------------------------------
 CONVERSION FORMS 
 -------------------------------------------------------------------------------------------------------------------------
