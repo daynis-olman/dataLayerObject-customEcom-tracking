@@ -416,30 +416,36 @@ function HomeA_CTA_Hero_BookConsultation_IMPSN() {
     
     console.log("impression trigger success!");
 
+    count01=!1; // set counter to false
 }
 
 function HomeA_CTA_Hero_RequestCall_IMPSN() {
     
+    count02=!1; // set counter to false
 
 }
 
 function HomeA_Body_BookConsultation_IMPSN() {
     
+    count03=!1; // set counter to false
 
 }
 
 function HomeA_Body_RequestCall_IMPSN() {
     
+    count04=!1; // set counter to false
 
 }
 
 function HomeA_Body_FAQ_IMPSN() {
     
+    count05=!1; // set counter to false
 
 }
 
 function HomeA_Body_FindCentre_IMPSN() {
     
+    count06=!1; // set counter to false
 
 }
 
@@ -449,41 +455,49 @@ function HomeA_Body_FindCentre_IMPSN() {
 
 function HomeB_Body_BookConsultation_IMPSN() {
     
+    count07=!1; // set counter to false
 
 }
 
 function HomeB_Body_RequestCall_IMPSN() {
     
+    count08=!1; // set counter to false
 
 }
 
 function HomeB_Body_FindCentre_IMPSN() {
     
+    count09=!1; // set counter to false
 
 }
 
 function HomeB_Body_FAQ_IMPSN() {
     
+    count10=!1; // set counter to false
 
 }
 
 function HomeB_Mob_Body_BookConsultation_IMPSN() {
     
+    count11=!1; // set counter to false
 
 }
 
 function HomeB_Mob_Body_RequestCall_IMPSN() {
     
+    count12=!1; // set counter to false
 
 }
 
 function HomeB_Mob_Body_FindCentre_IMPSN() {
     
+    count12=!1; // set counter to false
 
 }
 
 function HomeB_Mob_Body_FAQ_IMPSN() {
     
+    count13=!1; // set counter to false
 
 }
 
@@ -492,16 +506,19 @@ function HomeB_Mob_Body_FAQ_IMPSN() {
 
 function GlobalHeader_CTA_StartNowOrange_IMPSN() {
     
+    count14=!1; // set counter to false
 
 }
 
 function GlobalHeader_CTA_ClickToCall_IMPSN() {
     
+    count15=!1; // set counter to false
 
 }
 
 function GlobalHeader_CTA_StartLiveChat_IMPSN() {
     
+    count16=!1; // set counter to false
 
 }
 
@@ -510,26 +527,31 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
 
 function GlobalFooter_IconFacebook_IMPSN() {
     
+    count17=!1; // set counter to false
 
 }
 
 function GlobalFooter_IconInstagram_IMPSN() {
     
+    count18=!1; // set counter to false
 
 }
 
 function GlobalFooter_IconYouTube_IMPSN() {
     
+    count19=!1; // set counter to false
 
 }
 
 function GlobalFooter_JCAH_Delivery_IMPSN() {
     
+    count20=!1; // set counter to false
 
 }
 
 function GlobalFooter_IconBlog_IMPSN() {
     
+    count21=!1; // set counter to false
 
 }
 
@@ -539,11 +561,13 @@ function GlobalFooter_IconBlog_IMPSN() {
 
 function mktoForm_2257_IMPSN() {
     
+    count22=!1; // set counter to false
 
 }
 
 function mktoForm_2258_IMPSN() {
     
+    count23=!1; // set counter to false
 
 }
 
@@ -551,11 +575,13 @@ function mktoForm_2258_IMPSN() {
 
 function mktoForm_2259_IMPSN() {
     
+    count24=!1; // set counter to false
 
 }
 
 function mktoForm_2260_IMPSN() {
     
+    count25=!1; // set counter to false
 
 }
 
@@ -563,11 +589,13 @@ function mktoForm_2260_IMPSN() {
 
 function mktoForm_1579_IMPSN() {
     
+    count26=!1; // set counter to false
 
 }
 
 function mktoForm_1626_IMPSN() {
     
+    count27=!1; // set counter to false
 
 }
 
@@ -575,6 +603,7 @@ function mktoForm_1626_IMPSN() {
 
 function mktoForm_1589_IMPSN() {
     
+    count28=!1; // set counter to false
 
 }
 
