@@ -126,6 +126,7 @@ function discoverRegionNPush() {
 //Discover Page URL + store as String
 var currentUrl = window.location.href;
 
+
 /*
 DRUPAL ID COOKIE LOGIC
 push to dataLayer. If missing: create + push to dataLayer
@@ -1176,43 +1177,139 @@ function mktoForm_1589_IMPSN() {
 //CLICK FUNCTIONS - HOME-A
 function HomeA_CTA_Hero_BookConsultation_CLK() {
 
-   //INSERT dataLayer.push here
-    
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeA_CTA_Hero_BookConsultation',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 }
 
 function HomeA_CTA_Hero_RequestCall_CLK() {
     
-   //INSERT dataLayer.push here
-
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeA_CTA_Hero_RequestCall',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 }
 
 function HomeA_Body_BookConsultation_CLK() {
     
-   //INSERT dataLayer.push here
-
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeA_Body_BookConsultation',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 }
 
 function HomeA_Body_RequestCall_CLK() {
     
-   //INSERT dataLayer.push here
-
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeA_Body_RequestCall',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 }
 
 function HomeA_Body_FAQ_CLK() {
     
-   //INSERT dataLayer.push here
-
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeA_Body_FAQ',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 }
 
 function HomeA_Body_FindCentre_CLK() {
     
-   //INSERT dataLayer.push here
-
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeA_Body_FindCentre',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 }
 
@@ -1222,56 +1319,192 @@ function HomeA_Body_FindCentre_CLK() {
 
 function HomeB_Body_BookConsultation_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Body_BookConsultation',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function HomeB_Body_RequestCall_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Body_RequestCall',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function HomeB_Body_FindCentre_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Body_FindCentre',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
-
+    
 }
 
 function HomeB_Body_FAQ_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Body_FAQ',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function HomeB_Mob_Body_BookConsultation_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Mob_Body_BookConsultation',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function HomeB_Mob_Body_RequestCall_CLK() {
 
-   //INSERT dataLayer.push here
-    
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Mob_Body_RequestCall',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
+    
 }
 
 function HomeB_Mob_Body_FindCentre_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Mob_Body_FindCentre',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function HomeB_Mob_Body_FAQ_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'HomeB_Mob_Body_FAQ',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
@@ -1281,21 +1514,72 @@ function HomeB_Mob_Body_FAQ_CLK() {
 
 function GlobalHeader_CTA_StartNowOrange_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalHeader_CTA_StartNowOrange',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function GlobalHeader_CTA_ClickToCall_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalHeader_CTA_ClickToCall',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function GlobalHeader_CTA_StartLiveChat_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalHeader_CTA_StartLiveChat',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
@@ -1305,35 +1589,120 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
 
 function GlobalFooter_IconFacebook_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalFooter_IconFacebook',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function GlobalFooter_IconInstagram_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalFooter_IconInstagram',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function GlobalFooter_IconYouTube_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalFooter_IconYouTube',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function GlobalFooter_JCAH_Delivery_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalFooter_JCAH_Delivery',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
 
 function GlobalFooter_IconBlog_CLK() {
     
-   //INSERT dataLayer.push here
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': '',
+            'click': {
+                'actionField': {'list': currentUrl}, // Same as impression location
+                'products': [{
+                    'name': 'GlobalFooter_IconBlog',
+                    'id': '1',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
 
 
 }
