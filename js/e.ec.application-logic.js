@@ -414,14 +414,48 @@ if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null )
 //IMPRESSION FUNCTIONS - HOME-A
 function HomeA_CTA_Hero_BookConsultation_IMPSN() {
     
-    //INSERT dataLayer.push here
-
-    count01=!1; // set counter to false
+    dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeA_CTA_Hero_BookConsultation',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });   
+    
+count01=!1; // set counter to false
 }
 
 function HomeA_CTA_Hero_RequestCall_IMPSN() {
 
-    //INSERT dataLayer.push here    
+    dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeA_CTA_Hero_RequestCall',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count02=!1; // set counter to false
 
@@ -429,7 +463,24 @@ function HomeA_CTA_Hero_RequestCall_IMPSN() {
 
 function HomeA_Body_BookConsultation_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeA_Body_BookConsultation',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count03=!1; // set counter to false
 
@@ -437,7 +488,24 @@ function HomeA_Body_BookConsultation_IMPSN() {
 
 function HomeA_Body_RequestCall_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeA_Body_RequestCall',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count04=!1; // set counter to false
 
@@ -445,7 +513,24 @@ function HomeA_Body_RequestCall_IMPSN() {
 
 function HomeA_Body_FAQ_IMPSN() {
     
-    //INSERT dataLayer.push here
+     dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeA_Body_FAQ',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count05=!1; // set counter to false
 
@@ -453,7 +538,24 @@ function HomeA_Body_FAQ_IMPSN() {
 
 function HomeA_Body_FindCentre_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeA_Body_FindCentre',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count06=!1; // set counter to false
 
@@ -465,7 +567,24 @@ function HomeA_Body_FindCentre_IMPSN() {
 
 function HomeB_Body_BookConsultation_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Body_BookConsultation',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count07=!1; // set counter to false
 
@@ -473,13 +592,48 @@ function HomeB_Body_BookConsultation_IMPSN() {
 
 function HomeB_Body_RequestCall_IMPSN() {
     
+     dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Body_RequestCall',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
     count08=!1; // set counter to false
 
 }
 
 function HomeB_Body_FindCentre_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Body_FindCentre',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count09=!1; // set counter to false
 
@@ -487,7 +641,24 @@ function HomeB_Body_FindCentre_IMPSN() {
 
 function HomeB_Body_FAQ_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Body_FAQ',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count10=!1; // set counter to false
 
@@ -495,7 +666,24 @@ function HomeB_Body_FAQ_IMPSN() {
 
 function HomeB_Mob_Body_BookConsultation_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Mob_Body_BookConsultation',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count11=!1; // set counter to false
 
@@ -503,7 +691,24 @@ function HomeB_Mob_Body_BookConsultation_IMPSN() {
 
 function HomeB_Mob_Body_RequestCall_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Mob_Body_RequestCall',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count12=!1; // set counter to false
 
@@ -511,7 +716,24 @@ function HomeB_Mob_Body_RequestCall_IMPSN() {
 
 function HomeB_Mob_Body_FindCentre_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Mob_Body_FindCentre',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count12=!1; // set counter to false
 
@@ -519,7 +741,24 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
 
 function HomeB_Mob_Body_FAQ_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'HomeB_Mob_Body_FAQ',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count13=!1; // set counter to false
 
@@ -530,7 +769,24 @@ function HomeB_Mob_Body_FAQ_IMPSN() {
 
 function GlobalHeader_CTA_StartNowOrange_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalHeader_CTA_StartNowOrange',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count14=!1; // set counter to false
 
@@ -538,7 +794,24 @@ function GlobalHeader_CTA_StartNowOrange_IMPSN() {
 
 function GlobalHeader_CTA_ClickToCall_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalHeader_CTA_ClickToCall',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count15=!1; // set counter to false
 
@@ -546,7 +819,24 @@ function GlobalHeader_CTA_ClickToCall_IMPSN() {
 
 function GlobalHeader_CTA_StartLiveChat_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalHeader_CTA_StartLiveChat',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count16=!1; // set counter to false
 
@@ -557,7 +847,24 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
 
 function GlobalFooter_IconFacebook_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalFooter_IconFacebook',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count17=!1; // set counter to false
 
@@ -565,7 +872,24 @@ function GlobalFooter_IconFacebook_IMPSN() {
 
 function GlobalFooter_IconInstagram_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalFooter_IconInstagram',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count18=!1; // set counter to false
 
@@ -573,7 +897,25 @@ function GlobalFooter_IconInstagram_IMPSN() {
 
 function GlobalFooter_IconYouTube_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalFooter_IconYouTube',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
+
 
     count19=!1; // set counter to false
 
@@ -581,7 +923,24 @@ function GlobalFooter_IconYouTube_IMPSN() {
 
 function GlobalFooter_JCAH_Delivery_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalFooter_JCAH_Delivery',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count20=!1; // set counter to false
 
@@ -589,7 +948,24 @@ function GlobalFooter_JCAH_Delivery_IMPSN() {
 
 function GlobalFooter_IconBlog_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'GlobalFooter_IconBlog',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count21=!1; // set counter to false
 
@@ -601,7 +977,24 @@ function GlobalFooter_IconBlog_IMPSN() {
 
 function mktoForm_2257_IMPSN() {
     
-    //INSERT dataLayer.push here
+        dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_2257',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count22=!1; // set counter to false
 
@@ -609,7 +1002,24 @@ function mktoForm_2257_IMPSN() {
 
 function mktoForm_2258_IMPSN() {
 
-   //INSERT dataLayer.push here
+       dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_2258',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count23=!1; // set counter to false
 
@@ -619,7 +1029,24 @@ function mktoForm_2258_IMPSN() {
 
 function mktoForm_2259_IMPSN() {
 
-   //INSERT dataLayer.push here
+       dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_2259',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     
     count24=!1; // set counter to false
@@ -628,7 +1055,24 @@ function mktoForm_2259_IMPSN() {
 
 function mktoForm_2260_IMPSN() {
     
-   //INSERT dataLayer.push here
+       dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_2260',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count25=!1; // set counter to false
 
@@ -638,7 +1082,24 @@ function mktoForm_2260_IMPSN() {
 
 function mktoForm_1579_IMPSN() {
     
-   //INSERT dataLayer.push here
+       dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_1579',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count26=!1; // set counter to false
 
@@ -646,7 +1107,24 @@ function mktoForm_1579_IMPSN() {
 
 function mktoForm_1626_IMPSN() {
     
-   //INSERT dataLayer.push here
+       dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_1626',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count27=!1; // set counter to false
 
@@ -656,7 +1134,24 @@ function mktoForm_1626_IMPSN() {
 
 function mktoForm_1589_IMPSN() {
     
-   //INSERT dataLayer.push here
+       dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': '',
+            'impressions':[
+                {
+                'name': 'mktoForm_1589',
+                'id': '1',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': currentUrl,
+                'position': 1
+                }
+            ]
+        }
+    });       
 
     count28=!1; // set counter to false
 
@@ -853,7 +1348,7 @@ function GlobalFooter_IconBlog_CLK() {
 
 //FUNCTION: Determine if an element is in the visible viewport
 function isElementInViewport(el) {
-  if (!!el) {
+  if (!!el) { 
     var rect = el.getBoundingClientRect();
     return (
       rect.top >= 0 &&
