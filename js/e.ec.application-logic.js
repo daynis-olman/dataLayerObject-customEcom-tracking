@@ -2,7 +2,7 @@
 
 window.onload = function() {
 //  cookieDrupalID(); Cookie logic 
-    discoverRegionNPush();
+    discoverCurrencyPlusRegionNPush();
     checkForNewImpressions(); //check for assets in viewport on pageload
     addClickListenersGroup();
     window.addEventListener('scroll', function(){checkForNewImpressions();}, true);
@@ -104,24 +104,50 @@ ELEMENT-ID            | Impression Function   | OnFocus Function      | Submit F
 mktoForm_1589 [au&nz] |  mktoForm_1589_IMPSN  | xmktoForm_1589_Focus | xmktoForm_1589_Submit                
 */
 
+
+//FUNCTION: Determine if an element is in the visible viewport
+function isElementInViewport(el) {
+  if (!!el) { 
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document. documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document. documentElement.clientWidth)
+    );
+  }
+}
+
+
+//Region-specific currency value stored as string (NZD or AUD, defined by )
+var currencyByRegion = "RussianRuble!"; 
+
+
 //FUNCTION: Discover region + dataLayer push
-function discoverRegionNPush() {
+function discoverCurrencyPlusRegionNPush() {
 
     (function($) {
 // Required to override html content inside a view 
         $(window).load(function() {
             if(window.location.href.indexOf(".co.nz") > -1) {
                 dataLayer.push({'region' : 'NZ'});
+                currencyByRegion = "NZD"; //sets currency value for all events on the page
                 console.log("NZ Region Pushed to Datalayer");
+                console.log("Currency set as NZD");
             }
-            else if(window.location.href.indexOf(".com.au") > -1) { 
+            
+            if(window.location.href.indexOf(".com.au") > -1) { 
                 dataLayer.push({'region' : 'AU'});
+                currencyByRegion = "AUD"; //sets currency value for all events on the page
                 console.log("AU Region Pushed to Datalayer");
-}
-});  
-})(jQuery);
+                console.log("Currency set as AUD");
+            }
+        });  
+    })(jQuery);
     
 }
+
+
 
 //Discover Page URL + store as String
 var currentUrl = window.location.href;
@@ -418,7 +444,7 @@ function HomeA_CTA_Hero_BookConsultation_IMPSN() {
     dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeA_CTA_Hero_BookConsultation',
@@ -442,7 +468,7 @@ function HomeA_CTA_Hero_RequestCall_IMPSN() {
     dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeA_CTA_Hero_RequestCall',
@@ -467,7 +493,7 @@ function HomeA_Body_BookConsultation_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeA_Body_BookConsultation',
@@ -492,7 +518,7 @@ function HomeA_Body_RequestCall_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeA_Body_RequestCall',
@@ -517,7 +543,7 @@ function HomeA_Body_FAQ_IMPSN() {
      dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeA_Body_FAQ',
@@ -542,7 +568,7 @@ function HomeA_Body_FindCentre_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeA_Body_FindCentre',
@@ -571,7 +597,7 @@ function HomeB_Body_BookConsultation_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Body_BookConsultation',
@@ -596,7 +622,7 @@ function HomeB_Body_RequestCall_IMPSN() {
      dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Body_RequestCall',
@@ -620,7 +646,7 @@ function HomeB_Body_FindCentre_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Body_FindCentre',
@@ -645,7 +671,7 @@ function HomeB_Body_FAQ_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Body_FAQ',
@@ -670,7 +696,7 @@ function HomeB_Mob_Body_BookConsultation_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Mob_Body_BookConsultation',
@@ -695,7 +721,7 @@ function HomeB_Mob_Body_RequestCall_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Mob_Body_RequestCall',
@@ -720,7 +746,7 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Mob_Body_FindCentre',
@@ -745,7 +771,7 @@ function HomeB_Mob_Body_FAQ_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'HomeB_Mob_Body_FAQ',
@@ -773,7 +799,7 @@ function GlobalHeader_CTA_StartNowOrange_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalHeader_CTA_StartNowOrange',
@@ -798,7 +824,7 @@ function GlobalHeader_CTA_ClickToCall_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalHeader_CTA_ClickToCall',
@@ -823,7 +849,7 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalHeader_CTA_StartLiveChat',
@@ -851,7 +877,7 @@ function GlobalFooter_IconFacebook_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalFooter_IconFacebook',
@@ -876,7 +902,7 @@ function GlobalFooter_IconInstagram_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalFooter_IconInstagram',
@@ -901,7 +927,7 @@ function GlobalFooter_IconYouTube_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalFooter_IconYouTube',
@@ -927,7 +953,7 @@ function GlobalFooter_JCAH_Delivery_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalFooter_JCAH_Delivery',
@@ -952,7 +978,7 @@ function GlobalFooter_IconBlog_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'GlobalFooter_IconBlog',
@@ -981,7 +1007,7 @@ function mktoForm_2257_IMPSN() {
         dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'mktoForm_2257',
@@ -1033,7 +1059,7 @@ function mktoForm_2259_IMPSN() {
        dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'mktoForm_2259',
@@ -1059,7 +1085,7 @@ function mktoForm_2260_IMPSN() {
        dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'mktoForm_2260',
@@ -1086,7 +1112,7 @@ function mktoForm_1579_IMPSN() {
        dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'mktoForm_1579',
@@ -1111,7 +1137,7 @@ function mktoForm_1626_IMPSN() {
        dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'mktoForm_1626',
@@ -1138,7 +1164,7 @@ function mktoForm_1589_IMPSN() {
        dataLayer.push({
         'event': 'productImpressions',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'impressions':[
                 {
                 'name': 'mktoForm_1589',
@@ -1180,7 +1206,7 @@ function HomeA_CTA_Hero_BookConsultation_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1203,7 +1229,7 @@ function HomeA_CTA_Hero_RequestCall_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1226,7 +1252,7 @@ function HomeA_Body_BookConsultation_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1249,7 +1275,7 @@ function HomeA_Body_RequestCall_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1272,7 +1298,7 @@ function HomeA_Body_FAQ_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1295,7 +1321,7 @@ function HomeA_Body_FindCentre_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1322,7 +1348,7 @@ function HomeB_Body_BookConsultation_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1346,7 +1372,7 @@ function HomeB_Body_RequestCall_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1370,7 +1396,7 @@ function HomeB_Body_FindCentre_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1394,7 +1420,7 @@ function HomeB_Body_FAQ_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1418,7 +1444,7 @@ function HomeB_Mob_Body_BookConsultation_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1442,7 +1468,7 @@ function HomeB_Mob_Body_RequestCall_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1466,7 +1492,7 @@ function HomeB_Mob_Body_FindCentre_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1490,7 +1516,7 @@ function HomeB_Mob_Body_FAQ_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1517,7 +1543,7 @@ function GlobalHeader_CTA_StartNowOrange_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1541,7 +1567,7 @@ function GlobalHeader_CTA_ClickToCall_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1565,7 +1591,7 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1592,7 +1618,7 @@ function GlobalFooter_IconFacebook_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1616,7 +1642,7 @@ function GlobalFooter_IconInstagram_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1640,7 +1666,7 @@ function GlobalFooter_IconYouTube_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1664,7 +1690,7 @@ function GlobalFooter_JCAH_Delivery_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1688,7 +1714,7 @@ function GlobalFooter_IconBlog_CLK() {
    dataLayer.push({
        'event': 'productClick',
         'ecommerce': {
-            'currencyCode': '',
+            'currencyCode': currencyByRegion,
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
@@ -1711,242 +1737,3 @@ function GlobalFooter_IconBlog_CLK() {
 //////////////////////////
 //END CLICK FUNCTIONS
 //////////////////////////
-
-
-
-
-//FUNCTION: Determine if an element is in the visible viewport
-function isElementInViewport(el) {
-  if (!!el) { 
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document. documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document. documentElement.clientWidth)
-    );
-  }
-}
-
-
-//FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #1
-
-function dataLayerAssetImpression01 () {
-        if (count01 === true) {
-        
-                dataLayer.push({
-                    'event': 'productImpressions',
-                    'ecommerce': {
-                        'currencyCode': 'AUD',
-                        'impressions':[
-                            {
-                                'name': 'Asset-Impression-Test-01',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'variant': '',
-                                'list': '/home',
-                                'position': 1
-                            },
-                        ]
-                    }  
-                    });
-        
-            
-        console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #1");
-        count01 = false;
-    }    
-}
-
-//FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #2
-
-function dataLayerAssetImpression02 () {
-        if (count02 === true) {
-        
-            
-                dataLayer.push({
-                    'event': 'productImpressions',
-                    'ecommerce': {
-                        'currencyCode': 'AUD',
-                        'impressions':[
-                            {
-                                'name': 'Asset-Impression-Test-02',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'variant': '',
-                                'list': '/home',
-                                'position': 1
-                            },
-                        ]
-                    }  
-                    });
-        
-            
-        
-        console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #2");
-        count02 = false;
-    }    
-}
-
-//FUNCTION: DataLayer.push - ASSET IMPRESSION TEST #3
-
-function dataLayerAssetImpression03 () {
-    
-        if (count03 === true) {
-        
-     
-                  dataLayer.push({
-                    'event': 'productImpressions',
-                    'ecommerce': {
-                        'currencyCode': 'AUD',
-                        'impressions':[
-                            {
-                                'name': 'Asset-Impression-Test-03',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'variant': '',
-                                'list': '/home',
-                                'position': 1
-                            },
-                        ]
-                    }  
-                    });
-        
-        
-        console.log("Completed: DataLayer.push - ASSET IMPRESSION TEST #3");
-        count03 = false;
-    }    
-}
-
-//FUNCTION: DataLayer.push - CTA Click
-
-function dataLayerProductClick() {
-dataLayer.push({
-    'event': 'productClick',
-    'ecommerce': {
-        'currencyCode': 'AUD', 
-        'click': {
-            'actionField': {'list': '/weight-loss'}, // Same as impression location
-            'products': [{
-                'name': 'Book Consultation - CTA Click TEST',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'position': 1
-                }]}}}); 
-
-console.log("Completed: DataLayer.push - CTA Click");
-}
-
-//FUNCTION: DataLayer.push - Checkout Complete
-
-function dataLayerCheckoutComplete() {
-
-
-    dataLayer.push({
-        'event': 'purchase',
-        'ecommerce': {
-            'currencyCode': 'AUD', 
-            'purchase': {
-                'actionField': {
-                    'id': 'T12345',
-                    'affiliation': undefined, 
-                    'revenue': '',
-                    'tax':'',
-                    'shipping': '0.00',
-                    'coupon': 'NewYear'
-                    },
-                    'products': [{
-                        'name': 'Book Consultation - Checkout Complete TEST',
-                        'id': '1',
-                        'price': '',
-                        'brand': 'Jenny Craig',
-                        'category': 'lead',
-                        'quantity': 1,
-                        'variant': ''
-                    }]
-            }
-        }
-    });
-
-
-console.log("Completed: DataLayer.push - Checkout Complete");
-}
-
-
-
-
-//FUNCTION: DataLayer.push - Product Add - User form input
-
-function dataLayerFormInput() {
-    if (formCount01 === true) {
-        
-
-      dataLayer.push({
-        'event': 'productAdd',
-        'ecommerce': {
-            'currencyCode': 'AUD',
-            'add': {
-                'actionField': {'list': undefined },
-                'products': [{
-                    'name': 'Product Add - User form input - TEST',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'quantity': 1,
-                    'variant': ''
-                    }]}}});
-    
-
-        console.log("Completed: DataLayer.push - Product Add - User form input");
-        formCount01 = false;
-    }    
-}
-
-
-//FUNCTION: DataLayer.push - Checkout - Form Submit  
-
-function dataLayerFormSubmit() {
-
-    if (formCount02 === true) {
-        
-     
-         dataLayer.push({
-            'event': 'purchase',
-            'ecommerce': {
-                'currencyCode': 'AUD', 
-                'purchase': {
-                    'actionField': {
-                        'id': 'T12345',
-                        'affiliation': undefined, 
-                        'revenue': '',
-                        'tax':'',
-                        'shipping': '0.00',
-                        'coupon': 'NewYear'
-                        },
-                        'products': [{
-                            'name': 'Checkout - Form Submit - TEST',
-                            'id': '1',
-                            'price': '',
-                            'brand': 'Jenny Craig',
-                            'category': 'lead',
-                            'quantity': 1,
-                            'variant': ''
-                        }]
-                }
-            }
-        });
-        
-        
-        console.log("Completed: DataLayer.push - Checkout - Form Submit");
-        formCount02 = false;
-    }    
-}
