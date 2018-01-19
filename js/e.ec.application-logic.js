@@ -323,8 +323,23 @@ function checkForNewImpressions() {
 /* Impression logic re-written to fit in one line for readability. Previous longer version below.
    
 if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null ) 
-    {isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN(); }; */
+    {isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN(); }; 
 
+    
+    if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null ) 
+    {
+    
+    if (count23 !== false) 
+
+        {
+
+            document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Focus()})
+
+
+        }
+    
+    }
+    */
     
 //Home A - Impression listeners
     
@@ -1745,7 +1760,7 @@ function GlobalFooter_IconBlog_CLK() {
 //START CONVERSION FORMS | TRACKING FOCUS & SUBMIT
 ////////////////////////////////////////////
 
-/*
+
 
 var inputCounter01=!0     // form input counter 
 var inputCounter02=!0     // form input counter 
@@ -1754,35 +1769,81 @@ var inputCounter04=!0     // form input counter
 var inputCounter05=!0     // form input counter 
 var inputCounter06=!0     // form input counter 
 var inputCounter07=!0     // form input counter 
-var inputCounter08=!0     // form input counter 
-var inputCounter09=!0     // form input counter 
-var inputCounter10=!0     // form input counter 
-var inputCounter11=!0     // form input counter 
-var inputCounter12=!0     // form input counter 
-var inputCounter13=!0     // form input counter 
 
-*/
 
-function checkFormExistence_nTrackFocus_nTrackSubmit(); {
-    
-    // FORM #1 - /book-now-ab - TRACKING INPUT & SUBMIT
-    
-    null!=document.getElementById("mktoForm_2257")&& //AU Region input
-    isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Focus()})); 
-    
 
+function checkFormExistence_nTrackFocus_nTrackSubmit() {
+    
+   // FORM #1 - /book-now-ab - TRACKING INPUT & SUBMIT
+    
+   null!=document.getElementById("mktoForm_2257")&& //AU Region input
+   isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Focus()}));   
+        
+    
             function mktoForm_2257_Focus() {
-                
-                //add dataLayer.push here
 
-            }
+/*
+                    !1!==inputCounter01&&( //check counter
+
+                    console.log("Input triggered ! "), //insert dataLayer.push here
+                     
+                            dataLayer.push({
+                                'event': 'productAdd',
+                                'ecommerce': {
+                                    'currencyCode': '',
+                                    'add': {
+                                        'actionField': {'list': undefined },
+                                        'products': [{
+                                            'name': 'Book Consultation',
+                                             'id': '1',
+                                             'price': '',
+                                             'brand': 'Jenny Craig',
+                                             'category': 'lead',
+                                             'quantity': 1,
+                                             'variant': ''
+                                        }]
+                                     }
+                                }
+                            })
+                
+                
+                inputCounter01=false;) //set counter to false
+*/
+            };
+
+
+            
     
     null!=document.getElementById("mktoForm_2258")&& //NZ Region input
     isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Focus()})); 
     
             function mktoForm_2258_Focus() {
                 
-                //add dataLayer.push here
+                !1!==inputCounter02&&( //check counter
+
+                    console.log("Input triggered ! "), //insert dataLayer.push here
+                     /*
+                            dataLayer.push({
+                                'event': 'productAdd',
+                                'ecommerce': {
+                                    'currencyCode': '',
+                                    'add': {
+                                        'actionField': {'list': undefined },
+                                        'products': [{
+                                            'name': 'Book Consultation',
+                                             'id': '1',
+                                             'price': '',
+                                             'brand': 'Jenny Craig',
+                                             'category': 'lead',
+                                             'quantity': 1,
+                                             'variant': ''
+                                        }]
+                                     }
+                                }
+                            });
+                
+                */
+                inputCounter02=!1); //set counter to false
             
             }
 
@@ -1791,8 +1852,33 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
 
             function mktoForm_2257_Submit() {
                 
-                //add dataLayer.push here
-            
+                dataLayer.push({
+                    'event': 'purchase',
+                    'ecommerce': {
+                    'currencyCode': 'AUD',
+                        'purchase': {
+                            'actionField': {
+                                'id': 'T12345',
+                                'affiliation': undefined,
+                                'revenue': '',
+                                'tax':'<tax>',
+                                'shipping': '0.00',
+                                'coupon': 'Daynis'
+                            },
+                            'products': [{
+                                'name': 'Book Consultation',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                               }]
+                            }
+                    }
+                });
+
+
             }
 
     
@@ -1801,7 +1887,31 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
 
             function mktoForm_2258_Submit() {
                 
-                //add dataLayer.push here
+                dataLayer.push({
+                    'event': 'purchase',
+                    'ecommerce': {
+                    'currencyCode': 'NZD',
+                        'purchase': {
+                            'actionField': {
+                                'id': 'T12346',
+                                'affiliation': undefined,
+                                'revenue': '',
+                                'tax':'<tax>',
+                                'shipping': '0.00',
+                                'coupon': 'Daynis'
+                            },
+                            'products': [{
+                                'name': 'Book Consultation',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                               }]
+                            }
+                    }
+                });
             
             }   
 
@@ -1812,7 +1922,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
     
             function mktoForm_2259_Focus() {
                 
-                //add dataLayer.push here
+                !1!==inputCounter03&&( //check counter
+
+                    console.log("Input triggered ! "), //insert dataLayer.push here
+                
+                inputCounter03=!1); //set counter to false
+
 
             }
     
@@ -1821,7 +1936,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
     
             function mktoForm_2260_Focus() {
                 
-                //add dataLayer.push here
+                !1!==inputCounter04&&( //check counter
+
+                    console.log("Input triggered ! "), //insert dataLayer.push here
+                
+                inputCounter04=!1); //set counter to false
+
 
             }
         
@@ -1849,7 +1969,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
     
             function mktoForm_1579_Focus() {
                 
-                //add dataLayer.push here
+                !1!==inputCounter07&&( //check counter
+
+                    console.log("Input triggered ! "), //insert dataLayer.push here
+                
+                inputCounter07=!1); //set counter to false
+
             
             }
     
@@ -1859,7 +1984,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
     
             function mktoForm_1626_Focus() {
                 
-                //add dataLayer.push here
+                !1!==inputCounter05&&( //check counter
+
+                    console.log("Input triggered ! "), //insert dataLayer.push here
+                
+                inputCounter05=!1); //set counter to false
+
 
             }
         
@@ -1884,23 +2014,73 @@ function checkFormExistence_nTrackFocus_nTrackSubmit(); {
     // FORM #4 Subscribe to Inspire Magazine
     
     null!=document.getElementById("mktoForm_1589")&& //AU&NZ Region input - Language neutral form
-    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1589_Focus()})); 
+    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Focus()})); 
     
             function mktoForm_1589_Focus() { //AU&NZ Region input - Language neutral form
                 
-                //add dataLayer.push here
+                !1!==inputCounter06&&( //check counter
+
+                    /*
+                    
+                            dataLayer.push({
+                                'event': 'productAdd',
+                                'ecommerce': {
+                                'currencyCode': '',
+                                    'add': {
+                                        'actionField': {'list': undefined },
+                                        'products': [{
+                                            'name': 'Get inspired',
+                                             'id': '1',
+                                             'price': '',
+                                             'brand': 'Jenny Craig',
+                                             'category': 'lead',
+                                             'quantity': 1,
+                                             'variant': ''
+                                        }]
+                                     }
+                                }
+                            });
+                        
+
+                */
+                inputCounter06=!1); //set counter to false
+      
+            };
             
-            }
+              
     
     null!=document.getElementById("mktoForm_1589")&& //AU&NZ Region submit - Language neutral form
     isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("submit",function(){mktoForm_1589_Submit()})); 
     
             function mktoForm_1589_Submit() { //AU&NZ Region submit - Language neutral form
                 
-                //add dataLayer.push here
-            
-            }
+                
+                dataLayer.push({
+                    'event': 'purchase',
+                    'ecommerce': {
+                    'currencyCode': 'NZD',
+                        'purchase': {
+                            'actionField': {
+                                'id': 'T12346',
+                                'affiliation': undefined,
+                                'revenue': '',
+                                'tax':'<tax>',
+                                'shipping': '0.00',
+                                'coupon': 'Daynis'
+                            },
+                            'products': [{
+                                'name': 'Get inspired',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                               }]
+                            }
+                    }
+                });
+           
+ }
 }
-
-
 
