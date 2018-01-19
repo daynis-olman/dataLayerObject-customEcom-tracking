@@ -119,8 +119,8 @@ function isElementInViewport(el) {
 }
 
 
-//Region-specific currency value stored as string (NZD or AUD, defined by )
-var currencyByRegion = "RussianRuble!"; 
+//Region-specific currency value stored as string & defined by discoverCurrencyPlusRegionNPush(); 
+var currencyByRegion = "RussianRuble"; 
 
 
 //FUNCTION: Discover region + dataLayer push
@@ -146,8 +146,6 @@ function discoverCurrencyPlusRegionNPush() {
     })(jQuery);
     
 }
-
-
 
 //Discover Page URL + store as String
 var currentUrl = window.location.href;
@@ -447,7 +445,7 @@ function HomeA_CTA_Hero_BookConsultation_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeA_CTA_Hero_BookConsultation',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -471,7 +469,7 @@ function HomeA_CTA_Hero_RequestCall_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeA_CTA_Hero_RequestCall',
+                'name': 'Request Call',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -496,7 +494,7 @@ function HomeA_Body_BookConsultation_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeA_Body_BookConsultation',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -521,7 +519,7 @@ function HomeA_Body_RequestCall_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeA_Body_RequestCall',
+                'name': 'Request Call',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -571,7 +569,7 @@ function HomeA_Body_FindCentre_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeA_Body_FindCentre',
+                'name': 'Centre Locator',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -600,7 +598,7 @@ function HomeB_Body_BookConsultation_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeB_Body_BookConsultation',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -625,7 +623,7 @@ function HomeB_Body_RequestCall_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeB_Body_RequestCall',
+                'name': 'Request Call',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -650,7 +648,7 @@ function HomeB_Body_FindCentre_IMPSN() {
             'impressions':[
                 {
                 'name': 'HomeB_Body_FindCentre',
-                'id': '1',
+                'id': '2',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -699,7 +697,7 @@ function HomeB_Mob_Body_BookConsultation_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeB_Mob_Body_BookConsultation',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -724,7 +722,7 @@ function HomeB_Mob_Body_RequestCall_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeB_Mob_Body_RequestCall',
+                'name': 'Request Call',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -749,8 +747,8 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeB_Mob_Body_FindCentre',
-                'id': '1',
+                'name': 'Centre Locator',
+                'id': '3',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -852,7 +850,7 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'GlobalHeader_CTA_StartLiveChat',
+                'name': 'Live Chat',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1210,7 +1208,7 @@ function HomeA_CTA_Hero_BookConsultation_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeA_CTA_Hero_BookConsultation',
+                    'name': 'Book Consultation',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1233,7 +1231,7 @@ function HomeA_CTA_Hero_RequestCall_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeA_CTA_Hero_RequestCall',
+                    'name': 'Request Call',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1256,7 +1254,7 @@ function HomeA_Body_BookConsultation_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeA_Body_BookConsultation',
+                    'name': 'Book Consultation',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1279,7 +1277,7 @@ function HomeA_Body_RequestCall_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeA_Body_RequestCall',
+                    'name': 'Request Call',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1325,7 +1323,7 @@ function HomeA_Body_FindCentre_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeA_Body_FindCentre',
+                    'name': 'Centre Locator',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1352,7 +1350,7 @@ function HomeB_Body_BookConsultation_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeB_Body_BookConsultation',
+                    'name': 'Book Consultation',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1376,7 +1374,7 @@ function HomeB_Body_RequestCall_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeB_Body_RequestCall',
+                    'name': 'Request Call',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1400,8 +1398,8 @@ function HomeB_Body_FindCentre_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeB_Body_FindCentre',
-                    'id': '1',
+                    'name': 'Centre Locator',
+                    'id': '4',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1448,7 +1446,7 @@ function HomeB_Mob_Body_BookConsultation_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeB_Mob_Body_BookConsultation',
+                    'name': 'Book Consultation',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1472,7 +1470,7 @@ function HomeB_Mob_Body_RequestCall_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeB_Mob_Body_RequestCall',
+                    'name': 'Request Call',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1595,7 +1593,7 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'GlobalHeader_CTA_StartLiveChat',
+                    'name': 'Live Chat',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1737,3 +1735,51 @@ function GlobalFooter_IconBlog_CLK() {
 //////////////////////////
 //END CLICK FUNCTIONS
 //////////////////////////
+
+
+
+
+
+//////////////////////////
+//CONVERSION FORMS LOGIC
+//////////////////////////
+
+
+
+/*
+
+FORM #1 /book-now-ab
+
+Step 1: onFocus  listener form #1 mktoForm_2257 [au]    
+Step 2: onFocus  listener form #1 mktoForm_2258 [nz]
+Step 3: onSubmit function form #1 mktoForm_2257 [au]
+Step 4: onSubmit function form #1 mktoForm_2258 [nz]
+Step 5: thankYou function form #1 mktoForm_2257 [au]
+Step 6: thankYou function form #1 mktoForm_2257 [nz]
+
+FORM #2 /book-now.html
+
+Step 1: onFocus  listener form #2 mktoForm_2259 [au]
+Step 2: onFocus  listener form #2 mktoForm_2260 [nz] 
+Step 3: onSubmit function form #2 mktoForm_2259 [au]
+Step 4: onSubmit function form #2 mktoForm_2260 [nz] 
+Step 5: thankYou function form #2 mktoForm_2259 [au]
+Step 6: thankYou function form #2 mktoForm_2260 [nz] 
+
+
+FORM #3 /start-today.html
+
+Step 1: onFocus  listener form #3 mktoForm_1579 [au]
+Step 2: onFocus  listener form #3 mktoForm_1626 [nz]
+Step 3: onSubmit function form #3 mktoForm_1579 [au]
+Step 4: onSubmit function form #3 mktoForm_1626 [nz]
+Step 5: thankYou function form #3 mktoForm_1579 [au]
+Step 6: thankYou function form #3 mktoForm_1626 [nz]
+
+FORM #4 Subscribe to Inspire Magazine
+
+Step 1: onFocus  listener form #4 mktoForm_1589 [au&nz]
+Step 2: onSubmit function form #4 mktoForm_1589 [au&nz]
+Step 3: thankYou function form #4 mktoForm_1589 [au&nz]
+
+*/
