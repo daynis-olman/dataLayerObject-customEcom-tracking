@@ -79,32 +79,32 @@ CONVERSION FORMS
 -------------------------------------------------------------------------------------------------------------------------
 FORM #1 /book-now-ab
 -------------------------------------------------------------------------------------------------------------------------
-ELEMENT-ID            | Impression Function   | OnFocus Function     | Submit Function             
+ELEMENT-ID            | Impression Function   | OnFocus Function    | onInput Function    | onSubmit Function           
 -------------------------------------------------------------------------------------------------------------------------  
-mktoForm_2257 [au]    |  mktoForm_2257_IMPSN  | xmktoForm_2257_Focus | xmktoForm_2257_Submit                
-mktoForm_2258 [nz]    |  mktoForm_2258_IMPSN  | xmktoForm_2258_Focus | xmktoForm_2258_Submit 
+mktoForm_2257 [au]    |  mktoForm_2257_IMPSN  | mktoForm_2257_Focus | mktoForm_2257_Input | mktoForm_2257_Submit             
+mktoForm_2258 [nz]    |  mktoForm_2258_IMPSN  | mktoForm_2258_Focus | mktoForm_2258_Input | mktoForm_2258_Submit
 -------------------------------------------------------------------------------------------------------------------------
 FORM #2 /book-now.html
 -------------------------------------------------------------------------------------------------------------------------
-ELEMENT-ID            | Impression Function   | OnFocus Function     | Submit Function             
--------------------------------------------------------------------------------------------------------------------------  
-mktoForm_2259 [au]    |  mktoForm_2259_IMPSN  | xmktoForm_2259_Focus | xmktoForm_2259_Submit                
-mktoForm_2260 [nz]    |  mktoForm_2260_IMPSN  | xmktoForm_2260_Focus | xmktoForm_2260_Submit 
+ELEMENT-ID            | Impression Function   | OnFocus Function    | onInput Function    | onSubmit Function             
+----------------------------------------------------------------------------------------------- --------------------------  
+mktoForm_2259 [au]    |  mktoForm_2259_IMPSN  | mktoForm_2259_Focus | mktoForm_2259_Input | mktoForm_2259_Submit            
+mktoForm_2260 [nz]    |  mktoForm_2260_IMPSN  | mktoForm_2260_Focus | mktoForm_2260_Input | mktoForm_2260_Submit
 -------------------------------------------------------------------------------------------------------------------------
 FORM #3 /start-today.html
 -------------------------------------------------------------------------------------------------------------------------
-ELEMENT-ID            | Impression Function   | OnFocus Function     | Submit Function             
+ELEMENT-ID            | Impression Function   | OnFocus Function    | onInput Function    | onSubmit Function            
 -------------------------------------------------------------------------------------------------------------------------  
-mktoForm_1579 [au]    |  mktoForm_1579_IMPSN  | xmktoForm_1579_Focus | xmktoForm_1579_Submit                
-mktoForm_1626 [nz]    |  mktoForm_1626_IMPSN  | xmktoForm_1626_Focus | xmktoForm_1626_Submit 
+mktoForm_1579 [au]    |  mktoForm_1579_IMPSN  | mktoForm_1579_Focus | mktoForm_1579_Input | mktoForm_1579_Submit             
+mktoForm_1626 [nz]    |  mktoForm_1626_IMPSN  | mktoForm_1626_Focus | mktoForm_1626_Input | mktoForm_1526_Submit
 -------------------------------------------------------------------------------------------------------------------------
 FORM #4 Subscribe to Inspire Magazine
 -------------------------------------------------------------------------------------------------------------------------
-ELEMENT-ID            | Impression Function   | OnFocus Function      | Submit Function             
+ELEMENT-ID            | Impression Function   | OnFocus Function    | onInput Function    | onSubmit Function      
 -------------------------------------------------------------------------------------------------------------------------  
-mktoForm_1589 [au&nz] |  mktoForm_1589_IMPSN  | xmktoForm_1589_Focus | xmktoForm_1589_Submit                
-*/
+mktoForm_1589 [au&nz] |  mktoForm_1589_IMPSN  | mktoForm_1589_Focus | mktoForm_1589_Input | mktoForm_1589_Submit            
 
+*/
 
 //FUNCTION: Determine if an element is in the visible viewport
 function isElementInViewport(el) {
@@ -1762,13 +1762,13 @@ function GlobalFooter_IconBlog_CLK() {
 
 
 
-var inputCounter01=!0     // form input counter 
-var inputCounter02=!0     // form input counter 
-var inputCounter03=!0     // form input counter 
-var inputCounter04=!0     // form input counter 
-var inputCounter05=!0     // form input counter 
-var inputCounter06=!0     // form input counter 
-var inputCounter07=!0     // form input counter 
+var inputCounter01=!0;     // form input counter 
+var inputCounter02=!0;     // form input counter 
+var inputCounter03=!0;     // form input counter 
+var inputCounter04=!0;     // form input counter 
+var inputCounter05=!0;     // form input counter 
+var inputCounter06=!0;     // form input counter 
+var inputCounter07=!0;     // form input counter 
 
 
 
@@ -1782,10 +1782,10 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
             function mktoForm_2257_Focus() {
 
-/*
+
                     !1!==inputCounter01&&( //check counter
 
-                    console.log("Input triggered ! "), //insert dataLayer.push here
+                //insert dataLayer.push here
                      
                             dataLayer.push({
                                 'event': 'productAdd',
@@ -1807,8 +1807,8 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                             })
                 
                 
-                inputCounter01=false;) //set counter to false
-*/
+                inputCounter01=false) //set counter to false
+
             };
 
 
@@ -1822,28 +1822,9 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 !1!==inputCounter02&&( //check counter
 
                     console.log("Input triggered ! "), //insert dataLayer.push here
-                     /*
-                            dataLayer.push({
-                                'event': 'productAdd',
-                                'ecommerce': {
-                                    'currencyCode': '',
-                                    'add': {
-                                        'actionField': {'list': undefined },
-                                        'products': [{
-                                            'name': 'Book Consultation',
-                                             'id': '1',
-                                             'price': '',
-                                             'brand': 'Jenny Craig',
-                                             'category': 'lead',
-                                             'quantity': 1,
-                                             'variant': ''
-                                        }]
-                                     }
-                                }
-                            });
-                
-                */
-                inputCounter02=!1); //set counter to false
+
+                    
+                    inputCounter02=!1); //set counter to false
             
             }
 
@@ -1852,34 +1833,9 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
             function mktoForm_2257_Submit() {
                 
-                dataLayer.push({
-                    'event': 'purchase',
-                    'ecommerce': {
-                    'currencyCode': 'AUD',
-                        'purchase': {
-                            'actionField': {
-                                'id': 'T12345',
-                                'affiliation': undefined,
-                                'revenue': '',
-                                'tax':'<tax>',
-                                'shipping': '0.00',
-                                'coupon': 'Daynis'
-                            },
-                            'products': [{
-                                'name': 'Book Consultation',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                               }]
-                            }
-                    }
-                });
+                //insert dataLayer.push here
 
-
-            }
+            };
 
     
     null!=document.getElementById("mktoForm_2258")&& //NZ Region submit
@@ -1887,31 +1843,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
             function mktoForm_2258_Submit() {
                 
-                dataLayer.push({
-                    'event': 'purchase',
-                    'ecommerce': {
-                    'currencyCode': 'NZD',
-                        'purchase': {
-                            'actionField': {
-                                'id': 'T12346',
-                                'affiliation': undefined,
-                                'revenue': '',
-                                'tax':'<tax>',
-                                'shipping': '0.00',
-                                'coupon': 'Daynis'
-                            },
-                            'products': [{
-                                'name': 'Book Consultation',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                               }]
-                            }
-                    }
-                });
+                //insert dataLayer.push here
             
             }   
 
@@ -1924,7 +1856,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
                 !1!==inputCounter03&&( //check counter
 
-                    console.log("Input triggered ! "), //insert dataLayer.push here
+                    console.log("Input triggered ! "); //insert dataLayer.push here
                 
                 inputCounter03=!1); //set counter to false
 
@@ -1938,7 +1870,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
                 !1!==inputCounter04&&( //check counter
 
-                    console.log("Input triggered ! "), //insert dataLayer.push here
+                    console.log("Input triggered ! "); //insert dataLayer.push here
                 
                 inputCounter04=!1); //set counter to false
 
@@ -1971,7 +1903,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
                 !1!==inputCounter07&&( //check counter
 
-                    console.log("Input triggered ! "), //insert dataLayer.push here
+                    console.log("Input triggered ! "); //insert dataLayer.push here
                 
                 inputCounter07=!1); //set counter to false
 
@@ -1986,7 +1918,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
                 !1!==inputCounter05&&( //check counter
 
-                    console.log("Input triggered ! "), //insert dataLayer.push here
+                    console.log("Input triggered ! "); //insert dataLayer.push here
                 
                 inputCounter05=!1); //set counter to false
 
@@ -2020,32 +1952,13 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
                 !1!==inputCounter06&&( //check counter
 
-                    /*
-                    
-                            dataLayer.push({
-                                'event': 'productAdd',
-                                'ecommerce': {
-                                'currencyCode': '',
-                                    'add': {
-                                        'actionField': {'list': undefined },
-                                        'products': [{
-                                            'name': 'Get inspired',
-                                             'id': '1',
-                                             'price': '',
-                                             'brand': 'Jenny Craig',
-                                             'category': 'lead',
-                                             'quantity': 1,
-                                             'variant': ''
-                                        }]
-                                     }
-                                }
-                            });
-                        
-
-                */
-                inputCounter06=!1); //set counter to false
+                    //insert dataLayer.push here
+                
+                inputCounter06 = false); //set counter to false
       
-            };
+      
+            }
+           
             
               
     
@@ -2055,32 +1968,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             function mktoForm_1589_Submit() { //AU&NZ Region submit - Language neutral form
                 
                 
-                dataLayer.push({
-                    'event': 'purchase',
-                    'ecommerce': {
-                    'currencyCode': 'NZD',
-                        'purchase': {
-                            'actionField': {
-                                'id': 'T12346',
-                                'affiliation': undefined,
-                                'revenue': '',
-                                'tax':'<tax>',
-                                'shipping': '0.00',
-                                'coupon': 'Daynis'
-                            },
-                            'products': [{
-                                'name': 'Get inspired',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                               }]
-                            }
-                    }
-                });
+                //insert dataLayer.push here
            
  }
-}
-
+};
