@@ -148,8 +148,8 @@ function discoverCurrencyPlusRegionNPush() {
     
 }
 
-//Discover Page URL + store as String
-var currentUrl = window.location.href;
+//Discover Page Path + store as String
+var currentUrl = window.location.pathname;
 
 
 /*
