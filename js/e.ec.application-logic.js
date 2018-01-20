@@ -1723,7 +1723,7 @@ function GlobalFooter_JCAH_Delivery_CLK() {
 
 }
 
-function GlobalFooter_IconBlog_CLK() {
+function GlobalFooter_IconBlog_CLK() { 
     
    dataLayer.push({
        'event': 'productClick',
@@ -1747,7 +1747,6 @@ function GlobalFooter_IconBlog_CLK() {
 
 }
 
-
 //////////////////////////
 //END CLICK FUNCTIONS
 //////////////////////////
@@ -1756,219 +1755,543 @@ function GlobalFooter_IconBlog_CLK() {
 
 
 
-////////////////////////////////////////////
+//////////////////////////////////////////////////
 //START CONVERSION FORMS | TRACKING FOCUS & SUBMIT
-////////////////////////////////////////////
+//////////////////////////////////////////////////
 
 
 
-var inputCounter01=!0;     // form input counter 
-var inputCounter02=!0;     // form input counter 
-var inputCounter03=!0;     // form input counter 
-var inputCounter04=!0;     // form input counter 
-var inputCounter05=!0;     // form input counter 
-var inputCounter06=!0;     // form input counter 
-var inputCounter07=!0;     // form input counter 
+var focusCounter01=!0;     // form focus counter mktoForm_2257_Focus
+var focusCounter02=!0;     // form focus counter mktoForm_2258_Focus
+var focusCounter03=!0;     // form focus counter mktoForm_2259_Focus
+var focusCounter04=!0;     // form focus counter mktoForm_2260_Focus
+var focusCounter05=!0;     // form focus counter mktoForm_1579_Focus
+var focusCounter06=!0;     // form focus counter mktoForm_1626_Focus
+var focusCounter07=!0;     // form focus counter mktoForm_1589_Focus
 
+var inputCounter01=!0;     // form input counter mktoForm_2257_Input
+var inputCounter02=!0;     // form input counter mktoForm_2258_Input
+var inputCounter03=!0;     // form input counter mktoForm_2259_Input
+var inputCounter04=!0;     // form input counter mktoForm_2260_Input
+var inputCounter05=!0;     // form input counter mktoForm_1579_Input
+var inputCounter06=!0;     // form input counter mktoForm_1626_Input
+var inputCounter07=!0;     // form input counter mktoForm_1589_Input
 
 
 function checkFormExistence_nTrackFocus_nTrackSubmit() {
+       
+  //////////////////////////
+  // BOOK-NOW-AB FORM LOGIC
+  //////////////////////////
     
-   // FORM #1 - /book-now-ab - TRACKING INPUT & SUBMIT
+  // BOOK-NOW-AB - FOCUS - AU 
+
+   null!=document.getElementById("mktoForm_2257")&& 
+   isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("focus",function(){mktoForm_2257_Focus()}));   
     
-   null!=document.getElementById("mktoForm_2257")&& //AU Region input
-   isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Focus()}));   
-        
-    
-            function mktoForm_2257_Focus() {
+        function mktoForm_2257_Focus() {
 
-
-                    !1!==inputCounter01&&( //check counter
-
-                //insert dataLayer.push here
-                     
-                            dataLayer.push({
-                                'event': 'productAdd',
-                                'ecommerce': {
-                                    'currencyCode': '',
-                                    'add': {
-                                        'actionField': {'list': undefined },
-                                        'products': [{
-                                            'name': 'Book Consultation',
-                                             'id': '1',
-                                             'price': '',
-                                             'brand': 'Jenny Craig',
-                                             'category': 'lead',
-                                             'quantity': 1,
-                                             'variant': ''
-                                        }]
-                                     }
-                                }
-                            })
-                
-                
-                inputCounter01=false) //set counter to false
-
-            };
-
-
-            
-    
-    null!=document.getElementById("mktoForm_2258")&& //NZ Region input
-    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Focus()})); 
-    
-            function mktoForm_2258_Focus() {
-                
-                !1!==inputCounter02&&( //check counter
-
-                    console.log("Input triggered ! "), //insert dataLayer.push here
+            !1!==focusCounter01&&( //check counter
 
                     
-                    inputCounter02=!1); //set counter to false
-            
-            }
-
-    null!=document.getElementById("mktoForm_2257")&& //AU Region submit
-    isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("submit",function(){mktoForm_2257_Submit ()})); 
-
-            function mktoForm_2257_Submit() {
-                
+                    
                 //insert dataLayer.push here
+      
+                           
+                
+                
+            focusCounter01=false) //set counter to false
+            };
 
+  // BOOK-NOW-AB - FOCUS - NZ 
+
+    null!=document.getElementById("mktoForm_2258")&& 
+    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("focus",function(){mktoForm_2258_Focus()}));   
+    
+         function mktoForm_2258_Focus() {
+
+             !1!==focusCounter02&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+            focusCounter02=false) //set counter to false
+
+            };
+    
+  // BOOK-NOW-AB - INPUT - AU 
+
+    null!=document.getElementById("mktoForm_2257")&& 
+    isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Input()}));   
+    
+         function mktoForm_2257_Input() {
+
+             !1!==inputCounter01&&( //check counter
+
+                    
+                    
+                 //insert dataLayer.push here
+
+                           
+                
+                
+            inputCounter01=false) //set counter to false
+
+            };
+    
+  // BOOK-NOW-AB - INPUT - NZ 
+
+    null!=document.getElementById("mktoForm_2258")&& 
+    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Input()}));   
+    
+         function mktoForm_2258_Input() {
+
+             !1!==inputCounter02&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+             inputCounter02=false) //set counter to false
+
+             };
+    
+  // BOOK-NOW-AB - SUBMIT - AU 
+
+    null!=document.getElementById("mktoForm_2257")&& 
+    isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("submit",function(){mktoForm_2257_Submit()}));   
+    
+         function mktoForm_2257_Submit() {
+
+
+                    
+                
+
+        };
+    
+  // BOOK-NOW-AB - SUBMIT - NZ 
+
+    null!=document.getElementById("mktoForm_2258")&& 
+    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("submit",function(){mktoForm_2258_Submit()}));   
+    
+         function mktoForm_2257_Submit() {
+
+
+                    
+                //insert dataLayer.push here
+                
+                
+
+        };
+
+
+  ////////////////////////////////
+  // BOOK-NOW FORM LOGIC (CONTROL)
+  ////////////////////////////////
+
+    // BOOK-NOW - FOCUS - AU 
+
+   null!=document.getElementById("mktoForm_2259")&& 
+   isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("focus",function(){mktoForm_2259_Focus()}));   
+    
+        function mktoForm_2259_Focus() {
+
+            !1!==focusCounter03&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+      
+                           
+                
+                
+            focusCounter03=false) //set counter to false
+            };
+
+  // BOOK-NOW - FOCUS - NZ 
+
+    null!=document.getElementById("mktoForm_2260")&& 
+    isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("focus",function(){mktoForm_2260_Focus()}));   
+    
+         function mktoForm_2260_Focus() {
+
+             !1!==focusCounter04&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+            focusCounter04=false) //set counter to false
+
+            };
+    
+  // BOOK-NOW - INPUT - AU 
+
+    null!=document.getElementById("mktoForm_2259")&& 
+    isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("input",function(){mktoForm_2259_Input()}));   
+    
+         function mktoForm_2259_Input() {
+
+             !1!==inputCounter03&&( //check counter
+
+                    
+                    
+                 //insert dataLayer.push here
+
+                           
+                
+                
+            inputCounter03=false) //set counter to false
+
+            };
+    
+  // BOOK-NOW - INPUT - NZ 
+
+    null!=document.getElementById("mktoForm_2260")&& 
+    isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("input",function(){mktoForm_2260_Input()}));   
+    
+         function mktoForm_2260_Input() {
+
+             !1!==inputCounter04&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+             inputCounter04=false) //set counter to false
+
+             };
+    
+  // BOOK-NOW - SUBMIT - AU 
+
+    null!=document.getElementById("mktoForm_2259")&& 
+    isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("submit",function(){mktoForm_2259_Submit()}));   
+    
+         function mktoForm_2259_Submit() {
+
+
+                    
+                
+
+        };
+    
+  // BOOK-NOW - SUBMIT - NZ 
+
+    null!=document.getElementById("mktoForm_2260")&& 
+    isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("submit",function(){mktoForm_2260_Submit()}));   
+    
+         function mktoForm_2260_Submit() {
+
+
+                    
+                //insert dataLayer.push here
+                
+                
+
+        };
+    
+
+  //////////////////////////////////////////
+  // START-TODAY (REQUEST A CALL) FORM LOGIC 
+  //////////////////////////////////////////
+
+   // START-TODAY - FOCUS - AU 
+
+   null!=document.getElementById("mktoForm_1579")&& 
+   isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("focus",function(){mktoForm_1579_Focus()}));   
+    
+        function mktoForm_1579_Focus() {
+
+            !1!==focusCounter05&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+      
+                           
+                
+                
+            focusCounter05=false) //set counter to false
+            };
+
+  // START-TODAY - FOCUS - NZ 
+
+    null!=document.getElementById("mktoForm_1626")&& 
+    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("focus",function(){mktoForm_1626_Focus()}));   
+    
+         function mktoForm_1626_Focus() {
+
+             !1!==focusCounter06&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+            focusCounter06=false) //set counter to false
+
+            };
+    
+  // START-TODAY - INPUT - AU 
+
+    null!=document.getElementById("mktoForm_1579")&& 
+    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
+    
+         function mktoForm_1579_Input() {
+
+             !1!==inputCounter05&&( //check counter
+
+                    
+                    
+                 //insert dataLayer.push here
+
+                           
+                
+                
+            inputCounter05=false) //set counter to false
+
+            };
+    
+  // START-TODAY - INPUT - NZ 
+
+    null!=document.getElementById("mktoForm_1626")&& 
+    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Input()}));   
+    
+         function mktoForm_1626_Input() {
+
+             !1!==inputCounter06&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+             inputCounter06=false) //set counter to false
+
+             };
+    
+  // START-TODAY - SUBMIT - AU 
+
+    null!=document.getElementById("mktoForm_1579")&& 
+    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("submit",function(){mktoForm_1579_Submit()}));   
+    
+         function mktoForm_1579_Submit() {
+
+
+                    
+                
+
+        };
+    
+  // START-TODAY - SUBMIT - NZ 
+
+    null!=document.getElementById("mktoForm_1626")&& 
+    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("submit",function(){mktoForm_1626_Submit()}));   
+    
+         function mktoForm_1626_Submit() {
+
+
+                    
+                //insert dataLayer.push here
+                
+                
+
+        };
+
+  //////////////////////////////////////////
+  // START-TODAY (REQUEST A CALL) FORM LOGIC 
+  //////////////////////////////////////////
+
+   // START-TODAY - FOCUS - AU 
+
+   null!=document.getElementById("mktoForm_1579")&& 
+   isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("focus",function(){mktoForm_1579_Focus()}));   
+    
+        function mktoForm_1579_Focus() {
+
+            !1!==focusCounter05&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+      
+                           
+                
+                
+            focusCounter05=false) //set counter to false
+            };
+
+  // START-TODAY - FOCUS - NZ 
+
+    null!=document.getElementById("mktoForm_1626")&& 
+    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("focus",function(){mktoForm_1626_Focus()}));   
+    
+         function mktoForm_1626_Focus() {
+
+             !1!==focusCounter06&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+            focusCounter06=false) //set counter to false
+
+            };
+    
+  // START-TODAY - INPUT - AU 
+
+    null!=document.getElementById("mktoForm_1579")&& 
+    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
+    
+         function mktoForm_1579_Input() {
+
+             !1!==inputCounter05&&( //check counter
+
+                    
+                    
+                 //insert dataLayer.push here
+
+                           
+                
+                
+            inputCounter05=false) //set counter to false
+
+            };
+    
+  // START-TODAY - INPUT - NZ 
+
+    null!=document.getElementById("mktoForm_1626")&& 
+    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Input()}));   
+    
+         function mktoForm_1626_Input() {
+
+             !1!==inputCounter06&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+                     
+                           
+                
+                
+             inputCounter06=false) //set counter to false
+
+             };
+    
+  // START-TODAY - SUBMIT - AU 
+
+    null!=document.getElementById("mktoForm_1579")&& 
+    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("submit",function(){mktoForm_1579_Submit()}));   
+    
+         function mktoForm_1579_Submit() {
+
+
+                    
+                
+
+        };
+    
+  // START-TODAY - SUBMIT - NZ 
+
+    null!=document.getElementById("mktoForm_1626")&& 
+    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("submit",function(){mktoForm_1626_Submit()}));   
+    
+         function mktoForm_1626_Submit() {
+
+
+                    
+                //insert dataLayer.push here
+                
+                
+
+        };
+
+
+  ///////////////////////////////
+  // SUBSCRIBE-INSPIRE FORM LOGIC 
+  ///////////////////////////////
+
+   // SUBSCRIBE-INSPIRE - FOCUS - AU/NZ 
+
+   null!=document.getElementById("mktoForm_1589")&& 
+   isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("focus",function(){mktoForm_1589_Focus()}));   
+    
+        function mktoForm_1589_Focus() {
+
+            !1!==focusCounter07&&( //check counter
+
+                    
+                    
+                //insert dataLayer.push here
+      
+                           
+                
+                
+            focusCounter07=false) //set counter to false
             };
 
     
-    null!=document.getElementById("mktoForm_2258")&& //NZ Region submit
-    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("submit",function(){mktoForm_2258_Submit ()})); 
+  // SUBSCRIBE-INSPIRE - INPUT - AU/NZ 
 
-            function mktoForm_2258_Submit() {
-                
-                //insert dataLayer.push here
-            
-            }   
-
-    // FORM #2 /book-now.html - TRACKING INPUT & SUBMIT
-
-    null!=document.getElementById("mktoForm_2259")&& //AU Region input
-    isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("input",function(){mktoForm_2259_Focus()})); 
+    null!=document.getElementById("mktoForm_1589")&& 
+    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Input()}));   
     
-            function mktoForm_2259_Focus() {
+         function mktoForm_1589_Input() {
+
+             !1!==inputCounter07&&( //check counter
+
+                    
+                    
+                 //insert dataLayer.push here
+
+                           
                 
-                !1!==inputCounter03&&( //check counter
-
-                    console.log("Input triggered ! "); //insert dataLayer.push here
                 
-                inputCounter03=!1); //set counter to false
+            inputCounter07=false) //set counter to false
 
-
-            }
+            };
     
-    null!=document.getElementById("mktoForm_2260")&& //NZ Region input
-    isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("input",function(){mktoForm_2260_Focus()})); 
+  // SUBSCRIBE-INSPIRE - SUBMIT - AU/NZ 
+
+    null!=document.getElementById("mktoForm_1589")&& 
+    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("submit",function(){mktoForm_1589_Submit()}));   
     
-            function mktoForm_2260_Focus() {
-                
-                !1!==inputCounter04&&( //check counter
-
-                    console.log("Input triggered ! "); //insert dataLayer.push here
-                
-                inputCounter04=!1); //set counter to false
+         function mktoForm_1589_Submit() {
 
 
-            }
-        
-    null!=document.getElementById("mktoForm_2259")&& //AU Region submit
-    isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("submit",function(){mktoForm_2259_Submit ()})); 
-    
-            function mktoForm_2258_Focus() {
+                    
                 
-            
-            }
-    
-    null!=document.getElementById("mktoForm_2260")&& //NZ Region submit
-    isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("submit",function(){mktoForm_2260_Submit ()})); 
-    
-            function mktoForm_2260_Submit() {
-                
-                //add dataLayer.push here
-                
-            }
 
-    // FORM #3 /book-now.html - TRACKING INPUT & SUBMIT
-
-    null!=document.getElementById("mktoForm_1579")&& //AU Region input
-    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Focus()})); 
-    
-            function mktoForm_1579_Focus() {
-                
-                !1!==inputCounter07&&( //check counter
-
-                    console.log("Input triggered ! "); //insert dataLayer.push here
-                
-                inputCounter07=!1); //set counter to false
-
-            
-            }
-    
-    null!=document.getElementById("mktoForm_1626")&& //NZ Region input
-    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Focus()})); 
+        };
     
     
-            function mktoForm_1626_Focus() {
-                
-                !1!==inputCounter05&&( //check counter
+    
+    
+    
 
-                    console.log("Input triggered ! "); //insert dataLayer.push here
-                
-                inputCounter05=!1); //set counter to false
+    
+//global form tracking end-function    
+};//global form tracking end-function
 
 
-            }
-        
-    null!=document.getElementById("mktoForm_1579")&& //AU Region submit
-    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("submit",function(){mktoForm_1579_Submit ()})); 
-    
-            function mktoForm_1579_Submit() {
-                
-                //add dataLayer.push here
 
-            }
-    
-    null!=document.getElementById("mktoForm_1626")&& //NZ Region submit
-    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("submit",function(){mktoForm_1626_Submit ()})); 
-    
-            function mktoForm_1626_Submit() { //NZ Region submit
-                
-                //add dataLayer.push here
-            
-            }
-
-    // FORM #4 Subscribe to Inspire Magazine
-    
-    null!=document.getElementById("mktoForm_1589")&& //AU&NZ Region input - Language neutral form
-    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Focus()})); 
-    
-            function mktoForm_1589_Focus() { //AU&NZ Region input - Language neutral form
-                
-                !1!==inputCounter06&&( //check counter
-
-                    //insert dataLayer.push here
-                
-                inputCounter06 = false); //set counter to false
-      
-      
-            }
-           
-            
-              
-    
-    null!=document.getElementById("mktoForm_1589")&& //AU&NZ Region submit - Language neutral form
-    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("submit",function(){mktoForm_1589_Submit()})); 
-    
-            function mktoForm_1589_Submit() { //AU&NZ Region submit - Language neutral form
-                
-                
-                //insert dataLayer.push here
-           
- }
-};
