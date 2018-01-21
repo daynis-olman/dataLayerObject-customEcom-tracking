@@ -1,12 +1,12 @@
 //SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
 window.onload = function() {
-//  cookieDrupalID(); Cookie logic 
-    discoverCurrencyPlusRegionNPush();
-    checkForNewImpressions(); //check for assets in viewport on pageload
-    addClickListenersGroup();
-    checkFormExistence_nTrackFocus_nTrackSubmit(); //listeners for form onHover and Submit
-    window.addEventListener('scroll', function(){checkForNewImpressions();}, true);
+    retrieve_or_make_Cookie();             // Check if cookie exists. !=, plant it and store value. 
+    discoverCurrencyPlusRegionNPush();     // Derive and push currency from TLD index window.localtion.href. Also push DrupalID from cookie.
+    checkForNewImpressions();              // Check for assets immediately in viewport on pageload
+    addClickListenersGroup();              // Start listening for asset clicks 
+    checkFormExistence_nTrackFocus_nTrackSubmit(); // Start listening and actioning form hover, input & submit events (all forms)
+    window.addEventListener('scroll', function(){checkForNewImpressions();}, true); // Re-check form & asset impressions on scroll
 };
 
 /* REGISTER OF ASSETS FOR IMPRESSIONS / CLICKS / INPUTS (BY ELEMENT IDs)
@@ -119,9 +119,39 @@ function isElementInViewport(el) {
   }
 }
 
-
-//Region-specific currency value stored as string & defined by discoverCurrencyPlusRegionNPush(); 
+//Discover Region Currency + store as String
 var currencyByRegion = "RussianRuble"; 
+
+//Discover Page Path + store as String
+var currentUrl = window.location.pathname;
+
+//DrupalCookie ID + store as String
+var drupalCookieID = 'RusskiID123';
+
+//////////////
+//COOKIE LOGIC
+//////////////
+
+//check if cookie exists. Returns cookie value or null
+value_or_null = (document.cookie.match(/^(?:.*;)?\s*DrupalID\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1] 
+
+function retrieve_or_make_Cookie() {
+    //If cookie exists already, drupalCookieID is set to existing cookie value
+    if (value_or_null !== null) {drupalCookieID = value_or_null;} 
+    //If cookie does not exist, generate new DrupalID, Plant Cookie, drupalCookieID is set to cookie value
+    else {drupalCookieID = generateDrupalID(); SetCookie("DrupalID",drupalCookieID,365);}
+}
+
+//Drupal ID Generator function
+function generateDrupalID() {
+var date = Date.now(); if (date <= generateDrupalID.previous) {date = ++generateDrupalID.previous;
+} else {generateDrupalID.previous = date; }return date;}generateDrupalID.previous = 0; 
+
+//Drupal ID Cookie Planting function
+function SetCookie(cookieName,cookieValue,nDays) {
+var today = new Date(); var expire = new Date();
+if (nDays==null || nDays==0) nDays=1;expire.setTime(today.getTime() + 3600000*24*nDays);
+document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();}
 
 
 //FUNCTION: Discover region + dataLayer push
@@ -131,53 +161,41 @@ function discoverCurrencyPlusRegionNPush() {
 // Required to override html content inside a view 
         $(window).load(function() {
             if(window.location.href.indexOf(".co.nz") > -1) {
-                dataLayer.push({'region' : 'NZ'});
+                
+                dataLayer.push({
+                    'userid' : drupalCookieID,
+                    'userCrmId' : '',
+                    'userSegment' : '',
+                    'region' : 'NZ',
+                    'pageType' : currentUrl
+                });
+
                 currencyByRegion = "NZD"; //sets currency value for all events on the page
-                console.log("NZ Region Pushed to Datalayer");
-                console.log("Currency set as NZD");
+                console.log("NZ Region set");
+                console.log("NZ Currency set");
             }
             
             if(window.location.href.indexOf(".com.au") > -1) { 
-                dataLayer.push({'region' : 'AU'});
+
+                dataLayer.push({
+                    'userid' : drupalCookieID,
+                    'userCrmId' : '',
+                    'userSegment' : '',
+                    'region' : 'AU',
+                    'pageType' : currentUrl
+                });
+
                 currencyByRegion = "AUD"; //sets currency value for all events on the page
-                console.log("AU Region Pushed to Datalayer");
-                console.log("Currency set as AUD");
+                console.log("NZ Region set");
+                console.log("NZ Currency set");
+
             }
         });  
     })(jQuery);
     
 }
 
-//Discover Page Path + store as String
-var currentUrl = window.location.pathname;
 
-
-/*
-DRUPAL ID COOKIE LOGIC
-push to dataLayer. If missing: create + push to dataLayer
-function cookieDrupalID() {
-console.log("STARTING COOKIE MONSTER");
-    
-    //Check if cookie exists. Return Cookie-value or null.
-    value_or_null = (document.cookie.match(/^(?:.*;)?\s*MyCookie\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1];
-    //If cookie exists push it's value to dataLayer
-    if (value_or_null == null) {
-        console.log("COOKIE EXISTS"); 
-                
-        //push to dataLayer
-        dataLayer.push({
-            'userSegment' = 'New',
-            'userid' = String(value_or_null);
-        });
-        console.log("COOKIE VALUE HAS BEEN PUSHED TO DATALAYER"); 
-    } 
-    //If cookie does not exist plant cookie and repeat function
-    console.log("COOKIE DOES NOT EXIST");
-     if (value_or_null === null) {
-        //TODO --- plant cookie 
-        drupalIDCookie();
-    }
-*/
     
 //LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
