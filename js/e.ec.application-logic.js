@@ -163,6 +163,7 @@ function discoverCurrencyPlusRegionNPush() {
             if(window.location.href.indexOf(".co.nz") > -1) {
                 
                 dataLayer.push({
+                    'event': 'gaEvent',
                     'userid' : drupalCookieID,
                     'userCrmId' : '',
                     'userSegment' : '',
@@ -907,23 +908,11 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
 function GlobalFooter_IconFacebook_IMPSN() {
     
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'GlobalFooter_IconFacebook',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'social',
+        'socialNetwork': 'Facebook',
+        'socialAction': 'Icon seen',
+        'socialTarget': 'https://www.facebook.com/jennycraigausnz?sk=wall'
+        });
 
     count17=!1; // set counter to false
 
@@ -932,23 +921,11 @@ function GlobalFooter_IconFacebook_IMPSN() {
 function GlobalFooter_IconInstagram_IMPSN() {
     
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'GlobalFooter_IconInstagram',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'social',
+        'socialNetwork': 'Instagram',
+        'socialAction': 'Icon seen',
+        'socialTarget': 'http://instagram.com/jennycraigausnz'
+        });
 
     count18=!1; // set counter to false
 
@@ -957,23 +934,11 @@ function GlobalFooter_IconInstagram_IMPSN() {
 function GlobalFooter_IconYouTube_IMPSN() {
     
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'GlobalFooter_IconYouTube',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'social',
+        'socialNetwork': 'YouTube',
+        'socialAction': 'Icon seen',
+        'socialTarget': 'https://www.youtube.com/user/jennycraigausnz'
+        });
 
 
     count19=!1; // set counter to false
@@ -1008,23 +973,11 @@ function GlobalFooter_JCAH_Delivery_IMPSN() {
 function GlobalFooter_IconBlog_IMPSN() {
     
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'GlobalFooter_IconBlog',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'social',
+        'socialNetwork': 'JC Blog',
+        'socialAction': 'Icon seen',
+        'socialTarget': '/blog'
+        });
 
     count21=!1; // set counter to false
 
@@ -1449,7 +1402,13 @@ function HomeB_Body_FindCentre_CLK() {
 
 function HomeB_Body_FAQ_CLK() {
     
-   dataLayer.push({
+   dataLayer.push({        dataLayer.push({
+        'event': 'social',
+        'socialNetwork': 'Facebook',
+        'socialAction': 'Icon seen',
+        'socialTarget': 'https://www.facebook.com/jennycraigausnz?sk=wall'
+        });
+
        'event': 'productClick',
         'ecommerce': {
             'currencyCode': currencyByRegion,
@@ -1647,72 +1606,36 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
 
 function GlobalFooter_IconFacebook_CLK() {
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'GlobalFooter_IconFacebook',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
+        dataLayer.push({
+        'event': 'social',
+        'socialNetwork': 'Facebook',
+        'socialAction': 'Click',
+        'socialTarget': 'https://www.facebook.com/jennycraigausnz?sk=wall'
+        });
 
 
 }
 
 function GlobalFooter_IconInstagram_CLK() {
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'GlobalFooter_IconInstagram',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
+        dataLayer.push({
+        'event': 'social',
+        'socialNetwork': 'Instagram',
+        'socialAction': 'Click',
+        'socialTarget': 'http://instagram.com/jennycraigausnz'
+        });
 
 
 }
 
 function GlobalFooter_IconYouTube_CLK() {
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'GlobalFooter_IconYouTube',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
+        dataLayer.push({
+        'event': 'social',
+        'socialNetwork': 'YouTube',
+        'socialAction': 'Click',
+        'socialTarget': 'https://www.youtube.com/user/jennycraigausnz'
+        });
 
 
 }
@@ -1743,24 +1666,12 @@ function GlobalFooter_JCAH_Delivery_CLK() {
 
 function GlobalFooter_IconBlog_CLK() { 
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'GlobalFooter_IconBlog',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
+        dataLayer.push({
+        'event': 'social',
+        'socialNetwork': 'JC Blog',
+        'socialAction': 'Click',
+        'socialTarget': '/blog'
+        });
 
 
 }
