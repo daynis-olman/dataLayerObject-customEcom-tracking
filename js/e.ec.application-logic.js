@@ -104,7 +104,18 @@ ELEMENT-ID            | Impression Function   | OnFocus Function    | onInput Fu
 -------------------------------------------------------------------------------------------------------------------------  
 mktoForm_1589 [au&nz] |  mktoForm_1589_IMPSN  | mktoForm_1589_Focus | mktoForm_1589_Input | mktoForm_1589_Submit            
 
+
+ENHANCED E-COMMERCE LOGIC FOR THIS APPLICATION:
+
+DOM Element IMPSN  =  GTM dataLayer.push {'event': 'productImpressions'};
+DOM Element CLICK  =  GTM dataLayer.push {'event': 'productClick'};
+DOM FORM Impressn  =  GTM dataLayer.push {'event': 'productDetail'};                        
+DOM FORM Imput     =  GTM dataLayer.push {'event': 'productAdd'};
+DOM FORM Submit    =  GTM dataLayer.push {'event': 'checkout'};
+DOM THANKU PAGE    =  GTM dataLayer.push {'event': 'purchase'};
+
 */
+
 
 //FUNCTION: Determine if an element is in the visible viewport
 function isElementInViewport(el) {
@@ -340,24 +351,17 @@ var count28=!0     // impression counter mktoForm_1689_IMPSN();
 
 function checkForNewImpressions() {
     
-/* Impression logic re-written to fit in one line for readability. Previous longer version below.
+/* Impression logic re-written to fit in one line for readability. Previous longer versions included below.
    
 if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null ) 
     {isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN(); }; 
 
-    
+    FURTHER SIMPLIFIED 
     if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null ) 
     {
-    
-    if (count23 !== false) 
-
-        {
-
+        if (count23 !== false) {
             document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Focus()})
-
-
-        }
-    
+            }
     }
     */
     
@@ -573,25 +577,16 @@ function HomeA_Body_RequestCall_IMPSN() {
 }
 
 function HomeA_Body_FAQ_IMPSN() {
-    
-     dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'HomeA_Body_FAQ',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+
+    /*
+        dataLayer.push({
+        'event': 'non-cta-assets',
+        'eventCategory': 'Impression', 
+        'eventAction':   'Impression',
+        'eventLabel': 'FAQ'
+        });
+
+    */
 
     count05=!1; // set counter to false
 
@@ -683,7 +678,7 @@ function HomeB_Body_FindCentre_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'HomeB_Body_FindCentre',
+                'name': 'Centre Locator',
                 'id': '2',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -702,24 +697,15 @@ function HomeB_Body_FindCentre_IMPSN() {
 
 function HomeB_Body_FAQ_IMPSN() {
     
+    /*
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'HomeB_Body_FAQ',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'non-cta-assets',
+        'eventCategory': 'Impression', 
+        'eventAction':   'Impression',
+        'eventLabel': 'FAQ'
+        });
+
+    */
 
     count10=!1; // set counter to false
 
@@ -802,24 +788,15 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
 
 function HomeB_Mob_Body_FAQ_IMPSN() {
     
+    /*
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'HomeB_Mob_Body_FAQ',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'non-cta-assets',
+        'eventCategory': 'Impression', 
+        'eventAction':   'Impression',
+        'eventLabel': 'FAQ'
+        });
+
+    */
 
     count13=!1; // set counter to false
 
@@ -836,7 +813,7 @@ function GlobalHeader_CTA_StartNowOrange_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'GlobalHeader_CTA_StartNowOrange',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -861,7 +838,7 @@ function GlobalHeader_CTA_ClickToCall_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'GlobalHeader_CTA_ClickToCall',
+                'name': 'Direct dial',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -948,24 +925,15 @@ function GlobalFooter_IconYouTube_IMPSN() {
 
 function GlobalFooter_JCAH_Delivery_IMPSN() {
     
+    /*
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'GlobalFooter_JCAH_Delivery',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
-                }
-            ]
-        }
-    });       
+        'event': 'non-cta-assets',
+        'eventCategory': 'Impression', 
+        'eventAction':   'Impression',
+        'eventLabel': 'JCAH-Footer'
+        });
+
+    */
 
     count20=!1; // set counter to false
 
@@ -996,7 +964,7 @@ function mktoForm_2257_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'mktoForm_2257',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1021,7 +989,7 @@ function mktoForm_2258_IMPSN() {
             'currencyCode': '',
             'impressions':[
                 {
-                'name': 'mktoForm_2258',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1048,7 +1016,7 @@ function mktoForm_2259_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'mktoForm_2259',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1074,7 +1042,7 @@ function mktoForm_2260_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'mktoForm_2260',
+                'name': 'Book Consultation',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1101,7 +1069,7 @@ function mktoForm_1579_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'mktoForm_1579',
+                'name': 'Request Call',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1126,7 +1094,7 @@ function mktoForm_1626_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'mktoForm_1626',
+                'name': 'Request Call',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1153,7 +1121,7 @@ function mktoForm_1589_IMPSN() {
             'currencyCode': currencyByRegion,
             'impressions':[
                 {
-                'name': 'mktoForm_1589',
+                'name': 'GetInspired Subscribe',
                 'id': '1',
                 'price': '',
                 'brand': 'Jenny Craig',
@@ -1281,24 +1249,15 @@ function HomeA_Body_RequestCall_CLK() {
 
 function HomeA_Body_FAQ_CLK() {
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'HomeA_Body_FAQ',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
+    /*
+        dataLayer.push({
+        'event': 'non-cta-assets',
+        'eventCategory': 'Click', 
+        'eventAction':   'Click',
+        'eventLabel': 'JCAH-Footer'
+        });
+
+    */
 
 }
 
@@ -1403,30 +1362,6 @@ function HomeB_Body_FindCentre_CLK() {
 
 function HomeB_Body_FAQ_CLK() {
     
-   dataLayer.push({        dataLayer.push({
-        'event': 'social',
-        'socialNetwork': 'Facebook',
-        'socialAction': 'Icon seen',
-        'socialTarget': 'https://www.facebook.com/jennycraigausnz?sk=wall'
-        });
-
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'HomeB_Body_FAQ',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
 
 
 }
@@ -1488,7 +1423,7 @@ function HomeB_Mob_Body_FindCentre_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'HomeB_Mob_Body_FindCentre',
+                    'name': 'Centre Locator',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1505,24 +1440,6 @@ function HomeB_Mob_Body_FindCentre_CLK() {
 
 function HomeB_Mob_Body_FAQ_CLK() {
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'HomeB_Mob_Body_FAQ',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
 
 
 }
@@ -1539,7 +1456,7 @@ function GlobalHeader_CTA_StartNowOrange_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'GlobalHeader_CTA_StartNowOrange',
+                    'name': 'Book Consultation',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1563,7 +1480,7 @@ function GlobalHeader_CTA_ClickToCall_CLK() {
             'click': {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
-                    'name': 'GlobalHeader_CTA_ClickToCall',
+                    'name': 'Direct dial',
                     'id': '1',
                     'price': '',
                     'brand': 'Jenny Craig',
@@ -1643,25 +1560,7 @@ function GlobalFooter_IconYouTube_CLK() {
 
 function GlobalFooter_JCAH_Delivery_CLK() {
     
-   dataLayer.push({
-       'event': 'productClick',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
-                'products': [{
-                    'name': 'GlobalFooter_JCAH_Delivery',
-                    'id': '1',
-                    'price': '',
-                    'brand': 'Jenny Craig',
-                    'category': 'lead',
-                    'variant': '',
-                    'position': 1
-                }]
-            }
-        }
-   }); 
-
+    
 
 }
 
