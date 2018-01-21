@@ -179,6 +179,7 @@ function discoverCurrencyPlusRegionNPush() {
             if(window.location.href.indexOf(".com.au") > -1) { 
 
                 dataLayer.push({
+                    'event': 'gaEvent',
                     'userid' : drupalCookieID,
                     'userCrmId' : '',
                     'userSegment' : '',
