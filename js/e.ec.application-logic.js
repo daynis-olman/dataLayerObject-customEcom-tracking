@@ -110,7 +110,7 @@ ENHANCED E-COMMERCE LOGIC FOR THIS APPLICATION:
 DOM Element IMPSN  =  GTM dataLayer.push {'event': 'productImpressions'};
 DOM Element CLICK  =  GTM dataLayer.push {'event': 'productClick'};
 DOM FORM Impressn  =  GTM dataLayer.push {'event': 'productDetail'};                        
-DOM FORM Imput     =  GTM dataLayer.push {'event': 'productAdd'};
+DOM FORM Input     =  GTM dataLayer.push {'event': 'productAdd'};
 DOM FORM Submit    =  GTM dataLayer.push {'event': 'checkout'};
 DOM THANKU PAGE    =  GTM dataLayer.push {'event': 'purchase'};
 
@@ -148,28 +148,29 @@ value_or_null = (document.cookie.match(/^(?:.*;)?\s*DrupalID\s*=\s*([^;]+)(?:.*)
 
 function retrieve_or_make_Cookie() {
     //If cookie exists already, drupalCookieID is set to existing cookie value
-    if (value_or_null !== null) {drupalCookieID = value_or_null;} 
+    if (value_or_null !== null) {drupalCookieID = value_or_null;}
     //If cookie does not exist, generate new DrupalID, Plant Cookie, drupalCookieID is set to cookie value
     else {drupalCookieID = generateDrupalID(); SetCookie("DrupalID",drupalCookieID,365);}
 }
 
 //Drupal ID Generator function
 function generateDrupalID() {
-var date = Date.now(); if (date <= generateDrupalID.previous) {date = ++generateDrupalID.previous;
-} else {generateDrupalID.previous = date; }return date;}generateDrupalID.previous = 0; 
+    var date = Date.now(); if (date <= generateDrupalID.previous) {date = ++generateDrupalID.previous;
+    } else {generateDrupalID.previous = date; }return date;}generateDrupalID.previous = 0; 
 
 //Drupal ID Cookie Planting function
 function SetCookie(cookieName,cookieValue,nDays) {
-var today = new Date(); var expire = new Date();
-if (nDays==null || nDays==0) nDays=1;expire.setTime(today.getTime() + 3600000*24*nDays);
-document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();}
+    var today = new Date(); var expire = new Date();
+    if (nDays==null || nDays==0) nDays=1;expire.setTime(today.getTime() + 3600000*24*nDays);
+    document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();}
+
 
 
 //FUNCTION: Discover region + dataLayer push
 function discoverCurrencyPlusRegionNPush() {
 
     (function($) {
-// Required to override html content inside a view 
+        // Required to override html content inside a view 
         $(window).load(function() {
             if(window.location.href.indexOf(".co.nz") > -1) {
                 
@@ -367,7 +368,6 @@ if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null )
     
 //Home A - Impression listeners
     
-    
   null!=document.getElementById("HomeA-CTA-Hero-BookConsultation")&&
   isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN();
    
@@ -471,7 +471,7 @@ if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null )
     
 }
 
-//////////////////////////
+////////////////////////////
 //START IMPRESSION FUNCTIONS
 //////////////////////////
 
@@ -1589,7 +1589,8 @@ function GlobalFooter_IconBlog_CLK() {
 //////////////////////////////////////////////////
 
 
-
+//focus counters are part of onFocus functionality that is not part of
+//the scope yet however added in for 
 var focusCounter01=!0;     // form focus counter mktoForm_2257_Focus
 var focusCounter02=!0;     // form focus counter mktoForm_2258_Focus
 var focusCounter03=!0;     // form focus counter mktoForm_2259_Focus
@@ -1613,7 +1614,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
   // BOOK-NOW-AB FORM LOGIC
   //////////////////////////
     
-  // BOOK-NOW-AB - FOCUS - AU 
+  /* BOOK-NOW-AB - FOCUS - AU - (Stable - Not Yet Required)
 
    null!=document.getElementById("mktoForm_2257")&& 
    isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("focus",function(){mktoForm_2257_Focus()}));   
@@ -1631,8 +1632,10 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
             focusCounter01=false) //set counter to false
             };
+            
+  */        
 
-  // BOOK-NOW-AB - FOCUS - NZ 
+  /* BOOK-NOW-AB - FOCUS - NZ - (Stable - Not Yet Required)
 
     null!=document.getElementById("mktoForm_2258")&& 
     isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("focus",function(){mktoForm_2258_Focus()}));   
@@ -1651,7 +1654,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             focusCounter02=false) //set counter to false
 
             };
-    
+  */
   // BOOK-NOW-AB - INPUT - AU 
 
     null!=document.getElementById("mktoForm_2257")&& 
@@ -1661,12 +1664,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
              !1!==inputCounter01&&( //check counter
 
-                    
-                    
-                 //insert dataLayer.push here
-
-                           
-                
+                    dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'Book Consultation',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push
                 
             inputCounter01=false) //set counter to false
 
@@ -1681,12 +1696,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
              !1!==inputCounter02&&( //check counter
 
-                    
-                    
-                //insert dataLayer.push here
-                     
-                           
-                
+                      dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'Book Consultation',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push   
                 
              inputCounter02=false) //set counter to false
 
@@ -1725,7 +1752,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
   // BOOK-NOW FORM LOGIC (CONTROL)
   ////////////////////////////////
 
-    // BOOK-NOW - FOCUS - AU 
+  /* BOOK-NOW - FOCUS - AU - (Stable - Not Yet Required)
 
    null!=document.getElementById("mktoForm_2259")&& 
    isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("focus",function(){mktoForm_2259_Focus()}));   
@@ -1743,8 +1770,9 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
             focusCounter03=false) //set counter to false
             };
+    */
 
-  // BOOK-NOW - FOCUS - NZ 
+  /* BOOK-NOW - FOCUS - NZ - (Stable - Not Yet Required)
 
     null!=document.getElementById("mktoForm_2260")&& 
     isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("focus",function(){mktoForm_2260_Focus()}));   
@@ -1763,7 +1791,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             focusCounter04=false) //set counter to false
 
             };
-    
+    */
   // BOOK-NOW - INPUT - AU 
 
     null!=document.getElementById("mktoForm_2259")&& 
@@ -1773,7 +1801,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
              !1!==inputCounter03&&( //check counter
 
-                    
+                      dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'Book Consultation',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push    
                     
                  //insert dataLayer.push here
 
@@ -1793,13 +1838,25 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
              !1!==inputCounter04&&( //check counter
 
-                    
-                    
-                //insert dataLayer.push here
+                      dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'Book Consultation',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push
                      
-                           
-                
-                
              inputCounter04=false) //set counter to false
 
              };
@@ -1837,7 +1894,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
   // START-TODAY (REQUEST A CALL) FORM LOGIC 
   //////////////////////////////////////////
 
-   // START-TODAY - FOCUS - AU 
+  /* START-TODAY - FOCUS - AU - (Stable - Not Yet Required)
 
    null!=document.getElementById("mktoForm_1579")&& 
    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("focus",function(){mktoForm_1579_Focus()}));   
@@ -1856,7 +1913,8 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             focusCounter05=false) //set counter to false
             };
 
-  // START-TODAY - FOCUS - NZ 
+  */
+  /* START-TODAY - FOCUS - NZ - (Stable - Not Yet Required)
 
     null!=document.getElementById("mktoForm_1626")&& 
     isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("focus",function(){mktoForm_1626_Focus()}));   
@@ -1875,8 +1933,9 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             focusCounter06=false) //set counter to false
 
             };
-    
-  // START-TODAY - INPUT - AU 
+   */
+
+  // START-TODAY - INPUT - AU - (Stable - Not Yet Required)
 
     null!=document.getElementById("mktoForm_1579")&& 
     isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
@@ -1885,12 +1944,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
              !1!==inputCounter05&&( //check counter
 
-                    
-                    
-                 //insert dataLayer.push here
-
-                           
-                
+                      dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'Request Call',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push
                 
             inputCounter05=false) //set counter to false
 
@@ -1905,12 +1976,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
              !1!==inputCounter06&&( //check counter
 
-                    
-                    
-                //insert dataLayer.push here
-                     
-                           
-                
+                dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'Request Call',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push
                 
              inputCounter06=false) //set counter to false
 
@@ -1945,10 +2028,6 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                      }]
                  }}
              });//end push
-
-                    
-                
-
         };
     
   // START-TODAY - SUBMIT - NZ 
@@ -1988,7 +2067,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
   // START-TODAY (REQUEST A CALL) FORM LOGIC 
   //////////////////////////////////////////
 
-   // START-TODAY - FOCUS - AU 
+   /* START-TODAY - FOCUS - AU - (Stable - Not Yet Required)
 
    null!=document.getElementById("mktoForm_1579")&& 
    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("focus",function(){mktoForm_1579_Focus()}));   
@@ -2007,7 +2086,9 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             focusCounter05=false) //set counter to false
             };
 
-  // START-TODAY - FOCUS - NZ 
+   */
+
+   /* START-TODAY - FOCUS - NZ - (Stable - Not Yet Required)
 
     null!=document.getElementById("mktoForm_1626")&& 
     isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("focus",function(){mktoForm_1626_Focus()}));   
@@ -2026,120 +2107,13 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             focusCounter06=false) //set counter to false
 
             };
-    
-  // START-TODAY - INPUT - AU 
-
-    null!=document.getElementById("mktoForm_1579")&& 
-    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
-    
-         function mktoForm_1579_Input() {
-
-             !1!==inputCounter05&&( //check counter
-
-                    
-                    
-                 //insert dataLayer.push here
-
-                           
-                
-                
-            inputCounter05=false) //set counter to false
-
-            };
-    
-  // START-TODAY - INPUT - NZ 
-
-    null!=document.getElementById("mktoForm_1626")&& 
-    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Input()}));   
-    
-         function mktoForm_1626_Input() {
-
-             !1!==inputCounter06&&( //check counter
-
-                    
-                    
-                //insert dataLayer.push here
-                     
-                           
-                
-                
-             inputCounter06=false) //set counter to false
-
-             };
-    
-  // START-TODAY - SUBMIT - AU 
-
-    null!=document.getElementById("mktoForm_1579")&& 
-    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("submit",function(){mktoForm_1579_Submit()}));   
-    
-         function mktoForm_1579_Submit() {
-
-             dataLayer.push({
-                'event': 'purchase',
-                 'ecommerce': {
-                 'currencyCode': currencyByRegion,
-                 'purchase': {
-                    'actionField': {
-                        'id': 'T12345',
-                        'affiliation': undefined,
-                        'revenue': '',
-                        'coupon': 'EnhancedECM'
-                    },
-                     'products': [{
-                         'name': 'Book Consultation',
-                         'id': '1',
-                         'price': '',
-                         'brand': 'Jenny Craig',
-                         'category': 'lead',
-                         'quantity': 1,
-                         'variant': ''
-                     }]
-                 }}
-             });//end push
-                    
-               };
-
-        
-    
-  // START-TODAY - SUBMIT - NZ 
-
-    null!=document.getElementById("mktoForm_1626")&& 
-    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("submit",function(){mktoForm_1626_Submit()}));   
-    
-         function mktoForm_1626_Submit() {
-
-
-            dataLayer.push({
-                'event': 'purchase',
-                 'ecommerce': {
-                 'currencyCode': currencyByRegion,
-                 'purchase': {
-                    'actionField': {
-                        'id': 'T12345',
-                        'affiliation': undefined,
-                        'revenue': '',
-                        'coupon': 'EnhancedECM'
-                    },
-                     'products': [{
-                         'name': 'Request a Call-back',
-                         'id': '1',
-                         'price': '',
-                         'brand': 'Jenny Craig',
-                         'category': 'lead',
-                         'quantity': 1,
-                         'variant': ''
-                     }]
-                 }}
-             });//end push
-
-        };
-
+    */
 
   ///////////////////////////////
   // SUBSCRIBE-INSPIRE FORM LOGIC 
   ///////////////////////////////
 
-   // SUBSCRIBE-INSPIRE - FOCUS - AU/NZ 
+   /* SUBSCRIBE-INSPIRE - FOCUS - AU/NZ - (Stable - Not Yet Required)
 
    null!=document.getElementById("mktoForm_1589")&& 
    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("focus",function(){mktoForm_1589_Focus()}));   
@@ -2157,7 +2131,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                 
             focusCounter07=false) //set counter to false
             };
-
+   */
     
   // SUBSCRIBE-INSPIRE - INPUT - AU/NZ 
 
