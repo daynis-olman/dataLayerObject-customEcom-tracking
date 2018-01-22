@@ -107,12 +107,22 @@ mktoForm_1589 [au&nz] |  mktoForm_1589_IMPSN  | mktoForm_1589_Focus | mktoForm_1
 
 ENHANCED E-COMMERCE LOGIC FOR THIS APPLICATION:
 
-DOM Element IMPSN  =  GTM dataLayer.push {'event': 'productImpressions'};
-DOM Element CLICK  =  GTM dataLayer.push {'event': 'productClick'};
-DOM FORM Impressn  =  GTM dataLayer.push {'event': 'productDetail'};                        
-DOM FORM Input     =  GTM dataLayer.push {'event': 'productAdd'};
-DOM FORM Submit    =  GTM dataLayer.push {'event': 'checkout'};
-DOM THANKU PAGE    =  GTM dataLayer.push {'event': 'purchase'};
+DOM Element IMPSN  =  GTM dataLayer.push {'event': 'productImpressions'};   
+DOM Element CLICK  =  GTM dataLayer.push {'event': 'productClick'};        =  ProductID:
+DOM FORM Impressn  =  GTM dataLayer.push {'event': 'productDetail'};       =  ProductID:               
+DOM FORM Input     =  GTM dataLayer.push {'event': 'productAdd'};          =  ProductID:
+DOM FORM Submit    =  GTM dataLayer.push {'event': 'checkout'};            =  ProductID:
+DOM THANKU PAGE    =  GTM dataLayer.push {'event': 'purchase'};            =  ProductID:
+
+PRODUCT ID REGISTER:
+
+ProductID = 10001 = Book Consultation
+ProductID = 20001 = Request Call
+ProductID = 30001 = Centre Locator
+ProductID = 40001 = Direct dial
+ProductID = 50001 = Live Chat
+ProductID = 60001 = GetInspired Subscribe
+
 
 */
 
@@ -1935,7 +1945,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
             };
    */
 
-  // START-TODAY - INPUT - AU - (Stable - Not Yet Required)
+  // START-TODAY - INPUT - AU 
 
     null!=document.getElementById("mktoForm_1579")&& 
     isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
@@ -2141,13 +2151,25 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
          function mktoForm_1589_Input() {
 
              !1!==inputCounter07&&( //check counter
-
                     
-                    
-                 //insert dataLayer.push here
-
-                           
-                
+                 dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode': currencyByRegion,
+                           'add': {
+                            'actionField': {'list': undefined },
+                            'products': [{
+                               'name': 'GetInspired Subscribe',
+                                'id': '1',
+                                'price': '',
+                                'brand': 'Jenny Craig',
+                                'category': 'lead',
+                                'quantity': 1,
+                                'variant': ''
+                                }]
+                            }
+                        }
+                    });//end push
                 
             inputCounter07=false) //set counter to false
 
