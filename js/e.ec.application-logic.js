@@ -6,6 +6,7 @@ window.onload = function() {
     checkForNewImpressions();              // Check for assets immediately in viewport on pageload
     addClickListenersGroup();              // Start listening for asset clicks 
     checkFormExistence_nTrackFocus_nTrackSubmit(); // Start listening and actioning form hover, input & submit events (all forms)
+    checkForPurchases();                   // Check if we are on any of the thank-you page final steps. if yes = trigger purchase event
     window.addEventListener('scroll', function(){checkForNewImpressions();}, true); // Re-check form & asset impressions on scroll
 };
 
@@ -144,10 +145,15 @@ function isElementInViewport(el) {
 var currencyByRegion = "RussianRuble"; 
 
 //Discover Page Path + store as String
-var currentUrl = window.location.pathname;
+var pageUrlPath = window.location.pathname;
+
+//Discover Page Full URL + store as String 
+var thankYouPageUrl = window.location.href;
 
 //DrupalCookie ID + store as String
 var drupalCookieID = 'RusskiID123';
+
+
 
 //////////////
 //COOKIE LOGIC
@@ -190,7 +196,7 @@ function discoverCurrencyPlusRegionNPush() {
                     'userCrmId' : '',
                     'userSegment' : '',
                     'region' : 'NZ',
-                    'pageType' : currentUrl
+                    'pageType' : pageUrlPath
                 });
 
                 currencyByRegion = "NZD"; //sets currency value for all events on the page
@@ -206,7 +212,7 @@ function discoverCurrencyPlusRegionNPush() {
                     'userCrmId' : '',
                     'userSegment' : '',
                     'region' : 'AU',
-                    'pageType' : currentUrl
+                    'pageType' : pageUrlPath
                 });
 
                 currencyByRegion = "AUD"; //sets currency value for all events on the page
@@ -501,7 +507,7 @@ function HomeA_CTA_Hero_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -525,7 +531,7 @@ function HomeA_CTA_Hero_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -550,7 +556,7 @@ function HomeA_Body_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -575,7 +581,7 @@ function HomeA_Body_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -616,7 +622,7 @@ function HomeA_Body_FindCentre_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 2
                 }
             ]
@@ -645,7 +651,7 @@ function HomeB_Body_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 2
                 }
             ]
@@ -670,7 +676,7 @@ function HomeB_Body_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -694,7 +700,7 @@ function HomeB_Body_FindCentre_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 2
                 }
             ]
@@ -735,7 +741,7 @@ function HomeB_Mob_Body_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -760,7 +766,7 @@ function HomeB_Mob_Body_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -785,7 +791,7 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -829,7 +835,7 @@ function GlobalHeader_CTA_StartNowOrange_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -854,7 +860,7 @@ function GlobalHeader_CTA_ClickToCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -879,7 +885,7 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': currentUrl,
+                'list': pageUrlPath,
                 'position': 1
                 }
             ]
@@ -1173,7 +1179,7 @@ function HomeA_CTA_Hero_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1196,7 +1202,7 @@ function HomeA_CTA_Hero_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1219,7 +1225,7 @@ function HomeA_Body_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1242,7 +1248,7 @@ function HomeA_Body_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1279,7 +1285,7 @@ function HomeA_Body_FindCentre_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
                     'id': '30003',
@@ -1306,7 +1312,7 @@ function HomeB_Body_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1330,7 +1336,7 @@ function HomeB_Body_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1354,7 +1360,7 @@ function HomeB_Body_FindCentre_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
                     'id': '30001',
@@ -1384,7 +1390,7 @@ function HomeB_Mob_Body_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1408,7 +1414,7 @@ function HomeB_Mob_Body_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1432,7 +1438,7 @@ function HomeB_Mob_Body_FindCentre_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
                     'id': '30001',
@@ -1465,7 +1471,7 @@ function GlobalHeader_CTA_StartNowOrange_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1489,7 +1495,7 @@ function GlobalHeader_CTA_ClickToCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Direct dial',
                     'id': '40001',
@@ -1513,7 +1519,7 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': currentUrl}, // Same as impression location
+                'actionField': {'list': pageUrlPath}, // Same as impression location
                 'products': [{
                     'name': 'Live Chat',
                     'id': '50001',
@@ -2278,3 +2284,126 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
 
 
+//////////////////////////////////////////////////////////////
+// TRACK PURCHASES BY THANK YOU PAGE URL's  
+//////////////////////////////////////////////////////////////
+
+
+
+function checkForPurchases() {
+
+switch (thankYouPageUrl) {
+        
+        //if current url matches case, fire 'purchase' event
+
+  case 'https://pages.jennycraig.com.au/thank-you-for-booking.html': //AB TEST Book-now AU
+  case 'https://pages.jennycraig.co.nz/thank-you-for-booking.html': //AB TEST Book-now NZ
+  case 'https://appointments.jennycraig.com.au/thank-you': //origin Book-now AU
+  case 'https://appointments.jennycraig.co.nz/thank-you': //origin Book-now NZ
+
+        //BOOK-AB + BOOK-ORIGIN - AUS+NZ PURCHASE EVENT 
+        
+            dataLayer.push({
+                'event': 'purchase',
+                'ecommerce': {
+                'currencyCode': currencyByRegion,
+                    'purchase': {
+                      'actionField': {
+                        'id': drupalCookieID,
+                        'affiliation': 'undefined',
+                        'revenue': '',
+                        'tax':'',
+                        'shipping': '0.00',
+                        'coupon': ''
+                        },
+                        'products': [{
+                           'name': 'Book Consultation',
+                           'id': '10001',
+                           'price': '',
+                           'brand': 'Jenny Craig',
+                           'category': 'lead',
+                           'quantity': 1,
+                           'variant': ''
+                        }]
+                    }
+                }
+            });// end push
+            
+            
+  break;
+
+  case 'https://www.jennycraig.co.nz/start-today/thank-you':
+  case 'https://www.jennycraig.com.au/start-today/thank-you':
+        
+  //REQUEST A CALLBACK - AUS+NZ PURCHASE EVENT 
+
+        
+          dataLayer.push({
+                'event': 'purchase',
+                'ecommerce': {
+                'currencyCode': currencyByRegion,
+                    'purchase': {
+                      'actionField': {
+                        'id': drupalCookieID,
+                        'affiliation': 'undefined',
+                        'revenue': '',
+                        'tax':'',
+                        'shipping': '0.00',
+                        'coupon': ''
+                        },
+                        'products': [{
+                           'name': 'Request Call',
+                           'id': '20001',
+                           'price': '',
+                           'brand': 'Jenny Craig',
+                           'category': 'lead',
+                           'quantity': 1,
+                           'variant': ''
+                        }]
+                    }
+                }
+            });// end push?
+        
+            console.log('Purchase event : Book Consultation : ID:20001 : dataLayer.push() OK!');
+
+
+    break;
+        
+    case 'https://www.jennycraig.com.au/recipe-thank-you':
+    case 'https://www.jennycraig.co.nz/recipe-thank-you':
+
+            dataLayer.push({
+                'event': 'purchase',
+                'ecommerce': {
+                'currencyCode': currencyByRegion,
+                    'purchase': {
+                      'actionField': {
+                        'id': drupalCookieID,
+                        'affiliation': 'undefined',
+                        'revenue': '',
+                        'tax':'',
+                        'shipping': '0.00',
+                        'coupon': ''
+                        },
+                        'products': [{
+                           'name': 'GetInspired Subscribe',
+                           'id': '60001',
+                           'price': '',
+                           'brand': 'Jenny Craig',
+                           'category': 'lead',
+                           'quantity': 1,
+                           'variant': ''
+                        }]
+                    }
+                }
+            });// end push?
+        
+            console.log('Purchase event : Book Consultation : ID:20001 : dataLayer.push() OK!');
+
+  default:
+        
+    console.log('No thank you page found!....');
+}//end swith
+    
+    
+};//end codebase
