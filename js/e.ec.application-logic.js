@@ -96,7 +96,7 @@ FORM #3 /start-today.html
 ELEMENT-ID            | Impression Function   | OnFocus Function    | onInput Function    | onSubmit Function            
 -------------------------------------------------------------------------------------------------------------------------  
 mktoForm_1579 [au]    |  mktoForm_1579_IMPSN  | mktoForm_1579_Focus | mktoForm_1579_Input | mktoForm_1579_Submit             
-mktoForm_1626 [nz]    |  mktoForm_1626_IMPSN  | mktoForm_1626_Focus | mktoForm_1626_Input | mktoForm_1526_Submit
+mktoForm_1626 [nz]    |  mktoForm_1626_IMPSN  | mktoForm_1626_Focus | mktoForm_1626_Input | mktoForm_1626_Submit
 -------------------------------------------------------------------------------------------------------------------------
 FORM #4 Subscribe to Inspire Magazine
 -------------------------------------------------------------------------------------------------------------------------
@@ -114,6 +114,7 @@ DOM FORM Input     =  GTM dataLayer.push {'event': 'productAdd'};          =  Pr
 DOM FORM Submit    =  GTM dataLayer.push {'event': 'checkout'};            =  ProductID:
 DOM THANKU PAGE    =  GTM dataLayer.push {'event': 'purchase'};            =  ProductID:
 
+
 PRODUCT ID REGISTER:
 
 ProductID = 10001 = Book Consultation
@@ -122,7 +123,6 @@ ProductID = 30001 = Centre Locator
 ProductID = 40001 = Direct dial
 ProductID = 50001 = Live Chat
 ProductID = 60001 = GetInspired Subscribe
-
 
 */
 
@@ -496,7 +496,7 @@ function HomeA_CTA_Hero_BookConsultation_IMPSN() {
             'impressions':[
                 {
                 'name': 'Book Consultation',
-                'id': '1',
+                'id': '10001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -520,7 +520,7 @@ function HomeA_CTA_Hero_RequestCall_IMPSN() {
             'impressions':[
                 {
                 'name': 'Request Call',
-                'id': '1',
+                'id': '20001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -545,7 +545,7 @@ function HomeA_Body_BookConsultation_IMPSN() {
             'impressions':[
                 {
                 'name': 'Book Consultation',
-                'id': '1',
+                'id': '10001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -570,7 +570,7 @@ function HomeA_Body_RequestCall_IMPSN() {
             'impressions':[
                 {
                 'name': 'Request Call',
-                'id': '1',
+                'id': '20001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -611,13 +611,13 @@ function HomeA_Body_FindCentre_IMPSN() {
             'impressions':[
                 {
                 'name': 'Centre Locator',
-                'id': '1',
+                'id': '30001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
                 'list': currentUrl,
-                'position': 1
+                'position': 2
                 }
             ]
         }
@@ -640,13 +640,13 @@ function HomeB_Body_BookConsultation_IMPSN() {
             'impressions':[
                 {
                 'name': 'Book Consultation',
-                'id': '1',
+                'id': '10001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
                 'list': currentUrl,
-                'position': 1
+                'position': 2
                 }
             ]
         }
@@ -665,7 +665,7 @@ function HomeB_Body_RequestCall_IMPSN() {
             'impressions':[
                 {
                 'name': 'Request Call',
-                'id': '1',
+                'id': '20001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -689,13 +689,13 @@ function HomeB_Body_FindCentre_IMPSN() {
             'impressions':[
                 {
                 'name': 'Centre Locator',
-                'id': '2',
+                'id': '30001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
                 'list': currentUrl,
-                'position': 1
+                'position': 2
                 }
             ]
         }
@@ -730,7 +730,7 @@ function HomeB_Mob_Body_BookConsultation_IMPSN() {
             'impressions':[
                 {
                 'name': 'Book Consultation',
-                'id': '1',
+                'id': '10001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -755,7 +755,7 @@ function HomeB_Mob_Body_RequestCall_IMPSN() {
             'impressions':[
                 {
                 'name': 'Request Call',
-                'id': '1',
+                'id': '20001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -780,7 +780,7 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
             'impressions':[
                 {
                 'name': 'Centre Locator',
-                'id': '3',
+                'id': '30003',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -824,7 +824,7 @@ function GlobalHeader_CTA_StartNowOrange_IMPSN() {
             'impressions':[
                 {
                 'name': 'Book Consultation',
-                'id': '1',
+                'id': '10001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -849,7 +849,7 @@ function GlobalHeader_CTA_ClickToCall_IMPSN() {
             'impressions':[
                 {
                 'name': 'Direct dial',
-                'id': '1',
+                'id': '40001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -874,7 +874,7 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
             'impressions':[
                 {
                 'name': 'Live Chat',
-                'id': '1',
+                'id': '50001',
                 'price': '',
                 'brand': 'Jenny Craig',
                 'category': 'lead',
@@ -969,23 +969,23 @@ function GlobalFooter_IconBlog_IMPSN() {
 function mktoForm_2257_IMPSN() {
     
         dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'Book Consultation',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'Book Consultation',
+                        'id': '10001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
+            }
+        });
 
     count22=!1; // set counter to false
 
@@ -994,23 +994,23 @@ function mktoForm_2257_IMPSN() {
 function mktoForm_2258_IMPSN() {
 
        dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': '',
-            'impressions':[
-                {
-                'name': 'Book Consultation',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'Book Consultation',
+                        'id': '10001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
+            }
+        });
 
     count23=!1; // set counter to false
 
@@ -1021,24 +1021,23 @@ function mktoForm_2258_IMPSN() {
 function mktoForm_2259_IMPSN() {
 
        dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'Book Consultation',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'Book Consultation',
+                        'id': '10001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
-
+            }
+        });
     
     count24=!1; // set counter to false
 
@@ -1046,24 +1045,24 @@ function mktoForm_2259_IMPSN() {
 
 function mktoForm_2260_IMPSN() {
     
-       dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'Book Consultation',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+      dataLayer.push({
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'Book Consultation',
+                        'id': '10001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
+            }
+        });
 
     count25=!1; // set counter to false
 
@@ -1073,24 +1072,24 @@ function mktoForm_2260_IMPSN() {
 
 function mktoForm_1579_IMPSN() {
     
-       dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'Request Call',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+     dataLayer.push({
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'Request Call',
+                        'id': '20001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
+            }
+        });
 
     count26=!1; // set counter to false
 
@@ -1099,23 +1098,23 @@ function mktoForm_1579_IMPSN() {
 function mktoForm_1626_IMPSN() {
     
        dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'Request Call',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'Request Call',
+                        'id': '20001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
+            }
+        });
 
     count27=!1; // set counter to false
 
@@ -1125,24 +1124,26 @@ function mktoForm_1626_IMPSN() {
 
 function mktoForm_1589_IMPSN() {
     
-       dataLayer.push({
-        'event': 'productImpressions',
-        'ecommerce': {
-            'currencyCode': currencyByRegion,
-            'impressions':[
-                {
-                'name': 'GetInspired Subscribe',
-                'id': '1',
-                'price': '',
-                'brand': 'Jenny Craig',
-                'category': 'lead',
-                'variant': '',
-                'list': currentUrl,
-                'position': 1
+
+dataLayer.push({
+            'pageType': 'Booking Form',
+            'event': 'productDetail',
+            'ecommerce': {
+                'currencyCode': currencyByRegion,
+                'detail': {
+                    'actionField': {'list': ''},
+                    'products': [{
+                        'name': 'GetInspired Subscribe',
+                        'id': '60001',
+                        'price': '',
+                        'brand': 'Jenny Craig',
+                        'category': 'lead',
+                        'variant': ''
+                    }]
                 }
-            ]
-        }
-    });       
+            }
+        });
+          
 
     count28=!1; // set counter to false
 
@@ -1175,7 +1176,7 @@ function HomeA_CTA_Hero_BookConsultation_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
-                    'id': '1',
+                    'id': '10001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1198,7 +1199,7 @@ function HomeA_CTA_Hero_RequestCall_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
-                    'id': '1',
+                    'id': '20001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1221,12 +1222,12 @@ function HomeA_Body_BookConsultation_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
-                    'id': '1',
+                    'id': '10001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1244,12 +1245,12 @@ function HomeA_Body_RequestCall_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
-                    'id': '1',
+                    'id': '20001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1281,12 +1282,12 @@ function HomeA_Body_FindCentre_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
-                    'id': '1',
+                    'id': '30003',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1308,12 +1309,12 @@ function HomeB_Body_BookConsultation_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
-                    'id': '1',
+                    'id': '10001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1332,12 +1333,12 @@ function HomeB_Body_RequestCall_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
-                    'id': '1',
+                    'id': '20001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1356,7 +1357,7 @@ function HomeB_Body_FindCentre_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
-                    'id': '4',
+                    'id': '30001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1386,12 +1387,12 @@ function HomeB_Mob_Body_BookConsultation_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
-                    'id': '1',
+                    'id': '10001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1410,12 +1411,12 @@ function HomeB_Mob_Body_RequestCall_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
-                    'id': '1',
+                    'id': '20001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
                     'variant': '',
-                    'position': 1
+                    'position': 2
                 }]
             }
         }
@@ -1434,7 +1435,7 @@ function HomeB_Mob_Body_FindCentre_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
-                    'id': '1',
+                    'id': '30001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1467,7 +1468,7 @@ function GlobalHeader_CTA_StartNowOrange_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
-                    'id': '1',
+                    'id': '10001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1491,7 +1492,7 @@ function GlobalHeader_CTA_ClickToCall_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Direct dial',
-                    'id': '1',
+                    'id': '40001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1515,7 +1516,7 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
                 'actionField': {'list': currentUrl}, // Same as impression location
                 'products': [{
                     'name': 'Live Chat',
-                    'id': '1',
+                    'id': '50001',
                     'price': '',
                     'brand': 'Jenny Craig',
                     'category': 'lead',
@@ -1665,69 +1666,73 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
             };
   */
-  // BOOK-NOW-AB - INPUT - AU 
+  // BOOK-NOW-AB - INPUT - AU - GOLDEN VERSION!!!
 
-    null!=document.getElementById("mktoForm_2257")&& 
+    null!=document.getElementById("mktoForm_2257")&&!1!==inputCounter01&&
     isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Input()}));   
     
-         function mktoForm_2257_Input() {
-
-             !1!==inputCounter01&&( //check counter
+         function mktoForm_2257_Input() {                 
 
                     dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
-                           'currencyCode': currencyByRegion,
+                           'currencyCode':currencyByRegion,
                            'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'Book Consultation',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
-                            }
-                        }
-                    });//end push
-                
-            inputCounter01=false) //set counter to false
-
-            };
-    
-  // BOOK-NOW-AB - INPUT - NZ 
-
-    null!=document.getElementById("mktoForm_2258")&& 
-    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Input()}));   
-    
-         function mktoForm_2258_Input() {
-
-             !1!==inputCounter02&&( //check counter
-
-                      dataLayer.push({
-                      'event': 'productAdd',
-                        'ecommerce': {
-                           'currencyCode': currencyByRegion,
-                           'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'Book Consultation',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'Book Consultation',
+                                    'id': '10001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
                             }
                         }
                     });//end push   
-                
-             inputCounter02=false) //set counter to false
 
-             };
+
+                inputCounter01 = false;
+             //set counter to false
+
+            
+         }
+    
+  // BOOK-NOW-AB - INPUT - NZ 
+
+    null!=document.getElementById("mktoForm_2258")&&!1!==inputCounter02&&
+    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Input()}));   
+    
+         function mktoForm_2258_Input() {                 
+
+                    dataLayer.push({
+                      'event': 'productAdd',
+                        'ecommerce': {
+                           'currencyCode':currencyByRegion,
+                           'add': {
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'Book Consultation',
+                                    'id': '10001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
+                            }
+                        }
+                    });//end push   
+
+
+                inputCounter02 = false;
+             //set counter to false
+
+            
+         }
     
   // BOOK-NOW-AB - SUBMIT - AU 
 
@@ -1736,7 +1741,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
          function mktoForm_2257_Submit() {
 
-
+             dataLayer.push({
+                'event': 'checkout',
+                 'ecommerce': {
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'Book Consultation',
+                             'id': '10001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
+             });//end push
                     
                 
 
@@ -1747,11 +1769,26 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     null!=document.getElementById("mktoForm_2258")&& 
     isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("submit",function(){mktoForm_2258_Submit()}));   
     
-         function mktoForm_2257_Submit() {
-
-
+         function mktoForm_2258_Submit() {
                     
-                //insert dataLayer.push here
+                dataLayer.push({
+                'event': 'checkout',
+                 'ecommerce': {
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'Book Consultation',
+                             'id': '10001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
+             });//end push
                 
                 
 
@@ -1804,72 +1841,71 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     */
   // BOOK-NOW - INPUT - AU 
 
-    null!=document.getElementById("mktoForm_2259")&& 
+    null!=document.getElementById("mktoForm_2259")&&!1!==inputCounter03&&
     isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("input",function(){mktoForm_2259_Input()}));   
     
-         function mktoForm_2259_Input() {
+         function mktoForm_2259_Input() {                 
 
-             !1!==inputCounter03&&( //check counter
-
-                      dataLayer.push({
+                    dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
-                           'currencyCode': currencyByRegion,
+                           'currencyCode':currencyByRegion,
                            'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'Book Consultation',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'Book Consultation',
+                                    'id': '10001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
                             }
                         }
-                    });//end push    
-                    
-                 //insert dataLayer.push here
+                    });//end push   
 
-                           
-                
-                
-            inputCounter03=false) //set counter to false
 
-            };
-    
+                inputCounter03 = false;
+             //set counter to false
+
+            
+         }
+
   // BOOK-NOW - INPUT - NZ 
 
-    null!=document.getElementById("mktoForm_2260")&& 
+    null!=document.getElementById("mktoForm_2260")&&!1!==inputCounter04&&
     isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("input",function(){mktoForm_2260_Input()}));   
     
-         function mktoForm_2260_Input() {
+         function mktoForm_2260_Input() {                 
 
-             !1!==inputCounter04&&( //check counter
-
-                      dataLayer.push({
+                    dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
-                           'currencyCode': currencyByRegion,
+                           'currencyCode':currencyByRegion,
                            'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'Book Consultation',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'Book Consultation',
+                                    'id': '10001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
                             }
                         }
-                    });//end push
-                     
-             inputCounter04=false) //set counter to false
+                    });//end push   
 
-             };
+
+                inputCounter04 = false;
+             //set counter to false
+
+            
+         }
     
   // BOOK-NOW - SUBMIT - AU 
 
@@ -1878,7 +1914,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
          function mktoForm_2259_Submit() {
 
-
+             dataLayer.push({
+                'event': 'checkout',
+                 'ecommerce': {
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'Book Consultation',
+                             'id': '10001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
+             });//end push
                     
                 
 
@@ -1891,9 +1944,24 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
          function mktoForm_2260_Submit() {
 
-
-                    
-                //insert dataLayer.push here
+             dataLayer.push({
+                'event': 'checkout',
+                 'ecommerce': {
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'Book Consultation',
+                             'id': '10001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
+             });//end push
                 
                 
 
@@ -1947,67 +2015,73 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
   // START-TODAY - INPUT - AU 
 
-    null!=document.getElementById("mktoForm_1579")&& 
+    
+    null!=document.getElementById("mktoForm_1579")&&!1!==inputCounter05&&
     isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
     
-         function mktoForm_1579_Input() {
+         function mktoForm_1579_Input() {                 
 
-             !1!==inputCounter05&&( //check counter
-
-                      dataLayer.push({
+                    dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
-                           'currencyCode': currencyByRegion,
+                           'currencyCode':currencyByRegion,
                            'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'Request Call',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'Request Call',
+                                    'id': '20001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
                             }
                         }
-                    });//end push
-                
-            inputCounter05=false) //set counter to false
+                    });//end push   
 
-            };
+
+                inputCounter05 = false;
+             //set counter to false
+
+            
+         }
+
     
   // START-TODAY - INPUT - NZ 
 
-    null!=document.getElementById("mktoForm_1626")&& 
+    null!=document.getElementById("mktoForm_1626")&&!1!==inputCounter06&&
     isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Input()}));   
     
-         function mktoForm_1626_Input() {
+         function mktoForm_1626_Input() {                 
 
-             !1!==inputCounter06&&( //check counter
-
-                dataLayer.push({
+                    dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
-                           'currencyCode': currencyByRegion,
+                           'currencyCode':currencyByRegion,
                            'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'Request Call',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'Request Call',
+                                    'id': '20001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
                             }
                         }
-                    });//end push
-                
-             inputCounter06=false) //set counter to false
+                    });//end push   
 
-             };
+
+                inputCounter06 = false;
+             //set counter to false
+
+            
+         }
     
   // START-TODAY - SUBMIT - AU 
 
@@ -2017,26 +2091,22 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
          function mktoForm_1579_Submit() {
 
             dataLayer.push({
-                'event': 'purchase',
+                'event': 'checkout',
                  'ecommerce': {
-                 'currencyCode': currencyByRegion,
-                 'purchase': {
-                    'actionField': {
-                        'id': 'T12345',
-                        'affiliation': undefined,
-                        'revenue': '',
-                        'coupon': 'EnhancedECM'
-                    },
-                     'products': [{
-                         'name': 'Book Consultation',
-                         'id': '1',
-                         'price': '',
-                         'brand': 'Jenny Craig',
-                         'category': 'lead',
-                         'quantity': 1,
-                         'variant': ''
-                     }]
-                 }}
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'Request Call',
+                             'id': '20001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
              });//end push
         };
     
@@ -2048,26 +2118,22 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
          function mktoForm_1626_Submit() {
         
              dataLayer.push({
-                'event': 'purchase',
+                'event': 'checkout',
                  'ecommerce': {
-                 'currencyCode': currencyByRegion,
-                 'purchase': {
-                    'actionField': {
-                        'id': 'T12345',
-                        'affiliation': undefined,
-                        'revenue': '',
-                        'coupon': 'EnhancedECM'
-                    },
-                     'products': [{
-                         'name': 'Book Consultation',
-                         'id': '1',
-                         'price': '',
-                         'brand': 'Jenny Craig',
-                         'category': 'lead',
-                         'quantity': 1,
-                         'variant': ''
-                     }]
-                 }}
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'Request Call',
+                             'id': '20001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
              });//end push
 
 
@@ -2145,35 +2211,38 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
   // SUBSCRIBE-INSPIRE - INPUT - AU/NZ 
 
-    null!=document.getElementById("mktoForm_1589")&& 
+    null!=document.getElementById("mktoForm_1589")&&!1!==inputCounter07&&
     isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Input()}));   
     
-         function mktoForm_1589_Input() {
+         function mktoForm_1589_Input() {                 
 
-             !1!==inputCounter07&&( //check counter
-                    
-                 dataLayer.push({
+                    dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
-                           'currencyCode': currencyByRegion,
+                           'currencyCode':currencyByRegion,
                            'add': {
-                            'actionField': {'list': undefined },
-                            'products': [{
-                               'name': 'GetInspired Subscribe',
-                                'id': '1',
-                                'price': '',
-                                'brand': 'Jenny Craig',
-                                'category': 'lead',
-                                'quantity': 1,
-                                'variant': ''
-                                }]
+                                'actionField': {'list': undefined},
+                                'products': {
+                                    'name': 'GetInspired Subscribe',
+                                    'id': '60001',
+                                    'price': '',
+                                    'brand': 'Jenny Craig',
+                                    'category': 'lead',
+                                    'quantity': 1,
+                                    'variant': ''
+                                    }
+                                
                             }
                         }
-                    });//end push
-                
-            inputCounter07=false) //set counter to false
+                    });//end push   
 
-            };
+
+                inputCounter07 = false;
+             //set counter to false
+
+            
+         }
+
     
   // SUBSCRIBE-INSPIRE - SUBMIT - AU/NZ 
 
@@ -2182,29 +2251,23 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
          function mktoForm_1589_Submit() {
              
-             var test = 01;
-
              dataLayer.push({
-                'event': 'purchase',
+                'event': 'checkout',
                  'ecommerce': {
-                 'currencyCode': currencyByRegion,
-                 'purchase': {
-                    'actionField': {
-                        'id': 'T12345',
-                        'affiliation': undefined,
-                        'revenue': '',
-                        'coupon': 'EnhancedECM'
-                    },
-                     'products': [{
-                         'name': 'GetInspired Subscribe',
-                         'id': '1',
-                         'price': '',
-                         'brand': 'Jenny Craig',
-                         'category': 'lead',
-                         'quantity': 1,
-                         'variant': ''
-                     }]
-                 }}
+                     'currencyCode': currencyByRegion,
+                     'checkout': {
+                         'actionField': {'step': 1, 'option': ''},
+                         'products': [{
+                            'name': 'GetInspired Subscribe',
+                             'id': '60001',
+                             'price': '',
+                             'brand': 'Jenny Craig',
+                             'category': 'lead',
+                             'quantity': 1,
+                             'variant': ''
+                         }]
+                     }
+                 }
              });//end push
     
 
