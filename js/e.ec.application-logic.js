@@ -12,6 +12,9 @@ var thankYouPageUrl = window.location.href;
 //DrupalCookie ID + store as String
 var drupalCookieID = 'RusskiID123';
 
+var inputCounter08=!0;     // form input counter mktoForm_1589_Input
+
+
 //SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
 window.onload = function() {
@@ -2221,11 +2224,13 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     
   // SUBSCRIBE-INSPIRE - INPUT - AU/NZ 
 
-    null!=document.getElementById("mktoForm_1589")&&!1!==inputCounter07&&
-    isElementInViewport(document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Input()}));   
+
+    null!=document.getElementById("mktoForm_1589")&&
+    document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Input(); inputCounter08=false;});   
     
          function mktoForm_1589_Input() {                 
 
+             if (inputCounter08 === true) {
                     dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
@@ -2241,15 +2246,11 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'quantity': 1,
                                     'variant': ''
                                     }
-                                
                             }
                         }
                     });//end push   
 
-
-                inputCounter07 = false;
-             //set counter to false
-
+             }//end counter=true condition
             
          }
 
