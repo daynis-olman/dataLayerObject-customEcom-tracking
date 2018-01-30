@@ -1,21 +1,21 @@
+//SETTING CORE VARIABLES 
+
+//Discover Region Currency + store as String
+var currencyByRegion = "RussianRuble"; 
+
+//Discover Page Path + store as String
+var pageUrlPath = window.location.pathname;
+
+//Discover Page Full URL + store as String 
+var thankYouPageUrl = window.location.href;
+
+//DrupalCookie ID + store as String
+var drupalCookieID = 'RusskiID123';
+
 //SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
 
 window.onload = function() {
     
-    //SETTING CORE VARIABLES 
-
-    //Discover Region Currency + store as String
-    var currencyByRegion = "RussianRuble"; 
-
-    //Discover Page Path + store as String
-    var pageUrlPath = window.location.pathname;
-
-    //Discover Page Full URL + store as String 
-    var thankYouPageUrl = window.location.href;
-
-    //DrupalCookie ID + store as String
-    var drupalCookieID = 'RusskiID123';
-
     retrieve_or_make_Cookie();             // Check if cookie exists. !=, plant it and store value. 
     discoverCurrencyPlusRegionNPush();     // Derive and push currency from TLD index window.localtion.href. Also push DrupalID from cookie.
     checkForNewImpressions();              // Check for assets immediately in viewport on pageload
