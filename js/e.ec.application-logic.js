@@ -1692,7 +1692,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'Book Consultation',
                                     'id': '10001',
                                     'price': '',
@@ -1700,7 +1700,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                                 
                             }
                         }
@@ -1726,7 +1726,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'Book Consultation',
                                     'id': '10001',
                                     'price': '',
@@ -1734,7 +1734,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                                 
                             }
                         }
@@ -1865,7 +1865,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'Book Consultation',
                                     'id': '10001',
                                     'price': '',
@@ -1873,7 +1873,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                                 
                             }
                         }
@@ -1899,7 +1899,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'Book Consultation',
                                     'id': '10001',
                                     'price': '',
@@ -1907,7 +1907,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                                 
                             }
                         }
@@ -2040,7 +2040,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'Request Call',
                                     'id': '20001',
                                     'price': '',
@@ -2048,13 +2048,13 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                                 
                             }
                         }
                     });//end push   
 
-
+console.log("Input set to false");
                 inputCounter05 = false;
              //set counter to false
 
@@ -2075,7 +2075,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'Request Call',
                                     'id': '20001',
                                     'price': '',
@@ -2083,7 +2083,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                                 
                             }
                         }
@@ -2237,7 +2237,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                            'currencyCode':currencyByRegion,
                            'add': {
                                 'actionField': {'list': undefined},
-                                'products': {
+                                'products': [{
                                     'name': 'GetInspired Subscribe',
                                     'id': '60001',
                                     'price': '',
@@ -2245,10 +2245,10 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                                     'category': 'lead',
                                     'quantity': 1,
                                     'variant': ''
-                                    }
+                                    }]
                             }
                         }
-                    });//end push   
+                    });//end push
 
              }//end counter=true condition
             
@@ -2339,6 +2339,8 @@ switch (thankYouPageUrl) {
 
   case 'https://www.jennycraig.co.nz/start-today/thank-you':
   case 'https://www.jennycraig.com.au/start-today/thank-you':
+  case 'https://stage2.jennycraig.com.au/start-today/thank-you':
+  case 'https://stage2.jennycraig.com.au/start-today/thank-you':
         
   //REQUEST A CALLBACK - AUS+NZ PURCHASE EVENT 
 
@@ -2376,6 +2378,8 @@ switch (thankYouPageUrl) {
         
     case 'https://www.jennycraig.com.au/recipe-thank-you':
     case 'https://www.jennycraig.co.nz/recipe-thank-you':
+    case 'https://stage2.jennycraig.com.au/recipe-thank-you':
+    case 'https://stage2.jennycraig.co.nz/recipe-thank-you':
 
             dataLayer.push({
                 'event': 'purchase',
