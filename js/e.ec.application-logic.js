@@ -6,6 +6,9 @@ var currencyByRegion = "RussianRuble";
 //Discover Page Path + store as String
 var pageUrlPath = window.location.pathname;
 
+//Discover Page Description + store as String
+var pageDescription = document.querySelector("meta[property='og:title']").getAttribute('content')
+
 //Discover Page Full URL + store as String 
 var thankYouPageUrl = window.location.href;
 
@@ -209,12 +212,10 @@ function discoverCurrencyPlusRegionNPush() {
                     'userCrmId' : '',
                     'userSegment' : '',
                     'region' : 'NZ',
-                    'pageType' : pageUrlPath
+                    'pageType' : pageDescription
                 });
 
                 currencyByRegion = "NZD"; //sets currency value for all events on the page
-                console.log("NZ Region set");
-                console.log("NZ Currency set");
             }
             
             if(window.location.href.indexOf(".com.au") > -1) { 
@@ -225,12 +226,10 @@ function discoverCurrencyPlusRegionNPush() {
                     'userCrmId' : '',
                     'userSegment' : '',
                     'region' : 'AU',
-                    'pageType' : pageUrlPath
+                    'pageType' : pageDescription
                 });
 
                 currencyByRegion = "AUD"; //sets currency value for all events on the page
-                console.log("NZ Region set");
-                console.log("NZ Currency set");
 
             }
         });  
@@ -520,7 +519,7 @@ function HomeA_CTA_Hero_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -544,7 +543,7 @@ function HomeA_CTA_Hero_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -569,7 +568,7 @@ function HomeA_Body_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -594,7 +593,7 @@ function HomeA_Body_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -635,7 +634,7 @@ function HomeA_Body_FindCentre_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 2
                 }
             ]
@@ -664,7 +663,7 @@ function HomeB_Body_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 2
                 }
             ]
@@ -689,7 +688,7 @@ function HomeB_Body_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -713,7 +712,7 @@ function HomeB_Body_FindCentre_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 2
                 }
             ]
@@ -754,7 +753,7 @@ function HomeB_Mob_Body_BookConsultation_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -779,7 +778,7 @@ function HomeB_Mob_Body_RequestCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -804,7 +803,7 @@ function HomeB_Mob_Body_FindCentre_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -848,7 +847,7 @@ function GlobalHeader_CTA_StartNowOrange_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -873,7 +872,7 @@ function GlobalHeader_CTA_ClickToCall_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -898,7 +897,7 @@ function GlobalHeader_CTA_StartLiveChat_IMPSN() {
                 'brand': 'Jenny Craig',
                 'category': 'lead',
                 'variant': '',
-                'list': pageUrlPath,
+                'list': pageDescription,
                 'position': 1
                 }
             ]
@@ -1192,7 +1191,7 @@ function HomeA_CTA_Hero_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1215,7 +1214,7 @@ function HomeA_CTA_Hero_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1238,7 +1237,7 @@ function HomeA_Body_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1261,7 +1260,7 @@ function HomeA_Body_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1298,7 +1297,7 @@ function HomeA_Body_FindCentre_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
                     'id': '30003',
@@ -1325,7 +1324,7 @@ function HomeB_Body_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1349,7 +1348,7 @@ function HomeB_Body_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1373,7 +1372,7 @@ function HomeB_Body_FindCentre_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
                     'id': '30001',
@@ -1403,7 +1402,7 @@ function HomeB_Mob_Body_BookConsultation_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1427,7 +1426,7 @@ function HomeB_Mob_Body_RequestCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Request Call',
                     'id': '20001',
@@ -1451,7 +1450,7 @@ function HomeB_Mob_Body_FindCentre_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Centre Locator',
                     'id': '30001',
@@ -1484,7 +1483,7 @@ function GlobalHeader_CTA_StartNowOrange_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Book Consultation',
                     'id': '10001',
@@ -1508,7 +1507,7 @@ function GlobalHeader_CTA_ClickToCall_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Direct dial',
                     'id': '40001',
@@ -1532,7 +1531,7 @@ function GlobalHeader_CTA_StartLiveChat_CLK() {
         'ecommerce': {
             'currencyCode': currencyByRegion,
             'click': {
-                'actionField': {'list': pageUrlPath}, // Same as impression location
+                'actionField': {'list': pageDescription}, // Same as impression location
                 'products': [{
                     'name': 'Live Chat',
                     'id': '50001',
@@ -2361,7 +2360,6 @@ switch (thankYouPageUrl) {
                 }
             });// end push?
         
-            console.log('Purchase event : Book Consultation : ID:20001 : dataLayer.push() OK!');
 
 
     break;
@@ -2397,12 +2395,10 @@ switch (thankYouPageUrl) {
                 }
             });// end push
         
-            console.log('Purchase event : Book Consultation : ID:20001 : dataLayer.push() OK!');
 
   default:
         
-    console.log('No thank you page found!....');
 }//end swith 
-    
+    console.log("e.ecm-ok");
     
 };//end codebase
