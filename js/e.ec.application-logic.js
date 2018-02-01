@@ -1681,10 +1681,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
   */
   // BOOK-NOW-AB - INPUT - AU - GOLDEN VERSION!!!
 
-    null!=document.getElementById("mktoForm_2257")&&!1!==inputCounter01&&
-    isElementInViewport(document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Input()}));   
+     null!=document.getElementById("mktoForm_2257")&&
+  document.getElementById("mktoForm_2257").addEventListener("input",function(){mktoForm_2257_Input(); inputCounter01=false;});   
     
          function mktoForm_2257_Input() {                 
+
+             if (inputCounter01 === true) {                  
 
                     dataLayer.push({
                       'event': 'productAdd',
@@ -1705,20 +1707,17 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                             }
                         }
                     });//end push   
-
-
-                inputCounter01 = false;
-             //set counter to false
-
-            
+            }//end counter=true condition
          }
     
   // BOOK-NOW-AB - INPUT - NZ 
 
-    null!=document.getElementById("mktoForm_2258")&&!1!==inputCounter02&&
-    isElementInViewport(document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Input()}));   
+   null!=document.getElementById("mktoForm_2258")&&
+  document.getElementById("mktoForm_2258").addEventListener("input",function(){mktoForm_2258_Input(); inputCounter02=false;});   
     
          function mktoForm_2258_Input() {                 
+
+             if (inputCounter02 === true) {    
 
                     dataLayer.push({
                       'event': 'productAdd',
@@ -1741,10 +1740,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                     });//end push   
 
 
-                inputCounter02 = false;
-             //set counter to false
-
-            
+                }//end counter=true condition
          }
     
   // BOOK-NOW-AB - SUBMIT - AU 
@@ -1854,11 +1850,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
     */
   // BOOK-NOW - INPUT - AU 
 
-    null!=document.getElementById("mktoForm_2259")&&!1!==inputCounter03&&
-    isElementInViewport(document.getElementById("mktoForm_2259").addEventListener("input",function(){mktoForm_2259_Input()}));   
+  null!=document.getElementById("mktoForm_2259")&&
+  document.getElementById("mktoForm_2259").addEventListener("input",function(){mktoForm_2259_Input(); inputCounter03=false;});   
     
          function mktoForm_2259_Input() {                 
 
+             if (inputCounter03 === true) {                  
                     dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
@@ -1880,19 +1877,17 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                     });//end push   
 
 
-                inputCounter03 = false;
-             //set counter to false
-
-            
+            }//end counter=true condition
          }
 
   // BOOK-NOW - INPUT - NZ 
 
-    null!=document.getElementById("mktoForm_2260")&&!1!==inputCounter04&&
-    isElementInViewport(document.getElementById("mktoForm_2260").addEventListener("input",function(){mktoForm_2260_Input()}));   
+ null!=document.getElementById("mktoForm_2260")&&
+  document.getElementById("mktoForm_2260").addEventListener("input",function(){mktoForm_2260_Input(); inputCounter04=false;});   
     
          function mktoForm_2260_Input() {                 
 
+             if (inputCounter04 === true) {       
                     dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
@@ -1912,12 +1907,7 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                             }
                         }
                     });//end push   
-
-
-                inputCounter04 = false;
-             //set counter to false
-
-            
+                }//end counter=true condition
          }
     
   // BOOK-NOW - SUBMIT - AU 
@@ -2028,11 +2018,12 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
 
   // START-TODAY - INPUT - AU 
 
-    
-    null!=document.getElementById("mktoForm_1579")&&!1!==inputCounter05&&
-    isElementInViewport(document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input()}));   
+   null!=document.getElementById("mktoForm_1579")&&
+  document.getElementById("mktoForm_1579").addEventListener("input",function(){mktoForm_1579_Input(); inputCounter05=false;});   
     
          function mktoForm_1579_Input() {                 
+
+             if (inputCounter05 === true) {                  
 
                     dataLayer.push({
                       'event': 'productAdd',
@@ -2053,21 +2044,18 @@ function checkFormExistence_nTrackFocus_nTrackSubmit() {
                             }
                         }
                     });//end push   
-
-console.log("Input set to false");
-                inputCounter05 = false;
-             //set counter to false
-
-            
+                }//end counter=true condition
          }
 
     
   // START-TODAY - INPUT - NZ 
 
-    null!=document.getElementById("mktoForm_1626")&&!1!==inputCounter06&&
-    isElementInViewport(document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Input()}));   
+  null!=document.getElementById("mktoForm_1626")&&
+  document.getElementById("mktoForm_1626").addEventListener("input",function(){mktoForm_1626_Input(); inputCounter06=false;});   
     
          function mktoForm_1626_Input() {                 
+
+             if (inputCounter06 === true) {                  
 
                     dataLayer.push({
                       'event': 'productAdd',
@@ -2088,13 +2076,9 @@ console.log("Input set to false");
                             }
                         }
                     });//end push   
-
-
-                inputCounter06 = false;
-             //set counter to false
-
-            
+                }//end counter=true condition
          }
+    
     
   // START-TODAY - SUBMIT - AU 
 
@@ -2224,13 +2208,13 @@ console.log("Input set to false");
     
   // SUBSCRIBE-INSPIRE - INPUT - AU/NZ 
 
-
-    null!=document.getElementById("mktoForm_1589")&&
-    document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Input(); inputCounter08=false;});   
+null!=document.getElementById("mktoForm_1589")&&
+  document.getElementById("mktoForm_1589").addEventListener("input",function(){mktoForm_1589_Input(); inputCounter07=false;});   
     
          function mktoForm_1589_Input() {                 
 
-             if (inputCounter08 === true) {
+             if (inputCounter07 === true) {                  
+    
                     dataLayer.push({
                       'event': 'productAdd',
                         'ecommerce': {
@@ -2249,9 +2233,8 @@ console.log("Input set to false");
                             }
                         }
                     });//end push
-
-             }//end counter=true condition
             
+            }//end counter=true condition
          }
 
     
@@ -2405,14 +2388,14 @@ switch (thankYouPageUrl) {
                         }]
                     }
                 }
-            });// end push?
+            });// end push
         
             console.log('Purchase event : Book Consultation : ID:20001 : dataLayer.push() OK!');
 
   default:
         
     console.log('No thank you page found!....');
-}//end swith
+}//end swith 
     
     
 };//end codebase
