@@ -12,7 +12,13 @@ var thankYouPageUrl = window.location.href;
 //DrupalCookie ID + store as String
 var drupalCookieID = 'RusskiID123';
 
-var inputCounter08=!0;     // form input counter mktoForm_1589_Input
+//Unique Transaction ID Generator (added to purchase events)
+var transactionID = "TID-" + generateTransactionID();
+function generateTransactionID() {
+var date = Date.now(); if (date <= generateTransactionID.previous) {date = ++generateTransactionID.previous;
+} else {generateTransactionID.previous = date; }return date;}generateTransactionID.previous = 0; 
+
+
 
 
 //SETUP: KICKSTART CLICK LISTENERS / SCROLL LISTENERS / FORM IMPUT LISTENERS / FORM SUBMIT LISTENERS
@@ -1630,6 +1636,7 @@ var inputCounter04=!0;     // form input counter mktoForm_2260_Input
 var inputCounter05=!0;     // form input counter mktoForm_1579_Input
 var inputCounter06=!0;     // form input counter mktoForm_1626_Input
 var inputCounter07=!0;     // form input counter mktoForm_1589_Input
+var inputCounter08=!0;     // form input counter mktoForm_1589_Input
 
 
 function checkFormExistence_nTrackFocus_nTrackSubmit() {
@@ -2297,7 +2304,7 @@ switch (thankYouPageUrl) {
                 'currencyCode': currencyByRegion,
                     'purchase': {
                       'actionField': {
-                        'id': drupalCookieID,
+                        'id': transactionID,
                         'affiliation': 'undefined',
                         'revenue': '',
                         'tax':'',
@@ -2334,7 +2341,7 @@ switch (thankYouPageUrl) {
                 'currencyCode': currencyByRegion,
                     'purchase': {
                       'actionField': {
-                        'id': drupalCookieID,
+                        'id': transactionID,
                         'affiliation': 'undefined',
                         'revenue': '',
                         'tax':'',
@@ -2370,7 +2377,7 @@ switch (thankYouPageUrl) {
                 'currencyCode': currencyByRegion,
                     'purchase': {
                       'actionField': {
-                        'id': drupalCookieID,
+                        'id': transactionID,
                         'affiliation': 'undefined',
                         'revenue': '',
                         'tax':'',
