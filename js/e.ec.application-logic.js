@@ -1,7 +1,7 @@
-//SETTING CORE VARIABLES 
+//SETTING CORE VARIABLES
 
 //Discover Region Currency + store as String
-var currencyByRegion = "RussianRuble"; 
+var currencyByRegion = "AUD"; 
 
 //Discover Page Path + store as String
 var pageUrlPath = window.location.pathname;
@@ -29,10 +29,11 @@ var date = Date.now(); if (date <= generateTransactionID.previous) {date = ++gen
 window.onload = function() {
     
     retrieve_or_make_Cookie();             // Check if cookie exists. !=, plant it and store value. 
+    push_drupalID2hidden_mktform_field();  // On pageload, this will manually populate hidden field in Marketo with cookie value.
     discoverCurrencyPlusRegionNPush();     // Derive and push currency from TLD index window.localtion.href. Also push DrupalID from cookie.
     checkForNewImpressions();              // Check for assets immediately in viewport on pageload
     addClickListenersGroup();              // Start listening for asset clicks 
-    checkFormExistence_nTrackFocus_nTrackSubmit(); // Start listening and actioning form hover, input & submit events (all forms)
+    checkFormExistence_nTrackFocus_nTrackSubmit(); // DO NOT RENAME!! Listen & action form hover, input & submit  (all forms)
     checkForPurchases();                   // Check if we are on any of the thank-you page final steps. if yes = trigger purchase event
     window.addEventListener('scroll', function(){checkForNewImpressions();}, true); // Re-check form & asset impressions on scroll
 };
@@ -180,7 +181,7 @@ value_or_null = (document.cookie.match(/^(?:.*;)?\s*DrupalID\s*=\s*([^;]+)(?:.*)
 
 function retrieve_or_make_Cookie() {
     //If cookie exists already, drupalCookieID is set to existing cookie value
-    if (value_or_null !== null) {drupalCookieID = value_or_null;}
+    if (value_or_null !== null) {drupalCookieID = value_or_null; SetCookie("DrupalID",drupalCookieID,365);}
     //If cookie does not exist, generate new DrupalID, Plant Cookie, drupalCookieID is set to cookie value
     else {drupalCookieID = generateDrupalID(); SetCookie("DrupalID",drupalCookieID,365);}
 }
@@ -236,6 +237,25 @@ function discoverCurrencyPlusRegionNPush() {
     })(jQuery);
     
 }
+
+//If form exists on page load, populate hidden field "DrupalID" with 13 Digit Drupal ID
+
+function push_drupalID2hidden_mktform_field() {
+        
+/* Simplified version for debugging 
+if (document.getElementById("mktoForm_2258") != null) {
+document.forms['mktoForm_2258'].elements['drupalID'].value = drupalCookieID;};
+*/  
+
+null!=document.getElementById("mktoForm_2258")&&(document.forms.mktoForm_2258.elements.drupalID.value=drupalCookieID);
+null!=document.getElementById("mktoForm_2259")&&(document.forms.mktoForm_2259.elements.drupalID.value=drupalCookieID);
+null!=document.getElementById("mktoForm_2260")&&(document.forms.mktoForm_2260.elements.drupalID.value=drupalCookieID);
+null!=document.getElementById("mktoForm_1579")&&(document.forms.mktoForm_1579.elements.drupalID.value=drupalCookieID);
+null!=document.getElementById("mktoForm_1626")&&(document.forms.mktoForm_1626.elements.drupalID.value=drupalCookieID);
+null!=document.getElementById("mktoForm_1589")&&(document.forms.mktoForm_1589.elements.drupalID.value=drupalCookieID);
+
+    
+};
 
 
     
