@@ -2402,6 +2402,31 @@ switch (thankYouPageUrl) {
     console.log("e.ecm-ok");
     
     
+//run custom APD Pixel    
+
+addAPDTrackingPixel();
+    
+  function addAPDTrackingPixel() {
+
+      var pixelParamenersByCountry = "_"; 
+
+      if (currencyByRegion = "NZD") {pixelParamenersByCountry = "irchannel=13230&cid=7414"}
+      if (currencyByRegion = "AUD") {pixelParamenersByCountry = "irchannel=13229&cid=7413"}
+
+      
+   //Order ID is extracted from enhanced e-com cookie variable  
+   var apdOrderID = "&oid=" + drupalCookieID;
+
+   var apdPixel = document.createElement("iframe");
+        apdPixel.setAttribute("src", "https://t.dgm-au.com/ifconv/?" + pixelParamenersByCountry + apdOrderID + "&qty=1&amt=0&cat=[]&promocode=[]&notes=[]");
+        apdPixel.setAttribute("height", "1");
+        apdPixel.setAttribute("width", "1");
+        apdPixel.setAttribute("frameborder", "0");
+        apdPixel.setAttribute("scrolling", "no");
+
+    document.body.appendChild(apdPixel);
+    console.log("APD-ok");
+  }
     
     
     
