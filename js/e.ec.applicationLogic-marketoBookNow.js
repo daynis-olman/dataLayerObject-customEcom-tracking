@@ -2278,6 +2278,25 @@ null!=document.getElementById("mktoForm_1589")&&
 
 
 
+
+//APD PIXEL CONSTRUCTOR FUNCTION
+
+ function addAPDTrackingPixel() {
+      var pixelParamenersByCountry = "_"; 
+      if (currencyByRegion = "NZD") {pixelParamenersByCountry = "irchannel=13230&cid=7414"}
+      if (currencyByRegion = "AUD") {pixelParamenersByCountry = "irchannel=13229&cid=7413"}
+   //Order ID is extracted from enhanced e-com cookie variable  
+   var apdOrderID = "&oid=" + drupalCookieID;
+   var apdPixel = document.createElement("iframe");
+        apdPixel.setAttribute("src", "https://t.dgm-au.com/ifconv/?" + pixelParamenersByCountry + apdOrderID + "&qty=1&amt=0&cat=[]‌&promocode=[]‌&notes=[]");
+        apdPixel.setAttribute("height", "1");
+        apdPixel.setAttribute("width", "1");
+        apdPixel.setAttribute("frameborder", "0");
+        apdPixel.setAttribute("scrolling", "no");
+    document.body.appendChild(apdPixel);
+    console.log("APD-ok");
+  }
+
 //////////////////////////////////////////////////////////////
 // TRACK PURCHASES BY THANK YOU PAGE URL's  
 //////////////////////////////////////////////////////////////
@@ -2305,7 +2324,7 @@ switch (thankYouPageUrl) {
                       'actionField': {
                         'id': transactionID,
                         'affiliation': 'undefined',
-                        'revenue': '800.00',
+                        'revenue': '',
                         'tax':'',
                         'shipping': '0.00',
                         'coupon': ''
@@ -2322,14 +2341,21 @@ switch (thankYouPageUrl) {
                     }
                 }
             });// end push
+        
+        
+            //RUN APD PIXEL CONSTRUCTOR FUNCTION
+            addAPDTrackingPixel();
+    
+ 
+
+
             
             
   break;
 
   case 'https://www.jennycraig.co.nz/start-today/thank-you':
   case 'https://www.jennycraig.com.au/start-today/thank-you':
-  case 'https://stage2.jennycraig.com.au/start-today/thank-you':
-  case 'https://stage2.jennycraig.com.au/start-today/thank-you':
+
         
   //REQUEST A CALLBACK - AUS+NZ PURCHASE EVENT 
 
@@ -2342,7 +2368,7 @@ switch (thankYouPageUrl) {
                       'actionField': {
                         'id': transactionID,
                         'affiliation': 'undefined',
-                        'revenue': '800.00',
+                        'revenue': '',
                         'tax':'',
                         'shipping': '0.00',
                         'coupon': ''
@@ -2350,7 +2376,7 @@ switch (thankYouPageUrl) {
                         'products': [{
                            'name': 'Request Call',
                            'id': '20001',
-                           'price': '800.00',
+                           'price': '400.00',
                            'brand': 'Jenny Craig',
                            'category': 'lead',
                            'quantity': 1,
@@ -2360,14 +2386,14 @@ switch (thankYouPageUrl) {
                 }
             });// end push?
         
-
+            //RUN APD PIXEL CONSTRUCTOR FUNCTION
+            addAPDTrackingPixel();
 
     break;
         
     case 'https://www.jennycraig.com.au/recipe-thank-you':
     case 'https://www.jennycraig.co.nz/recipe-thank-you':
-    case 'https://stage2.jennycraig.com.au/recipe-thank-you':
-    case 'https://stage2.jennycraig.co.nz/recipe-thank-you':
+
 
             dataLayer.push({
                 'event': 'purchase',
@@ -2377,7 +2403,7 @@ switch (thankYouPageUrl) {
                       'actionField': {
                         'id': transactionID,
                         'affiliation': 'undefined',
-                        'revenue': '800.00',
+                        'revenue': '',
                         'tax':'',
                         'shipping': '0.00',
                         'coupon': ''
@@ -2385,7 +2411,7 @@ switch (thankYouPageUrl) {
                         'products': [{
                            'name': 'GetInspired Subscribe',
                            'id': '60001',
-                           'price': '800.00',
+                           'price': '1.00',
                            'brand': 'Jenny Craig',
                            'category': 'lead',
                            'quantity': 1,
@@ -2395,39 +2421,12 @@ switch (thankYouPageUrl) {
                 }
             });// end push
         
+            //RUN APD PIXEL CONSTRUCTOR FUNCTION
+            addAPDTrackingPixel();
 
   default:
         
-}//end swith 
+}//end switch 
     console.log("e.ecm-ok");
-    
-    
-//run custom APD Pixel    
-
-addAPDTrackingPixel();
-    
-  function addAPDTrackingPixel() {
-
-      var pixelParamenersByCountry = "_"; 
-
-      if (currencyByRegion = "NZD") {pixelParamenersByCountry = "irchannel=13230&cid=7414"}
-      if (currencyByRegion = "AUD") {pixelParamenersByCountry = "irchannel=13229&cid=7413"}
-
-      
-   //Order ID is extracted from enhanced e-com cookie variable  
-   var apdOrderID = "&oid=" + drupalCookieID;
-
-   var apdPixel = document.createElement("iframe");
-        apdPixel.setAttribute("src", "https://t.dgm-au.com/ifconv/?" + pixelParamenersByCountry + apdOrderID + "&qty=1&amt=0&cat=[]&promocode=[]&notes=[]");
-        apdPixel.setAttribute("height", "1");
-        apdPixel.setAttribute("width", "1");
-        apdPixel.setAttribute("frameborder", "0");
-        apdPixel.setAttribute("scrolling", "no");
-
-    document.body.appendChild(apdPixel);
-    console.log("APD-ok");
-  }
-    
-    
     
 };//end codebase
