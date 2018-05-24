@@ -262,6 +262,26 @@ null!=document.getElementById("mktoForm_1589")&&(document.forms.mktoForm_1589.el
 //LISTEN FOR CLICKS ON UNIQUE ASSETS 
 
 function addClickListenersGroup(){
+
+
+//COSTS + BMI PAGE- Click listeners
+    
+  null!=document.getElementById("Mob-Body-CTA-GACB")&&
+  document.getElementById("Mob-Body-CTA-GACB").addEventListener("click",Mob_Body_CTA_GACB_CLK,!1);
+
+  null!=document.getElementById("Mob-Body-CTA-BookConsultation")&&
+  document.getElementById("Mob-Body-CTA-BookConsultation").addEventListener("click",Mob_Body_CTA_BookConsultation_CLK,!1);
+
+  null!=document.getElementById("Mob-Body-CTA-CallNow")&&
+  document.getElementById("Mob-Body-CTA-CallNow").addEventListener("click",Mob_Body_CTA_CallNow_CLK,!1);
+
+  null!=document.getElementById("DSKTOP-Body-CTA-GACB")&&
+  document.getElementById("DSKTOP-Body-CTA-GACB").addEventListener("click",DSKTOP_Body_CTA_GACB_CLK,!1);
+
+  null!=document.getElementById("DSKTOP-Body-CTA-BookConsultation")&&
+  document.getElementById("DSKTOP-Body-CTA-BookConsultation").addEventListener("click",DSKTOP_Body_CTA_BookConsultation_CLK,!1);    
+    
+
         
 //Home A - Clicks listeners
 
@@ -404,6 +424,14 @@ var count27=!0     // impression counter mktoForm_1626_IMPSN();
 var count28=!0     // impression counter mktoForm_1689_IMPSN(); 
 var count29=!0     // impression counter back-to-top(); 
 
+//Form #4 - BMI CTA's impression counters
+
+var count30=!0     // impression counter Mob_Body_CTA_GACB_IMPSN(); 
+var count31=!0     // impression counter Mob_Body_CTA_BookConsultation_IMPSN(); 
+var count32=!0     // impression counter Mob_Body_CTA_CallNow_IMPSN(); 
+var count33=!0     // impression counter DSKTOP_Body_CTA_GACB_IMPSN(); 
+var count34=!0     // impression counter DSKTOP_Body_CTA_BookConsultation_IMPSN(); 
+
 
 function checkForNewImpressions() {
     
@@ -429,7 +457,28 @@ if (document.getElementById("HomeA-CTA-Hero-BookConsultation") !=null )
     
     
 //Home A - Impression listeners
-    
+
+null!=document.getElementById("DSKTOP-Body-CTA-BookConsultation")&&
+  isElementInViewport(document.getElementById("DSKTOP-Body-CTA-BookConsultation"))===!0&&count01===!0&&DSKTOP_Body_CTA_BookConsultation_IMPSN();
+
+null!=document.getElementById("DSKTOP-Body-CTA-GACB")&&
+  isElementInViewport(document.getElementById("DSKTOP-Body-CTA-GACB"))===!0&&count01===!0&&DSKTOP_Body_CTA_GACB_IMPSN();
+
+null!=document.getElementById("Mob-Body-CTA-CallNow")&&
+  isElementInViewport(document.getElementById("Mob-Body-CTA-CallNow"))===!0&&count01===!0&&Mob_Body_CTA_CallNow_IMPSN();
+
+null!=document.getElementById("Mob-Body-CTA-BookConsultation")&&
+  isElementInViewport(document.getElementById("Mob-Body-CTA-BookConsultation"))===!0&&count01===!0&&Mob_Body_CTA_BookConsultation_IMPSN();
+
+null!=document.getElementById("Mob-Body-CTA-GACB")&&
+  isElementInViewport(document.getElementById("Mob-Body-CTA-GACB"))===!0&&count01===!0&&Mob_Body_CTA_GACB_IMPSN();
+
+  
+  
+  
+  
+  
+  
   null!=document.getElementById("HomeA-CTA-Hero-BookConsultation")&&
   isElementInViewport(document.getElementById("HomeA-CTA-Hero-BookConsultation"))===!0&&count01===!0&&HomeA_CTA_Hero_BookConsultation_IMPSN();
    
@@ -562,6 +611,132 @@ function BackToTop_IMPSN() {
     
 count29=!1; // set counter to false
 }
+
+//IMPRESSION FUNCTIONS - BMI & COST-PAGE CTA's
+function Mob_Body_CTA_GACB_IMPSN() {
+    
+    dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'impressions':[
+                {
+                'name': 'Request Call',
+                'id': '20001',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': pageDescription,
+                'position': 1
+                }
+            ]
+        }
+    });     
+    
+count30=!1; // set counter to false
+}
+
+
+function Mob_Body_CTA_BookConsultation_IMPSN() {
+    
+     dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'impressions':[
+                {
+                'name': 'Book Consultation',
+                'id': '10001',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': pageDescription,
+                'position': 1
+                }
+            ]
+        }
+    });
+    
+count31=!1; // set counter to false
+}
+
+
+function Mob_Body_CTA_CallNow_IMPSN() {
+    
+     dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'impressions':[
+                {
+                'name': 'Direct dial',
+                'id': '40001',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': pageDescription,
+                'position': 1
+                }
+            ]
+        }
+    });       
+    
+count32=!1; // set counter to false
+}
+
+
+function DSKTOP_Body_CTA_GACB_IMPSN() {
+    
+     dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'impressions':[
+                {
+                'name': 'Request Call',
+                'id': '20001',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': pageDescription,
+                'position': 1
+                }
+            ]
+        }
+    });     
+    
+count33=!1; // set counter to false
+}
+
+
+function DSKTOP_Body_CTA_BookConsultation_IMPSN() {
+    
+     dataLayer.push({
+        'event': 'productImpressions',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'impressions':[
+                {
+                'name': 'Book Consultation',
+                'id': '10001',
+                'price': '',
+                'brand': 'Jenny Craig',
+                'category': 'lead',
+                'variant': '',
+                'list': pageDescription,
+                'position': 1
+                }
+            ]
+        }
+    });
+    
+count34=!1; // set counter to false
+}
+
 
 
 //IMPRESSION FUNCTIONS - HOME-A
@@ -1265,6 +1440,130 @@ function BackToTop_CLK() {
    }); 
 
 }
+
+
+//CLICK FUNCTIONS - BMI+COSTS PAGE CTAS
+function Mob_Body_CTA_GACB_CLK() {
+
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'click': {
+                'actionField': {'list': pageDescription}, // Same as impression location
+                'products': [{
+                    'name': 'Request Call',
+                    'id': '20001',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
+
+}
+
+function Mob_Body_CTA_BookConsultation_CLK() {
+
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'click': {
+                'actionField': {'list': pageDescription}, // Same as impression location
+                'products': [{
+                    'name': 'Book Consultation',
+                    'id': '10001',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
+
+}
+
+
+function Mob_Body_CTA_CallNow_CLK() {
+
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'click': {
+                'actionField': {'list': pageDescription}, // Same as impression location
+                'products': [{
+                    'name': 'Direct dial',
+                    'id': '40001',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
+
+}
+
+
+function DSKTOP_Body_CTA_GACB_CLK() {
+
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'click': {
+                'actionField': {'list': pageDescription}, // Same as impression location
+                'products': [{
+                    'name': 'Request Call',
+                    'id': '20001',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
+
+}
+
+
+function DSKTOP_Body_CTA_BookConsultation_CLK() {
+
+   dataLayer.push({
+       'event': 'productClick',
+        'ecommerce': {
+            'currencyCode': currencyByRegion,
+            'click': {
+                'actionField': {'list': pageDescription}, // Same as impression location
+                'products': [{
+                    'name': 'Book Consultation',
+                    'id': '10001',
+                    'price': '',
+                    'brand': 'Jenny Craig',
+                    'category': 'lead',
+                    'variant': '',
+                    'position': 1
+                }]
+            }
+        }
+   }); 
+
+}
+
+
+
+
 
 
 //CLICK FUNCTIONS - HOME-A
