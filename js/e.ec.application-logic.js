@@ -180,10 +180,19 @@ function isElementInViewport(el) {
 value_or_null = (document.cookie.match(/^(?:.*;)?\s*DrupalID\s*=\s*([^;]+)(?:.*)?$/)||[,null])[1] 
 
 function retrieve_or_make_Cookie() {
-    //If cookie exists already, drupalCookieID is set to existing cookie value
-    if (value_or_null !== null) {drupalCookieID = value_or_null; SetCookie("DrupalID",drupalCookieID,365);}
-    //If cookie does not exist, generate new DrupalID, Plant Cookie, drupalCookieID is set to cookie value
-    else {drupalCookieID = generateDrupalID(); SetCookie("DrupalID",drupalCookieID,365);}
+
+    //New Zealand: If cookie exists already, drupalCookieID is set to existing cookie value
+    if (value_or_null !== null && window.location.href.indexOf(".co.nz") > -1) {drupalCookieID = value_or_null; SetNZCookie("DrupalID",drupalCookieID,365);}
+
+    //Australia: If cookie exists already, drupalCookieID is set to existing cookie value
+    else if (value_or_null !== null && window.location.href.indexOf(".com.au") > -1) {drupalCookieID = value_or_null; SetAUCookie("DrupalID",drupalCookieID,365);}
+
+    //New Zealand If cookie does not exist, generate new DrupalID, Plant Cookie, drupalCookieID is set to cookie value
+    else if (window.location.href.indexOf(".co.nz") > -1) {drupalCookieID = generateDrupalID(); SetNZCookie("DrupalID",drupalCookieID,365);}
+
+    //Australia If cookie does not exist, generate new DrupalID, Plant Cookie, drupalCookieID is set to cookie value
+    else if (window.location.href.indexOf(".com.au") > -1){drupalCookieID = generateDrupalID(); SetAUCookie("DrupalID",drupalCookieID,365);}
+
 }
 
 //Drupal ID Generator function
@@ -191,11 +200,17 @@ function generateDrupalID() {
     var date = Date.now(); if (date <= generateDrupalID.previous) {date = ++generateDrupalID.previous;
     } else {generateDrupalID.previous = date; }return date;}generateDrupalID.previous = 0; 
 
-//Drupal ID Cookie Planting function
-function SetCookie(cookieName,cookieValue,nDays) {
+//Australia: Drupal ID Cookie Planting function
+function SetAUCookie(cookieName,cookieValue,nDays) {
     var today = new Date(); var expire = new Date();
     if (nDays==null || nDays==0) nDays=1;expire.setTime(today.getTime() + 3600000*24*nDays);
-    document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();}
+    document.cookie = cookieName+"="+escape(cookieValue)+ ";domain=.jennycraig.com.au;expires="+expire.toGMTString();}
+
+// NEW Zealand: Drupal ID Cookie Planting function
+function SetNZCookie(cookieName,cookieValue,nDays) {
+    var today = new Date(); var expire = new Date();
+    if (nDays==null || nDays==0) nDays=1;expire.setTime(today.getTime() + 3600000*24*nDays);
+    document.cookie = cookieName+"="+escape(cookieValue)+ ";domain=.jennycraig.co.nz;expires="+expire.toGMTString();}
 
 
 
